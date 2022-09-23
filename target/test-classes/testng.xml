@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+		<listener class-name="commons.ReportNGListener"/>
+		
+	</listeners>
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="orangehrm.page.Admin_Page_Access_01" />
+		</classes>
+	</test>
+
+<!--	<test name="Run on Firefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.bankguru.customer.NewCustomer_Validation_01" />
+			<class name="com.bankguru.customer.NewCustomer_Validation_02" />
+			<class name="com.bankguru.customer.NewCustomer_Validation_03" />
+		</classes>
+	</test> -->
+
+<!--	<test name="Run on Edge">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="com.bankguru.customer.NewCustomer_Validation_01" />
+			<class name="com.bankguru.customer.NewCustomer_Validation_02" />
+		</classes>
+	</test>-->
+	
+<!--	<test name="Run on IE">
+		<parameter name="browser" value="ie"></parameter>
+		<classes>
+			<class name="com.bankguru.customer.NewCustomer_Validation_02" />
+		</classes>
+	</test>-->
+</suite> <!-- Suite -->

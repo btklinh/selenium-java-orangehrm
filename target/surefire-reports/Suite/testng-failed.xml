@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="commons.ReportNGListener"/>
+  </listeners>
+  <test thread-count="5" name="Run on Chrome(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="orangehrm.page.Admin_Page_Access">
+        <methods>
+          <include name="TC_01_Verify_Access_User_Page"/>
+          <include name="TC_01_Login_Success"/>
+          <include name="deleteAllFilesInReportNGScreenshot"/>
+        </methods>
+      </class> <!-- orangehrm.page.Admin_Page_Access -->
+    </classes>
+  </test> <!-- Run on Chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->

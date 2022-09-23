@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Chrome"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="9.191">
+  <properties />
+  
+  
+            <testcase name="TC_02_Verify_Job_Titles_Page" time="1.311" classname="orangehrm.page.Admin_Page_Access_01" />
+                <testcase name="TC_01_Verify_Access_User_Page" time="7.880" classname="orangehrm.page.Admin_Page_Access_01" />
+      
+</testsuite>
