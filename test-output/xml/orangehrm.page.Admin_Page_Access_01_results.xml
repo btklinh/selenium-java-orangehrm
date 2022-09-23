@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Run on Chrome"
-           tests="2"
+           tests="6"
            failures="0"
            errors="0"
            skipped="0"
-           time="9.191">
+           time="21,804">
   <properties />
   
   
-            <testcase name="TC_02_Verify_Job_Titles_Page" time="1.311" classname="orangehrm.page.Admin_Page_Access_01" />
-                <testcase name="TC_01_Verify_Access_User_Page" time="7.880" classname="orangehrm.page.Admin_Page_Access_01" />
+            <testcase name="TC_05_Verify_Job_Job_Categories_Page" time="2,243" classname="orangehrm.page.Admin_Page_Access_01" />
+                <testcase name="TC_06_Verify_Job_Work_Shifts_Page" time="2,653" classname="orangehrm.page.Admin_Page_Access_01" />
+                <testcase name="TC_01_Verify_Access_User_Page" time="10,333" classname="orangehrm.page.Admin_Page_Access_01" />
+                <testcase name="TC_03_Verify_Job_Pay_Grades_Page" time="2,333" classname="orangehrm.page.Admin_Page_Access_01" />
+                <testcase name="TC_02_Verify_Job_Titles_Page" time="2,136" classname="orangehrm.page.Admin_Page_Access_01" />
+                <testcase name="TC_04_Verify_Job_Employee_Status_Page" time="2,106" classname="orangehrm.page.Admin_Page_Access_01" />
       
 </testsuite>

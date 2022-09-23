@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-23T08:52:36Z" name="Suite" finished-at="2022-09-23T08:52:56Z" duration-ms="19674">
+  <suite started-at="2022-09-23T15:30:30Z" name="Suite" finished-at="2022-09-23T15:30:52Z" duration-ms="22160">
     <groups>
     </groups>
-    <test started-at="2022-09-23T08:52:36Z" name="Run on Chrome" finished-at="2022-09-23T08:52:56Z" duration-ms="19674">
-      <class name="orangehrm.page.Admin_Page_Access_01">
-        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:orangehrm.page.Admin_Page_Access_01@58e85c6f]" started-at="2022-09-23T08:52:36Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2022-09-23T08:52:36Z" duration-ms="42" status="PASS">
+    <test started-at="2022-09-23T15:30:30Z" name="Run on Chrome" finished-at="2022-09-23T15:30:52Z" duration-ms="22160">
+      <class name="orangehrm.admin.job.JobTitle_Work_Flow">
+        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:orangehrm.admin.job.JobTitle_Work_Flow@107f4980]" started-at="2022-09-23T15:30:30Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2022-09-23T15:30:30Z" duration-ms="56" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAllFilesInReportNGScreenshot -->
-        <test-method is-config="true" signature="TC_01_Login_Success(java.lang.String)[pri:0, instance:orangehrm.page.Admin_Page_Access_01@58e85c6f]" started-at="2022-09-23T08:52:36Z" name="TC_01_Login_Success" finished-at="2022-09-23T08:52:46Z" duration-ms="10299" status="PASS">
+        <test-method is-config="true" signature="Precondition_Login(java.lang.String)[pri:0, instance:orangehrm.admin.job.JobTitle_Work_Flow@107f4980]" started-at="2022-09-23T15:30:30Z" name="Precondition_Login" finished-at="2022-09-23T15:30:46Z" duration-ms="15872" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,16 +21,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01_Login_Success -->
-        <test-method signature="TC_01_Verify_Access_User_Page()[pri:0, instance:orangehrm.page.Admin_Page_Access_01@58e85c6f]" started-at="2022-09-23T08:52:46Z" name="TC_01_Verify_Access_User_Page" finished-at="2022-09-23T08:52:54Z" duration-ms="7880" status="PASS">
+        </test-method> <!-- Precondition_Login -->
+        <test-method signature="TC_01_Verify_Add_Job_Title()[pri:0, instance:orangehrm.admin.job.JobTitle_Work_Flow@107f4980]" started-at="2022-09-23T15:30:46Z" name="TC_01_Verify_Add_Job_Title" finished-at="2022-09-23T15:30:52Z" duration-ms="5971" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01_Verify_Access_User_Page -->
-        <test-method signature="TC_02_Verify_Job_Titles_Page()[pri:0, instance:orangehrm.page.Admin_Page_Access_01@58e85c6f]" started-at="2022-09-23T08:52:54Z" name="TC_02_Verify_Job_Titles_Page" finished-at="2022-09-23T08:52:56Z" duration-ms="1311" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_02_Verify_Job_Titles_Page -->
-      </class> <!-- orangehrm.page.Admin_Page_Access_01 -->
+        </test-method> <!-- TC_01_Verify_Add_Job_Title -->
+      </class> <!-- orangehrm.admin.job.JobTitle_Work_Flow -->
     </test> <!-- Run on Chrome -->
   </suite> <!-- Suite -->
 </testng-results>

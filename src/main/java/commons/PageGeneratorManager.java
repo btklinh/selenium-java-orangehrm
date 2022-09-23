@@ -2,10 +2,14 @@ package commons;
 
 import org.openqa.selenium.WebDriver;
 
+import pageObjects.EmploymentStatusPageObject;
+import pageObjects.JobCategoriesPageObject;
 import pageObjects.JobTitlesPageObject;
 import pageObjects.LoginPageObject;
+import pageObjects.PayGradesPageObject;
 import pageObjects.PimPageObject;
 import pageObjects.UserPageObject;
+import pageObjects.WorkShiftsPageObject;
 
 public class PageGeneratorManager {
 
@@ -24,5 +28,21 @@ public class PageGeneratorManager {
 	
 	public static JobTitlesPageObject getJobTitlesPage(WebDriver driver) {
 		return new JobTitlesPageObject(driver);
+	}
+	
+	public static PayGradesPageObject getPayGradesPage(WebDriver driver) {
+		return new PayGradesPageObject(driver);
+	}
+	
+	public static EmploymentStatusPageObject getEmploymentStatusPage(WebDriver driver) {
+		return new EmploymentStatusPageObject(driver);
+	}
+	
+	public static JobCategoriesPageObject getJobCategoriesPage(WebDriver driver) {
+		return new JobCategoriesPageObject(driver);
+	}
+	
+	public static WorkShiftsPageObject getWorkShiftsPage(WebDriver driver) {
+		return new WorkShiftsPageObject(driver);
 	}
 }

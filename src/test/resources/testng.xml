@@ -10,7 +10,8 @@
 	<test name="Run on Chrome">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="orangehrm.page.Admin_Page_Access_01" />
+			<!--<class name="orangehrm.page.Admin_Page_Access_01" />-->
+			<class name="orangehrm.admin.job.JobTitle_Work_Flow" />
 		</classes>
 	</test>
 

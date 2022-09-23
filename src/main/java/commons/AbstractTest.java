@@ -52,7 +52,7 @@ public abstract class AbstractTest {
 		default:
 			throw new RuntimeException("Please choose browser name");
 		}
-		driver.get(GlobalConstants.TEST_URL);
+		driver.get(GlobalConstants.TEST_LOCAL_URL);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		return driver;

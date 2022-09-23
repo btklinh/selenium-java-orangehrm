@@ -166,4 +166,9 @@ public abstract class AbstractPage {
 		waitToElementVisible(driver, AbstractPageUI.PAGE_TITLE_CONTAIN_CONFIGURE);
 		return getElementText(driver, AbstractPageUI.PAGE_TITLE_CONTAIN_CONFIGURE);
 	}
+	
+	public void sendkeyToElementByJS(WebDriver driver, String locator, String value) {
+		jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("arguments[0].setAttribute('value', '" + value + "')", findElement(driver, locator));
+	}
 }

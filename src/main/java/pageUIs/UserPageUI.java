@@ -2,6 +2,6 @@ package pageUIs;
 
 public class UserPageUI {
 
-	public static final String PAGE_TITLE_LABEL = "//div[@class='oxd-topbar-header-title']/span/h6";
+	//public static final String PAGE_TITLE_LABEL = "//div[@class='oxd-topbar-header-title']/span/h6";
 
 }

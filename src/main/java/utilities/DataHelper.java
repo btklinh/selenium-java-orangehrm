@@ -16,8 +16,8 @@ public class DataHelper {
 		return new DataHelper();
 	}
 
-	public String getFirstName() {
-		return faker.address().firstName();
+	public String getJobTitle() {
+		return faker.job().title();
 	}
 
 	public String getLastName() {

@@ -1,0 +1,1 @@
+{"uuid":"3d20a006-0a16-466d-8113-655cfffe1fa5","name":"Suite","children":["a03645b9-86ef-4425-8b2b-090e95fe9ab4"],"befores":[{"name":"deleteAllFilesInReportNGScreenshot","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1663946485327,"stop":1663946485340}],"afters":[],"start":1663946485274,"stop":1663946505361}
