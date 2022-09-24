@@ -48,6 +48,7 @@ public class JobTitlesPageObject extends AbstractPage {
 	public void clickToBrowseButton() {
 		waitToElementClickable(driver, JobTitlesPageUI.BROWSE_BUTTON);
 		clickToElement(driver, JobTitlesPageUI.BROWSE_BUTTON);
+		sleepInSecond(1);
 	}
 
 	public void selectUploadFile(String directory) {
@@ -56,7 +57,8 @@ public class JobTitlesPageObject extends AbstractPage {
 			// Copy file path to Clipboard
 			StringSelection str = new StringSelection(directory);
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
-
+			sleepInSecond(1);
+			
 			// press Contol+V for pasting
 			rb.keyPress(KeyEvent.VK_CONTROL);
 			rb.keyPress(KeyEvent.VK_V);
@@ -64,10 +66,11 @@ public class JobTitlesPageObject extends AbstractPage {
 			// release Contol+V for pasting
 			rb.keyRelease(KeyEvent.VK_CONTROL);
 			rb.keyRelease(KeyEvent.VK_V);
-
+			sleepInSecond(1);
 			// for pressing and releasing Enter
 			rb.keyPress(KeyEvent.VK_ENTER);
 			rb.keyRelease(KeyEvent.VK_ENTER);
+			sleepInSecond(1);
 		} catch (Exception ex) {
 			System.out.println(ex.toString());
 		}
@@ -102,7 +105,53 @@ public class JobTitlesPageObject extends AbstractPage {
 	public void clickToEditIconOfJobTitle(String jobTitle) {
 		waitToElementClickable(driver, JobTitlesPageUI.DYNAMIC_EDIT_BUTTON_BY_TITLE, jobTitle);
 		clickToElement(driver, JobTitlesPageUI.DYNAMIC_EDIT_BUTTON_BY_TITLE, jobTitle);
-		sleepInSecond(3);
+		sleepInSecond(2);
 	}
+
+	public void selectReplaceCurrentRadio() {
+		clickToElementByJS(driver, JobTitlesPageUI.REPLACE_CURRENT_RADIO);
+	}
+
+	public String getUploadedFileName() {
+		waitToElementVisible(driver, JobTitlesPageUI.UPLOADED_FILE_NAME_LABEL);
+		return getElementAttribute(driver, JobTitlesPageUI.UPLOADED_FILE_NAME_LABEL,"title");
+	}
+
+	public boolean isDeleteRadioButtonUndisplayed() {
+		return isControlUndisplayed(driver, JobTitlesPageUI.DELETE_CURRENT_RADIO);
+	}
+
+	public void selectDeleteCurrentRadio() {
+		clickToElementByJS(driver, JobTitlesPageUI.DELETE_CURRENT_RADIO);
+	}
+
+	public void clickToDeleteButtonOfJobTitle(String jobTitle) {
+		waitToElementClickable(driver, JobTitlesPageUI.DYNAMIC_DELETE_BUTTON_BY_TITLE, jobTitle);
+		clickToElement(driver, JobTitlesPageUI.DYNAMIC_DELETE_BUTTON_BY_TITLE, jobTitle);
+		sleepInSecond(2);
+	}
+
+	public String getConfirmationPopupMessage() {
+		waitToElementVisible(driver, JobTitlesPageUI.DELETE_CONFIRM_MESSAGE);
+		return getElementText(driver, JobTitlesPageUI.DELETE_CONFIRM_MESSAGE);
+	}
+
+	public void clickToNoButton() {
+		waitToElementClickable(driver, JobTitlesPageUI.NO_BUTTON);
+		clickToElement(driver, JobTitlesPageUI.NO_BUTTON);
+		sleepInSecond(2);
+	}
+
+	public void clickToYesButton() {
+		waitToElementClickable(driver, JobTitlesPageUI.YES_BUTTON);
+		clickToElement(driver, JobTitlesPageUI.YES_BUTTON);
+		sleepInSecond(2);
+	}
+
+	public void clickToCancelButton() {
+		waitToElementClickable(driver, JobTitlesPageUI.CANCEL_BUTTON);
+		clickToElement(driver, JobTitlesPageUI.CANCEL_BUTTON);
+	}
+
 
 }

@@ -12,6 +12,14 @@ public class JobTitlesPageUI {
 	public static final String JOB_TITLES_LIST= "//div[@class='oxd-table-card']/descendant::div[6]";
 	public static final String SUCCESS_MESSAGE_POPUP= "//p[contains(@class,'oxd-text--toast-message')]";
 	public static final String DYNAMIC_EDIT_BUTTON_BY_TITLE = "//div[text()='%s']/parent::div/following-sibling::div[2]//i[contains(@class,'bi-pencil')]";
+	public static final String DYNAMIC_DELETE_BUTTON_BY_TITLE = "//div[text()='%s']/parent::div/following-sibling::div[2]//i[contains(@class,'bi-trash')]";
+	public static final String REPLACE_CURRENT_RADIO = "//input[@value='replaceCurrent']";
+	public static final String UPLOADED_FILE_NAME_LABEL = "//p[contains(@class,'orangehrm-file-name')]";
+	public static final String DELETE_CURRENT_RADIO = "//input[@value='deleteCurrent']";
+	public static final String DELETE_CONFIRM_MESSAGE = "//p[contains(@class,'oxd-text--card-body')]";
+	public static final String NO_BUTTON = "//button[contains(@class,'oxd-button--text')]";
+	public static final String YES_BUTTON = "//button[contains(@class,'oxd-button--label-danger')]";
+	public static final String CANCEL_BUTTON = "//button[@type='submit']/preceding-sibling::button";
 
 
 }

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Run on Chrome"
-           tests="2"
+           tests="5"
            failures="0"
            errors="0"
            skipped="0"
-           time="16,787">
+           time="62,515">
   <properties />
   
   
-            <testcase name="TC_02_Verify_Edit_Job_Title" time="9,800" classname="orangehrm.admin.job.JobTitle_Work_Flow" />
-                <testcase name="TC_01_Verify_Add_Job_Title" time="6,987" classname="orangehrm.admin.job.JobTitle_Work_Flow" />
+            <testcase name="TC_02_Verify_Edit_Job_Title" time="8,689" classname="orangehrm.admin.job.JobTitle_Work_Flow" />
+                <testcase name="TC_05_Verify_Delete_Operation" time="11,626" classname="orangehrm.admin.job.JobTitle_Work_Flow" />
+                <testcase name="TC_01_Verify_Add_Job_Title" time="11,425" classname="orangehrm.admin.job.JobTitle_Work_Flow" />
+                <testcase name="TC_04_Verify_Delete_Job_Specification_File" time="16,407" classname="orangehrm.admin.job.JobTitle_Work_Flow" />
+                <testcase name="TC_03_Verify_Edit_Job_Specification_File" time="14,368" classname="orangehrm.admin.job.JobTitle_Work_Flow" />
       
 </testsuite>

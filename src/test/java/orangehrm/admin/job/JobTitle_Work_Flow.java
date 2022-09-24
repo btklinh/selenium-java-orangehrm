@@ -2,10 +2,6 @@ package orangehrm.admin.job;
 
 import static org.testng.Assert.assertEquals;
 
-import java.awt.AWTException;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,12 +9,12 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.AbstractTest;
+import commons.GlobalConstants;
 import commons.PageGeneratorManager;
 import pageObjects.JobTitlesPageObject;
 import pageObjects.LoginPageObject;
 import pageObjects.PimPageObject;
 import pageObjects.UserPageObject;
-import pageUIs.JobTitlesPageUI;
 import utilities.DataHelper;
 
 public class JobTitle_Work_Flow extends AbstractTest {
@@ -29,15 +25,13 @@ public class JobTitle_Work_Flow extends AbstractTest {
 	JobTitlesPageObject jobTitlesPage;
 	UserPageObject userPage;
 	DataHelper data = DataHelper.getData();
-	String jobTitle, jobDescription, jobNote, directory;
+	String jobTitle, jobDescription, jobNote, directory, fileName, confirmMessage;
 
 	WebDriver driver;
 
 	@Parameters("browser")
 	@BeforeClass
 	public void Precondition_Login(String browserName) {
-		directory="D:\\Doc2.docx";
-
 		log.info("Pre-condition - Step 01: Open orangehrm site");
 		driver = getBrowserDriver(browserName);
 		username = "btklinh";
@@ -56,7 +50,7 @@ public class JobTitle_Work_Flow extends AbstractTest {
 		log.info("Pre-condition - Step 04: Click To Admin on the left menu");
 		pimPage.clickToLeftMenuByName(driver, "Admin");
 		userPage = PageGeneratorManager.getUserPage(driver);
-		
+
 		log.info("Pre-condition - Step 05: Access Job Titles page");
 		userPage.clickToParentMenuByName(driver, "Job");
 		userPage.clickToDropdownMenuByName(driver, "Job Titles");
@@ -64,8 +58,9 @@ public class JobTitle_Work_Flow extends AbstractTest {
 	}
 
 	@Test
-	public void TC_01_Verify_Add_Job_Title() throws AWTException {
-		
+	public void TC_01_Verify_Add_Job_Title() {
+		fileName = "Doc2.docx";
+		directory = GlobalConstants.ROOT_FOLDER + "\\upload-files\\" + fileName;
 		jobTitle = data.getJobTitle();
 		jobDescription = "This is a test description";
 		jobNote = "This is a test note";
@@ -75,7 +70,7 @@ public class JobTitle_Work_Flow extends AbstractTest {
 
 		log.info("TC01 - Step 03: Enter Job title");
 		jobTitlesPage.inputToJobTitleTexbox(jobTitle);
-		
+
 		log.info("TC01 - Step 04: Click Browse on Job Specification");
 		jobTitlesPage.clickToBrowseButton();
 
@@ -90,36 +85,115 @@ public class JobTitle_Work_Flow extends AbstractTest {
 
 		log.info("TC01 - Step 08: Click Save button");
 		jobTitlesPage.clickToSaveButton();
-		
+
 		log.info("TC01 - Step 09: Verify Successful popup is displayed");
-		assertEquals(jobTitlesPage.getSuccessMessage(),"Successfully Saved");
-	
+		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Saved");
+
 		log.info("TC01 - Step 09: Verify the Job Title is added into list");
 		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), true);
 	}
-	
+
 	@Test
-	public void TC_02_Verify_Edit_Job_Title() throws InterruptedException {
+	public void TC_02_Verify_Edit_Job_Title() {
 		log.info("TC02 - Step 01: Click to Edit icon");
 		jobTitlesPage.clickToEditIconOfJobTitle(jobTitle);
-		
+
 		log.info("TC02 - Step 02: Edit information");
-		jobTitle = data.getJobTitle();		
+		jobTitle = data.getJobTitle();
 		jobTitlesPage.inputToJobTitleTexbox(jobTitle);
 		jobTitlesPage.inputToJobDescriptionTextbox(data.getAddress());
 		jobTitlesPage.inputToJobNoteTextbox(data.getAddress());
-		
+
 		log.info("TC02 - Step 03: Click Save button");
 		jobTitlesPage.clickToSaveButton();
-		
+
 		log.info("TC02 - Step 04: Verify Successful popup is displayed");
-		assertEquals(jobTitlesPage.getSuccessMessage(),"Successfully Updated");
-	
+		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Updated");
+
 		log.info("TC02 - Step 05: Verify the Job Title is added into list");
 		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), true);
 	}
-	
-	
+
+	@Test
+	public void TC_03_Verify_Edit_Job_Specification_File() {
+		fileName = "Doc3.docx";
+		directory = GlobalConstants.ROOT_FOLDER + "\\upload-files\\" + fileName;
+		log.info("TC03 - Step 01: Click to Edit icon");
+		jobTitlesPage.clickToEditIconOfJobTitle(jobTitle);
+
+		log.info("TC03 - Step 02: Select Replace Current");
+		jobTitlesPage.selectReplaceCurrentRadio();
+
+		log.info("TC03 - Step 03: Click to Browse icon");
+		jobTitlesPage.clickToBrowseButton();
+
+		log.info("TC03 - Step 04: Select a valid file");
+		jobTitlesPage.selectUploadFile(directory);
+
+		log.info("TC03 - Step 05: Click Save button");
+		jobTitlesPage.clickToSaveButton();
+
+		log.info("TC03 - Step 06: Verify Successful popup is displayed");
+		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Updated");
+
+		log.info("TC03 - Step 07: Assert that file is upload");
+		jobTitlesPage.clickToEditIconOfJobTitle(jobTitle);
+		assertEquals(jobTitlesPage.getUploadedFileName(), fileName);
+	}
+
+	@Test
+	public void TC_04_Verify_Delete_Job_Specification_File() {
+		jobTitlesPage.clickToCancelButton();
+		
+		log.info("TC04 - Step 01: Click to Edit icon");
+		jobTitlesPage.clickToEditIconOfJobTitle(jobTitle);
+
+		log.info("TC04 - Step 02: Select Delete Current radio button");
+		jobTitlesPage.selectDeleteCurrentRadio();
+
+		log.info("TC04 - Step 03: Click Save button");
+		jobTitlesPage.clickToSaveButton();
+
+		log.info("TC04 - Step 06: Verify Successful popup is displayed");
+		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Updated");
+
+		log.info("TC04 - Step 07: Verify that file is deleted");
+		jobTitlesPage.clickToEditIconOfJobTitle(jobTitle);
+		assertEquals(jobTitlesPage.isDeleteRadioButtonUndisplayed(), true);
+	}
+
+	@Test
+	public void TC_05_Verify_Delete_Operation() {
+		jobTitlesPage.clickToCancelButton();
+		confirmMessage = "The selected record will be permanently deleted. Are you sure you want to continue?";
+
+		log.info("TC05 - Step 01: Click To Delete button");
+		jobTitlesPage.clickToDeleteButtonOfJobTitle(jobTitle);
+
+		log.info("TC05 - Step 02: Verify confirmation popup is displayed");
+		assertEquals(jobTitlesPage.getConfirmationPopupMessage(), confirmMessage);
+
+		log.info("TC05 - Step 03: Click to No, Cancel");
+		jobTitlesPage.clickToNoButton();
+
+		log.info("TC05 - Step 04: Verify job title is not deleted");
+		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), true);
+
+		log.info("TC05 - Step 05: Click to Delete button");
+		jobTitlesPage.clickToDeleteButtonOfJobTitle(jobTitle);
+
+		log.info("TC05 - Step 06: Click to Yes, Delete button");
+		jobTitlesPage.clickToYesButton();
+
+		log.info("TC05 - Step 07: Verify Successful popup is displayed");
+		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Deleted");
+
+		log.info("TC05 - Step 08: Verify job title is deleted");
+		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), false);
+
+	}
+
+	@AfterClass
 	public void afterClass() {
 		driver.quit();
 	}

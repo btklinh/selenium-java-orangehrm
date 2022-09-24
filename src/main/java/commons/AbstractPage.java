@@ -2,7 +2,9 @@ package commons;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.logging.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -20,6 +22,8 @@ public abstract class AbstractPage {
 	private long SHORT_TIMEOUT = 5;
 	private Actions action;
 	private JavascriptExecutor jsExecutor;
+	private List<WebElement> elements;
+	private Log log;
 
 	protected WebElement findElement(WebDriver driver, String locator) {
 		return driver.findElement(By.xpath(locator));
@@ -89,9 +93,9 @@ public abstract class AbstractPage {
 		action = new Actions(driver);
 		action.sendKeys(findElement(driver, locator), key).perform();
 	}
-	
+
 	protected void clearTextInTextbox(WebDriver driver, String locator) {
-		findElement(driver,locator).sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+		findElement(driver, locator).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 	}
 
 	protected void sendKeyboardToElement(WebDriver driver, String locator, Keys key, String... values) {
@@ -131,6 +135,7 @@ public abstract class AbstractPage {
 			e.printStackTrace();
 		}
 	}
+
 	public void scrollToBottomPage(WebDriver driver) {
 		jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("window.scrollBy(0,document.body.scrollHeight)");
@@ -173,5 +178,38 @@ public abstract class AbstractPage {
 	public void sendkeyToElementByJS(WebDriver driver, String locator, String value) {
 		jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("arguments[0].setAttribute('value', '" + value + "')", findElement(driver, locator));
+	}
+
+	public void clickToElementByJS(WebDriver driver, String locator) {
+		jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("arguments[0].click();", findElement(driver, locator));
+	}
+
+	public String getElementAttribute(WebDriver driver, String locator, String attributeName) {
+		return findElement(driver, locator).getAttribute(attributeName);
+	}
+
+	public boolean isControlDisplayed(WebDriver driver, String locator) {
+		return findElement(driver, locator).isDisplayed();
+	}
+
+	public boolean isControlUndisplayed(WebDriver driver, String locator) {
+		overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
+		elements = findElements(driver, locator);
+		overrideGlobalTimeout(driver, GlobalConstants.LONG_TIMEOUT);
+		if (elements.size() == 0) {
+			// System.out.println("Element not in DOM");
+			return true;
+		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+			// System.out.println("Element in DOM but not visible / displayed");
+			return true;
+		} else {
+			// System.out.println("Element in DOM and visible");
+			return false;
+		}
+
+	}
+	public void overrideGlobalTimeout(WebDriver driver, long timeout) {
+		driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
 	}
 }

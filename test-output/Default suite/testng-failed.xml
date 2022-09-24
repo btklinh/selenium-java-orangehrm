@@ -6,8 +6,8 @@
       <class name="orangehrm.admin.job.JobTitle_Work_Flow">
         <methods>
           <include name="Precondition_Login"/>
-          <include name="TC_02_Verify_Edit_Job_Title"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="TC_02_Verify_Edit_Job_Specification_File"/>
         </methods>
       </class> <!-- orangehrm.admin.job.JobTitle_Work_Flow -->
     </classes>
