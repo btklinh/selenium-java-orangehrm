@@ -23,6 +23,7 @@ public class JobTitlesPageObject extends AbstractPage {
 	public void clickToAddButton() {
 		waitToElementClickable(driver, JobTitlesPageUI.ADD_BUTTON);
 		clickToElement(driver, JobTitlesPageUI.ADD_BUTTON);
+		sleepInSecond(1);
 	}
 
 	public void inputToJobTitleTexbox(String jobTitle){		
@@ -48,7 +49,6 @@ public class JobTitlesPageObject extends AbstractPage {
 	public void clickToBrowseButton() {
 		waitToElementClickable(driver, JobTitlesPageUI.BROWSE_BUTTON);
 		clickToElement(driver, JobTitlesPageUI.BROWSE_BUTTON);
-		sleepInSecond(1);
 	}
 
 	public void selectUploadFile(String directory) {
@@ -105,7 +105,7 @@ public class JobTitlesPageObject extends AbstractPage {
 	public void clickToEditIconOfJobTitle(String jobTitle) {
 		waitToElementClickable(driver, JobTitlesPageUI.DYNAMIC_EDIT_BUTTON_BY_TITLE, jobTitle);
 		clickToElement(driver, JobTitlesPageUI.DYNAMIC_EDIT_BUTTON_BY_TITLE, jobTitle);
-		sleepInSecond(2);
+		sleepInSecond(1);
 	}
 
 	public void selectReplaceCurrentRadio() {
@@ -128,7 +128,7 @@ public class JobTitlesPageObject extends AbstractPage {
 	public void clickToDeleteButtonOfJobTitle(String jobTitle) {
 		waitToElementClickable(driver, JobTitlesPageUI.DYNAMIC_DELETE_BUTTON_BY_TITLE, jobTitle);
 		clickToElement(driver, JobTitlesPageUI.DYNAMIC_DELETE_BUTTON_BY_TITLE, jobTitle);
-		sleepInSecond(2);
+//		sleepInSecond(2);
 	}
 
 	public String getConfirmationPopupMessage() {
@@ -139,13 +139,13 @@ public class JobTitlesPageObject extends AbstractPage {
 	public void clickToNoButton() {
 		waitToElementClickable(driver, JobTitlesPageUI.NO_BUTTON);
 		clickToElement(driver, JobTitlesPageUI.NO_BUTTON);
-		sleepInSecond(2);
+//		sleepInSecond(2);
 	}
 
 	public void clickToYesButton() {
 		waitToElementClickable(driver, JobTitlesPageUI.YES_BUTTON);
 		clickToElement(driver, JobTitlesPageUI.YES_BUTTON);
-		sleepInSecond(2);
+//		sleepInSecond(2);
 	}
 
 	public void clickToCancelButton() {

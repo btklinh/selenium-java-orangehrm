@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import pageObjects.EmploymentStatusPageObject;
 import pageObjects.JobCategoriesPageObject;
 import pageObjects.JobTitlesPageObject;
+import pageObjects.LocationsPageObject;
 import pageObjects.LoginPageObject;
 import pageObjects.PayGradesPageObject;
 import pageObjects.PimPageObject;
@@ -44,5 +45,8 @@ public class PageGeneratorManager {
 	
 	public static WorkShiftsPageObject getWorkShiftsPage(WebDriver driver) {
 		return new WorkShiftsPageObject(driver);
+	}
+	public static LocationsPageObject getLocationsPage(WebDriver driver) {
+		return new LocationsPageObject(driver);
 	}
 }

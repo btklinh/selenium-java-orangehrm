@@ -9,13 +9,13 @@
   <test thread-count="5" name="Run on Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="orangehrm.admin.job.JobTitle_Work_Flow">
+      <class name="orangehrm.admin.organization.Location_Operation">
         <methods>
-          <include name="TC_04_Verify_Delete_Job_Specification_File"/>
-          <include name="Precondition_Login"/>
+          <include name="TC_04_Verify_Search_Existed_Location_By_Name"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="Precondition_Login"/>
         </methods>
-      </class> <!-- orangehrm.admin.job.JobTitle_Work_Flow -->
+      </class> <!-- orangehrm.admin.organization.Location_Operation -->
     </classes>
   </test> <!-- Run on Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->
