@@ -4,6 +4,8 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 
@@ -26,7 +28,6 @@ public class JobTitlesPageObject extends AbstractPage {
 		waitToElementVisible(driver, JobTitlesPageUI.JOB_TITLE_TEXTBOX);
 		sendKeysToElement(driver, JobTitlesPageUI.JOB_TITLE_TEXTBOX, jobTitle);
 	}
-
 
 	public void inputToJobDescriptionTextbox(String jobDescription) {
 		waitToElementVisible(driver, JobTitlesPageUI.JOB_DESCRIPTION_TEXTBOX);
@@ -69,6 +70,28 @@ public class JobTitlesPageObject extends AbstractPage {
 		} catch (Exception ex) {
 			System.out.println(ex.toString());
 		}
+	}
+
+	public List<String> getJobTitlesList() {
+		waitToElementVisible(driver, JobTitlesPageUI.JOB_TITLES_LIST);
+		return getElementsText(driver, JobTitlesPageUI.JOB_TITLES_LIST);
+	}
+
+	public boolean checkJobTitleInTheList(String jobTitle) {
+		boolean result = false;
+		waitToElementVisible(driver, JobTitlesPageUI.JOB_TITLES_LIST);
+		List<String> jobTitlesList = getElementsText(driver, JobTitlesPageUI.JOB_TITLES_LIST);
+		for (String job : jobTitlesList) {
+			System.out.println(job);
+			if (job == jobTitle) {
+				result = true;
+				break;
+			} else {
+				result = false;
+				continue;
+			}
+		}
+		return result;
 	}
 
 }

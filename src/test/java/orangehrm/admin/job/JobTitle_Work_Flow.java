@@ -1,10 +1,14 @@
 package orangehrm.admin.job;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
@@ -66,27 +70,32 @@ public class JobTitle_Work_Flow extends AbstractTest {
 		userPage.clickToParentMenuByName(driver, "Job");
 		userPage.clickToDropdownMenuByName(driver, "Job Titles");
 		jobTitlesPage = PageGeneratorManager.getJobTitlesPage(driver);
-
-		log.info("TC01 - Step 02: Click Add button");
-		jobTitlesPage.clickToAddButton();
-
-		log.info("TC01 - Step 03: Enter Job title");
-		jobTitlesPage.inputToJobTitleTexbox(jobTitle);
-		
-		log.info("TC01 - Step 04: Click Browse on Job Specification");
-		jobTitlesPage.clickToBrowseButton();
-
-		log.info("TC01 - Step 05: Select file that is correct format");
-		jobTitlesPage.selectUploadFile(directory);
-
-		log.info("TC01 - Step 06: Enter Job Description");
-		jobTitlesPage.inputToJobDescriptionTextbox(jobDescription);
-
-		log.info("TC01 - Step 07: Enter Job Note");
-		jobTitlesPage.inputToJobNoteTextbox(jobNote);
-
-		log.info("TC01 - Step 08: Click Save button");
-		jobTitlesPage.clickToSaveButton();
+//
+//		log.info("TC01 - Step 02: Click Add button");
+//		jobTitlesPage.clickToAddButton();
+//
+//		log.info("TC01 - Step 03: Enter Job title");
+//		jobTitlesPage.inputToJobTitleTexbox(jobTitle);
+//		
+//		log.info("TC01 - Step 04: Click Browse on Job Specification");
+//		jobTitlesPage.clickToBrowseButton();
+//
+//		log.info("TC01 - Step 05: Select file that is correct format");
+//		jobTitlesPage.selectUploadFile(directory);
+//
+//		log.info("TC01 - Step 06: Enter Job Description");
+//		jobTitlesPage.inputToJobDescriptionTextbox(jobDescription);
+//
+//		log.info("TC01 - Step 07: Enter Job Note");
+//		jobTitlesPage.inputToJobNoteTextbox(jobNote);
+//
+//		log.info("TC01 - Step 08: Click Save button");
+//		jobTitlesPage.clickToSaveButton();
+//		
+		log.info("TC01 - Step 09: Verify the Job Title is added into list");
+		System.out.println(jobTitlesPage.checkJobTitleInTheList("Hospitality Designer"));
+		assertEquals(jobTitlesPage.checkJobTitleInTheList("Hospitality Designer"), true);
+	
 	}
 
 }

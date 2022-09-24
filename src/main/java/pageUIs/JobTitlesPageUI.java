@@ -9,6 +9,7 @@ public class JobTitlesPageUI {
 	public static final String JOB_DESCRIPTION_TEXTBOX = "//textarea[contains(@placeholder,'description')]";
 	public static final String JOB_NOTE_TEXTBOX = "//textarea[contains(@placeholder,'note')]";
 	public static final String SAVE_BUTTON = "//button[@type='submit']";
+	public static final String JOB_TITLES_LIST= "//div[@class='oxd-table-card']/descendant::div[6]";
 
 
 }

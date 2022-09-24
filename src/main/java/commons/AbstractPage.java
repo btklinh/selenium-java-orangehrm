@@ -1,5 +1,8 @@
 package commons;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -22,6 +25,10 @@ public abstract class AbstractPage {
 		return driver.findElement(By.xpath(locator));
 	}
 
+	protected List<WebElement> findElements(WebDriver driver, String locator) {
+		return driver.findElements(By.xpath(locator));
+	}
+
 	protected void sendKeysToElement(WebDriver driver, String locator, String value) {
 		findElement(driver, locator).clear();
 		findElement(driver, locator).sendKeys(value);
@@ -36,6 +43,15 @@ public abstract class AbstractPage {
 		return findElement(driver, locator).getText();
 	}
 
+	protected List<String> getElementsText(WebDriver driver, String locator) {
+		List<WebElement> elements = findElements(driver, locator);
+		List<String> elementsText = new ArrayList<String>();
+		for (WebElement e : elements) {
+			elementsText.add(e.getText());
+		}
+		return elementsText;
+	}
+
 	protected String getElementText(WebDriver driver, String locator, String... values) {
 		return findElement(driver, castToRestParameter(locator, values)).getText();
 	}
@@ -47,8 +63,7 @@ public abstract class AbstractPage {
 
 	protected void waitToElementVisible(WebDriver driver, String locator, String... values) {
 		explicitWait = new WebDriverWait(driver, SHORT_TIMEOUT);
-		explicitWait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(castToRestParameter(locator, values))));
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(castToRestParameter(locator, values))));
 	}
 
 	protected void waitToElementClickable(WebDriver driver, String locator) {
@@ -161,12 +176,12 @@ public abstract class AbstractPage {
 		waitToElementVisible(driver, AbstractPageUI.PAGE_TITLE_CONTAIN_SEARCH);
 		return getElementText(driver, AbstractPageUI.PAGE_TITLE_CONTAIN_SEARCH);
 	}
-	
+
 	public String getPageTitleContainConfigure(WebDriver driver) {
 		waitToElementVisible(driver, AbstractPageUI.PAGE_TITLE_CONTAIN_CONFIGURE);
 		return getElementText(driver, AbstractPageUI.PAGE_TITLE_CONTAIN_CONFIGURE);
 	}
-	
+
 	public void sendkeyToElementByJS(WebDriver driver, String locator, String value) {
 		jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("arguments[0].setAttribute('value', '" + value + "')", findElement(driver, locator));
