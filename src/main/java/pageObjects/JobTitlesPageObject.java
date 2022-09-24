@@ -14,6 +14,7 @@ import pageUIs.JobTitlesPageUI;
 
 public class JobTitlesPageObject extends AbstractPage {
 	WebDriver driver;
+	boolean result;
 
 	public JobTitlesPageObject(WebDriver driver) {
 		this.driver = driver;
@@ -24,7 +25,7 @@ public class JobTitlesPageObject extends AbstractPage {
 		clickToElement(driver, JobTitlesPageUI.ADD_BUTTON);
 	}
 
-	public void inputToJobTitleTexbox(String jobTitle) {
+	public void inputToJobTitleTexbox(String jobTitle){		
 		waitToElementVisible(driver, JobTitlesPageUI.JOB_TITLE_TEXTBOX);
 		sendKeysToElement(driver, JobTitlesPageUI.JOB_TITLE_TEXTBOX, jobTitle);
 	}
@@ -78,12 +79,11 @@ public class JobTitlesPageObject extends AbstractPage {
 	}
 
 	public boolean checkJobTitleInTheList(String jobTitle) {
-		boolean result = false;
 		waitToElementVisible(driver, JobTitlesPageUI.JOB_TITLES_LIST);
-		List<String> jobTitlesList = getElementsText(driver, JobTitlesPageUI.JOB_TITLES_LIST);
+		List<String> jobTitlesList = new ArrayList<>();
+		jobTitlesList = getElementsText(driver, JobTitlesPageUI.JOB_TITLES_LIST);
 		for (String job : jobTitlesList) {
-			System.out.println(job);
-			if (job == jobTitle) {
+			if (job.equals(jobTitle)) {
 				result = true;
 				break;
 			} else {
@@ -92,6 +92,17 @@ public class JobTitlesPageObject extends AbstractPage {
 			}
 		}
 		return result;
+	}
+
+	public String getSuccessMessage() {
+		waitToElementVisible(driver, JobTitlesPageUI.SUCCESS_MESSAGE_POPUP);
+		return getElementText(driver, JobTitlesPageUI.SUCCESS_MESSAGE_POPUP);
+	}
+
+	public void clickToEditIconOfJobTitle(String jobTitle) {
+		waitToElementClickable(driver, JobTitlesPageUI.DYNAMIC_EDIT_BUTTON_BY_TITLE, jobTitle);
+		clickToElement(driver, JobTitlesPageUI.DYNAMIC_EDIT_BUTTON_BY_TITLE, jobTitle);
+		sleepInSecond(3);
 	}
 
 }

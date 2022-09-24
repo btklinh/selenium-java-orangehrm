@@ -30,12 +30,12 @@ public abstract class AbstractPage {
 	}
 
 	protected void sendKeysToElement(WebDriver driver, String locator, String value) {
-		findElement(driver, locator).clear();
+		clearTextInTextbox(driver, locator);
 		findElement(driver, locator).sendKeys(value);
 	}
 
 	protected void sendKeysToElement(WebDriver driver, String locator, String value, String... values) {
-		findElement(driver, castToRestParameter(locator, values)).clear();
+		clearTextInTextbox(driver, castToRestParameter(locator, values));
 		findElement(driver, castToRestParameter(locator, values)).sendKeys(value);
 	}
 
@@ -47,7 +47,7 @@ public abstract class AbstractPage {
 		List<WebElement> elements = findElements(driver, locator);
 		List<String> elementsText = new ArrayList<String>();
 		for (WebElement e : elements) {
-			elementsText.add(e.getText());
+			elementsText.add(e.getText().trim());
 		}
 		return elementsText;
 	}
@@ -89,6 +89,10 @@ public abstract class AbstractPage {
 		action = new Actions(driver);
 		action.sendKeys(findElement(driver, locator), key).perform();
 	}
+	
+	protected void clearTextInTextbox(WebDriver driver, String locator) {
+		findElement(driver,locator).sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+	}
 
 	protected void sendKeyboardToElement(WebDriver driver, String locator, Keys key, String... values) {
 		action = new Actions(driver);
@@ -119,30 +123,14 @@ public abstract class AbstractPage {
 		select.selectByIndex(index);
 	}
 
-//	public AbstractPage openMenuPageByName(WebDriver driver, String pageName) {
-//		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_MENU_PAGE_LINK, pageName);
-//		clickToElement(driver, AbstractPageUI.DYNAMIC_MENU_PAGE_LINK, pageName);
-//		if (pageName.equals("New Customer")) {
-//			return PageGeneratorManager.getNewCustomerPage(driver);
-//		} else if (pageName.equals("Edit Customer")) {
-//			return PageGeneratorManager.getEditCustomerPage(driver);
-//		} else if (pageName.equals("New Account")) {
-//			return PageGeneratorManager.getNewAccountPage(driver);
-//		} else {
-//			throw new RuntimeException();
-//		}
-//	}
+	public void sleepInSecond(long timeout) {
 
-//	public void openPageContainsSearchFunc(WebDriver driver, String pageName) {
-//		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_PAGE_CONTAIN_SEARCH, pageName);
-//		clickToElement(driver, AbstractPageUI.DYNAMIC_PAGE_CONTAIN_SEARCH, pageName);
-//	}
-//	
-//	public void openPageContainsConfigure(WebDriver driver, String pageName) {
-//		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_PAGE_CONTAIN_CONFIGURE, pageName);
-//		clickToElement(driver, AbstractPageUI.DYNAMIC_PAGE_CONTAIN_CONFIGURE, pageName);
-//	}
-
+		try {
+			Thread.sleep(timeout * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 	public void scrollToBottomPage(WebDriver driver) {
 		jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("window.scrollBy(0,document.body.scrollHeight)");

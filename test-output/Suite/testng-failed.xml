@@ -14,6 +14,7 @@
           <include name="TC_01_Verify_Add_Job_Title"/>
           <include name="Precondition_Login"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="afterClass"/>
         </methods>
       </class> <!-- orangehrm.admin.job.JobTitle_Work_Flow -->
     </classes>
