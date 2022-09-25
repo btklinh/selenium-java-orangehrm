@@ -1,11 +1,30 @@
 package test;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-import pageUIs.LocationsPageUI;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
-public class test {
+import commons.AbstractTest;
+import commons.PageGeneratorManager;
+import pageObjects.JobTitlesPageObject;
+import pageObjects.LoginPageObject;
+import pageObjects.PayGradesPageObject;
+import pageObjects.PimPageObject;
+import pageObjects.UserPageObject;
+import pageUIs.PayGradesPageUI;
+
+public class test extends AbstractTest {
+	String username, password;
+	PimPageObject pimPage;
+	LoginPageObject loginPage;
+	PayGradesPageObject payGradesPage;
+	JobTitlesPageObject jobTitlesPage;
+	UserPageObject userPage;
+WebDriver driver;
 	
 	public static String formatText(String s) {
 		return s.toLowerCase();
@@ -43,11 +62,17 @@ public class test {
 		String recordNumber = label.replace("Records Found", "").replace("(", "").replace(")", "").trim();
 		return Integer.parseInt(recordNumber);
 	}
+	
 
-	public static void main(String[] args) {
-		String myStr = "Hong Kong 1";
-		System.out.println(getRecordsNumber());
-		//System.out.println(myStr.contains("Hong")); 
+	
+	public static String generatePayGradeName() {
+		long ID = new Date().getTime();
+		String prefix = "Grade ";
+		String payGradeName = prefix + String.valueOf(ID);
+		return payGradeName;
 	}
 
+	public static void main(String args[]) {
+		System.out.println(generatePayGradeName());
+	}
 }

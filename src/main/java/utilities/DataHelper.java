@@ -77,5 +77,13 @@ public class DataHelper {
 	public String getDeposit() {
 		return faker.number().digits(7);
 	}
-	
+	public int getMinimumValue() {
+		return faker.number().numberBetween(10000, 80000);
+	}
+	public int getMaximumValue() {
+		return faker.number().numberBetween(90000, 200000);
+	}
+	public int getRandomIndex(int maximum) {
+		return faker.number().numberBetween(0, maximum);
+	}
 }

@@ -2,6 +2,7 @@ package commons;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
@@ -24,6 +25,10 @@ public abstract class AbstractPage {
 	private JavascriptExecutor jsExecutor;
 	private List<WebElement> elements;
 	private Log log;
+	
+	public String getCurrentPageUrl(WebDriver driver) {
+		return driver.getCurrentUrl();
+	}
 
 	protected WebElement findElement(WebDriver driver, String locator) {
 		return driver.findElement(By.xpath(locator));
@@ -49,6 +54,15 @@ public abstract class AbstractPage {
 
 	protected List<String> getElementsText(WebDriver driver, String locator) {
 		List<WebElement> elements = findElements(driver, locator);
+		List<String> elementsText = new ArrayList<String>();
+		for (WebElement e : elements) {
+			elementsText.add(e.getText().trim());
+		}
+		return elementsText;
+	}
+	
+	protected List<String> getElementsText(WebDriver driver, String locator, String...values) {
+		List<WebElement> elements = findElements(driver, castToRestParameter(locator, values));
 		List<String> elementsText = new ArrayList<String>();
 		for (WebElement e : elements) {
 			elementsText.add(e.getText().trim());
@@ -211,5 +225,22 @@ public abstract class AbstractPage {
 	}
 	public void overrideGlobalTimeout(WebDriver driver, long timeout) {
 		driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
+	}
+	
+	public By byXpath(String locator) {
+		return By.xpath(locator);
+	}
+	
+	public void waitToElementInvisible(WebDriver driver, String locator) {
+		try {
+			// co gia tri khi co trong dom
+			explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+
+			overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
+			explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(byXpath(locator)));
+			overrideGlobalTimeout(driver, GlobalConstants.LONG_TIMEOUT);
+		} catch (Exception e) {
+			log.info("Waiting for element invisible with message: " + e.getMessage());
+		}
 	}
 }

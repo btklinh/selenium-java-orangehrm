@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-24T20:02:12Z" name="Suite" finished-at="2022-09-24T20:02:27Z" duration-ms="15487">
+  <suite started-at="2022-09-25T18:14:08Z" name="Suite" finished-at="2022-09-25T18:14:49Z" duration-ms="41146">
     <groups>
     </groups>
-    <test started-at="2022-09-24T20:02:12Z" name="Run on Chrome" finished-at="2022-09-24T20:02:27Z" duration-ms="15487">
-      <class name="orangehrm.admin.organization.Location_Operation">
-        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:orangehrm.admin.organization.Location_Operation@2216effc]" started-at="2022-09-24T20:02:12Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2022-09-24T20:02:12Z" duration-ms="41" status="PASS">
+    <test started-at="2022-09-25T18:14:08Z" name="Run on Chrome" finished-at="2022-09-25T18:14:49Z" duration-ms="41146">
+      <class name="orangehrm.admin.job.PayGrades_Operation">
+        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:orangehrm.admin.job.PayGrades_Operation@107f4980]" started-at="2022-09-25T18:14:08Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2022-09-25T18:14:08Z" duration-ms="45" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAllFilesInReportNGScreenshot -->
-        <test-method is-config="true" signature="Precondition_Login(java.lang.String)[pri:0, instance:orangehrm.admin.organization.Location_Operation@2216effc]" started-at="2022-09-24T20:02:12Z" name="Precondition_Login" finished-at="2022-09-24T20:02:25Z" duration-ms="13728" status="PASS">
+        <test-method is-config="true" signature="Precondition_Access_Pay_Grades_List(java.lang.String)[pri:0, instance:orangehrm.admin.job.PayGrades_Operation@107f4980]" started-at="2022-09-25T18:14:08Z" name="Precondition_Access_Pay_Grades_List" finished-at="2022-09-25T18:14:17Z" duration-ms="9024" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,12 +21,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Precondition_Login -->
-        <test-method signature="TC_04_Verify_Search_Existed_Location_By_Name()[pri:0, instance:orangehrm.admin.organization.Location_Operation@2216effc]" started-at="2022-09-24T20:02:25Z" name="TC_04_Verify_Search_Existed_Location_By_Name" finished-at="2022-09-24T20:02:27Z" duration-ms="1619" status="PASS">
+        </test-method> <!-- Precondition_Access_Pay_Grades_List -->
+        <test-method signature="TC_02_Verify_Add_Currency()[pri:0, instance:orangehrm.admin.job.PayGrades_Operation@107f4980]" started-at="2022-09-25T18:14:17Z" name="TC_02_Verify_Add_Currency" finished-at="2022-09-25T18:14:49Z" duration-ms="31974" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_04_Verify_Search_Existed_Location_By_Name -->
-      </class> <!-- orangehrm.admin.organization.Location_Operation -->
+        </test-method> <!-- TC_02_Verify_Add_Currency -->
+      </class> <!-- orangehrm.admin.job.PayGrades_Operation -->
     </test> <!-- Run on Chrome -->
   </suite> <!-- Suite -->
 </testng-results>
