@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Run on Chrome"
-           tests="3"
+           tests="4"
            failures="0"
            errors="0"
            skipped="0"
-           time="48.601">
+           time="68,893">
   <properties />
   
   
-            <testcase name="TC_03_Verify_Edit_Currency" time="15.013" classname="orangehrm.admin.job.PayGrades_Operation" />
-                <testcase name="TC_01_Verify_Add_Pay_Grade" time="5.192" classname="orangehrm.admin.job.PayGrades_Operation" />
-                <testcase name="TC_02_Verify_Add_Currency" time="28.396" classname="orangehrm.admin.job.PayGrades_Operation" />
+            <testcase name="TC_01_Verify_Add_Pay_Grade" time="5,875" classname="orangehrm.admin.job.PayGrades_Operation" />
+                <testcase name="TC_03_Verify_Edit_Currency" time="14,773" classname="orangehrm.admin.job.PayGrades_Operation" />
+                <testcase name="TC_04_Verify_Delete_Currency" time="20,025" classname="orangehrm.admin.job.PayGrades_Operation" />
+                <testcase name="TC_02_Verify_Add_Currency" time="28,220" classname="orangehrm.admin.job.PayGrades_Operation" />
       
 </testsuite>

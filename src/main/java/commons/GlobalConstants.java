@@ -7,5 +7,7 @@ public class GlobalConstants {
 	public static final long LONG_TIMEOUT = 10;
 	public static final long SHORT_TIMEOUT = 5;
 	public static final String ROOT_FOLDER = System.getProperty("user.dir");
+	public static final String DELETE_CONFIRM_MESSAGE = "The selected record will be permanently deleted. Are you sure you want to continue?";
+	
 
 }

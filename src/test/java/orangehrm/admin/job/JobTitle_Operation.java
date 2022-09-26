@@ -17,7 +17,7 @@ import pageObjects.PimPageObject;
 import pageObjects.UserPageObject;
 import utilities.DataHelper;
 
-public class JobTitle_Work_Flow extends AbstractTest {
+public class JobTitle_Operation extends AbstractTest {
 
 	String username, password;
 	PimPageObject pimPage;

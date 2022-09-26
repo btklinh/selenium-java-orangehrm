@@ -212,13 +212,10 @@ public abstract class AbstractPage {
 		elements = findElements(driver, locator);
 		overrideGlobalTimeout(driver, GlobalConstants.LONG_TIMEOUT);
 		if (elements.size() == 0) {
-			// System.out.println("Element not in DOM");
 			return true;
 		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
-			// System.out.println("Element in DOM but not visible / displayed");
 			return true;
 		} else {
-			// System.out.println("Element in DOM and visible");
 			return false;
 		}
 

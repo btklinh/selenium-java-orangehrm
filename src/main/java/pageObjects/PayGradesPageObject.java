@@ -178,7 +178,49 @@ public class PayGradesPageObject extends AbstractPage {
 	}
 
 	public void clickToSaveEditCurrencyButton() {
-		waitToElementVisible(driver, PayGradesPageUI.CURRENCY_SAVE_EDIT_BUTTON);
+		waitToElementClickable(driver, PayGradesPageUI.CURRENCY_SAVE_EDIT_BUTTON);
 		clickToElement(driver, PayGradesPageUI.CURRENCY_SAVE_EDIT_BUTTON);
+	}
+
+	public void clickToDeleteCurrencyButton(String substring) {
+		waitToElementVisible(driver, PayGradesPageUI.CURRENCY_DELETE_BUTTON, substring);
+		clickToElement(driver, PayGradesPageUI.CURRENCY_DELETE_BUTTON, substring);
+		
+	}
+
+	public String getConfirmationPopupMessage() {
+		waitToElementVisible(driver, PayGradesPageUI.DELETE_CONFIRM_MESSAGE);
+		return getElementText(driver, PayGradesPageUI.DELETE_CONFIRM_MESSAGE);
+	}
+
+	public void clickToNoButton() {
+		waitToElementClickable(driver, PayGradesPageUI.NO_BUTTON);
+		clickToElement(driver, PayGradesPageUI.NO_BUTTON);
+		
+	}
+
+	public void clickToYesButton() {
+		waitToElementClickable(driver, PayGradesPageUI.YES_BUTTON);
+		clickToElement(driver, PayGradesPageUI.YES_BUTTON);
+	}
+
+	public boolean checkCurrencyDeleted(String currencyValue) {
+		waitToElementVisible(driver, PayGradesPageUI.CURRENCY_TABLE_HEADER);
+		List<String> currencyList = new ArrayList<>();
+		currencyList = getElementsText(driver, PayGradesPageUI.CURRENCY_ROW_LABEL);
+		if (currencyList.size()==0)
+			result = false;
+		else {
+			for (String currency : currencyList) {
+				if (currency.equals(currencyValue)) {
+					result = false;
+					continue;
+				} else {
+					result = true;
+					break;
+				}
+			}
+		}
+		return result;
 	}
 }

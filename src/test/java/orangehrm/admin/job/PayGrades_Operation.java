@@ -1,6 +1,7 @@
 package orangehrm.admin.job;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.util.List;
@@ -29,7 +30,7 @@ public class PayGrades_Operation extends AbstractTest {
 	UserPageObject userPage;
 	DataHelper data = DataHelper.getData();
 	String payGradeName, minimumSalary, maximumSalary, currencyValue;
-	String url;
+	String url, confirmMessage;
 	List<String> currencyList;
 
 	WebDriver driver;
@@ -41,6 +42,7 @@ public class PayGrades_Operation extends AbstractTest {
 		driver = getBrowserDriver(browserName);
 		username = "btklinh";
 		password = "Klinh1993@!";
+		confirmMessage = "The selected record will be permanently deleted. Are you sure you want to continue?";
 		loginPage = new LoginPageObject(driver);
 
 		log.info("Pre-condition - Step 02: Input correct Username");
@@ -78,7 +80,7 @@ public class PayGrades_Operation extends AbstractTest {
 
 		log.info("TC01 - Step 04: Verify page is Move to Edit screen");
 		assertEquals(payGradesPage.checkPageTitle(), "Edit Pay Grade");
-
+ 
 		log.info("TC01 - Step 05: Verify the Pay Grade is added into list");
 		payGradesPage.clickToParentMenuByName(driver, "Job");
 		payGradesPage.clickToDropdownMenuByName(driver, "Pay Grades");
@@ -151,13 +153,28 @@ public class PayGrades_Operation extends AbstractTest {
 	@Test
 	public void TC_04_Verify_Delete_Currency() {
 		log.info("TC04 - Step 01: Click To Delete button");
+		payGradesPage.clickToDeleteCurrencyButton(currencyValue.substring(6));
+				
 		log.info("TC04 - Step 02: Verify confirmation popup is displayed");
+		assertEquals(payGradesPage.getConfirmationPopupMessage(), confirmMessage);
+		
 		log.info("TC04 - Step 03: Click to No, Cancel");
+		payGradesPage.clickToNoButton();
+		
 		log.info("TC04 - Step 04: Verify currency is not deleted");
+		assertTrue(payGradesPage.checkCurrencyInTheList(currencyValue.substring(6), "Add Currency"));
+		
 		log.info("TC04 - Step 05: Click to Delete button");
+		payGradesPage.clickToDeleteCurrencyButton(currencyValue.substring(6));
+		
 		log.info("TC04 - Step 06: Click to Yes, Delete button");
+		payGradesPage.clickToYesButton();
+		
 		log.info("TC04 - Step 07: Verify Successful popup is displayed");
+		assertEquals(payGradesPage.getSuccessMessage(), "Successfully Deleted");
+		
 		log.info("TC04 - Step 08: Verify currency is deleted");
+		assertFalse(payGradesPage.checkCurrencyDeleted(currencyValue.substring(6)));
 
 	}
 
