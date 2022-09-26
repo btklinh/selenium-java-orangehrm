@@ -50,11 +50,6 @@ public class PayGradesPageObject extends AbstractPage {
 		return getElementText(driver, AbstractPageUI.PAGE_TITLE_CONTAIN_CONFIGURE);
 	}
 
-	public void moveToPayGradesList(String url) {
-		driver.get(url);
-		sleepInSecond(1);
-	}
-
 	public boolean checkPayGradesInTheList(String payGrade) {
 		waitToElementVisible(driver, PayGradesPageUI.PAY_GRADES_LIST);
 		List<String> payGradesList = new ArrayList<>();
@@ -87,7 +82,7 @@ public class PayGradesPageObject extends AbstractPage {
 	public void clickToAddCurrencyButton() {
 		waitToElementClickable(driver, PayGradesPageUI.CURRENCY_ADD_BUTTON);
 		clickToElement(driver, PayGradesPageUI.CURRENCY_ADD_BUTTON);
-		sleepInSecond(2);
+//		sleepInSecond(2);
 	}
 
 	public void clickToArrowIcon() {
@@ -121,14 +116,14 @@ public class PayGradesPageObject extends AbstractPage {
 		sendKeysToElement(driver, PayGradesPageUI.MAXIMUM_SALARY_TEXTBOX, maximumSalary);
 	}
 
-	public void clickToSaveCurrencyButton() {
-		waitToElementVisible(driver, PayGradesPageUI.CURRENCY_SAVE_BUTTON);
-		clickToElement(driver, PayGradesPageUI.CURRENCY_SAVE_BUTTON);
+	public void clickToSaveCurrencyButton(String title) {
+		waitToElementVisible(driver, PayGradesPageUI.CURRENCY_SAVE_BUTTON, title);
+		clickToElement(driver, PayGradesPageUI.CURRENCY_SAVE_BUTTON, title);
 		// sleepInSecond(4);
 	}
 
-	public boolean checkCurrencyInTheList(String currencyValue) {
-		waitToElementInvisible(driver, PayGradesPageUI.ADD_CURRENCY_LABEL);
+	public boolean checkCurrencyInTheList(String currencyValue, String labelName) {
+		waitToElementInvisible(driver, PayGradesPageUI.DYNAMIC_CURRENCY_LABEL, labelName);
 		List<String> currencyList = new ArrayList<>();
 		currencyList = getElementsText(driver, PayGradesPageUI.CURRENCY_ROW_LABEL);
 		for (String currency : currencyList) {
@@ -149,40 +144,41 @@ public class PayGradesPageObject extends AbstractPage {
 		return getElementText(driver, PayGradesPageUI.SELECTED_CURRENCY_VALUE);
 	}
 
-	public boolean checkMiniumumSalaryIntheListminimumSalary(String minimumSalary) {
-		waitToElementInvisible(driver, PayGradesPageUI.ADD_CURRENCY_LABEL);
-		List<String> minimumSalaryList = new ArrayList<>();
-		minimumSalaryList = getElementsText(driver, PayGradesPageUI.MINIMUM_SALARY_ROW_LABEL);
-		for (String salary : minimumSalaryList) {
-			if (salary.equals(minimumSalary)) {
-				result = true;
-				break;
-			} else {
-				result = false;
-				continue;
-			}
-		}
+	public boolean checkMiniumumSalaryIntheList(String currencyName, String labelName, String minimumSalary) {
+		waitToElementInvisible(driver, PayGradesPageUI.DYNAMIC_CURRENCY_LABEL, labelName);
+		String salary = getElementText(driver, PayGradesPageUI.MINIMUM_SALARY_ROW_LABEL, currencyName);
+		if (salary.equals(minimumSalary))
+			result = true;
+		else
+			result = false;
 		return result;
 	}
 
-	public boolean checkMaximumSalaryInTheList(String maximumSalary) {
-		waitToElementInvisible(driver, PayGradesPageUI.ADD_CURRENCY_LABEL);
-		List<String> maximumSalaryList = new ArrayList<>();
-		maximumSalaryList = getElementsText(driver, PayGradesPageUI.MAXIMUM_SALARY_ROW_LABEL);
-		for (String salary : maximumSalaryList) {
-			if (salary.equals(maximumSalary)) {
-				result = true;
-				break;
-			} else {
-				result = false;
-				continue;
-			}
-		}
+	public boolean checkMaximumSalaryInTheList(String currencyName, String labelName, String maximumSalary) {
+		waitToElementInvisible(driver, PayGradesPageUI.DYNAMIC_CURRENCY_LABEL, labelName);
+		String salary = getElementText(driver, PayGradesPageUI.MAXIMUM_SALARY_ROW_LABEL, currencyName);
+		if (salary.equals(maximumSalary))
+			result = true;
+		else
+			result = false;
 		return result;
 	}
 
 	public String getRandomCurrencyValue() {
 		currencyList = getAllDropdownValue();
 		return currencyList.get(data.getRandomIndex(currencyList.size() - 1));
+	}
+	
+
+	public void clickToEditIconOfCurrency(String currencyValue) {
+		// TODO Auto-generated method stub
+		waitToElementClickable(driver, PayGradesPageUI.CURRENCY_EDIT_BUTTON, currencyValue);
+		clickToElement(driver, PayGradesPageUI.CURRENCY_EDIT_BUTTON, currencyValue);
+		sleepInSecond(1);
+	}
+
+	public void clickToSaveEditCurrencyButton() {
+		waitToElementVisible(driver, PayGradesPageUI.CURRENCY_SAVE_EDIT_BUTTON);
+		clickToElement(driver, PayGradesPageUI.CURRENCY_SAVE_EDIT_BUTTON);
 	}
 }

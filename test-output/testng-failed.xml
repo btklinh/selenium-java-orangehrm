@@ -12,8 +12,8 @@
       <class name="orangehrm.admin.job.PayGrades_Operation">
         <methods>
           <include name="Precondition_Access_Pay_Grades_List"/>
+          <include name="TC_03_Verify_Edit_Currency"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
-          <include name="TC_02_Verify_Add_Currency"/>
         </methods>
       </class> <!-- orangehrm.admin.job.PayGrades_Operation -->
     </classes>

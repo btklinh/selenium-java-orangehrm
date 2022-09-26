@@ -243,4 +243,17 @@ public abstract class AbstractPage {
 			log.info("Waiting for element invisible with message: " + e.getMessage());
 		}
 	}
+	
+	public void waitToElementInvisible(WebDriver driver, String locator, String... values) {
+		try {
+			// co gia tri khi co trong dom
+			explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+
+			overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
+			explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(byXpath(castToRestParameter(locator, values))));
+			overrideGlobalTimeout(driver, GlobalConstants.LONG_TIMEOUT);
+		} catch (Exception e) {
+			log.info("Waiting for element invisible with message: " + e.getMessage());
+		}
+	}
 }

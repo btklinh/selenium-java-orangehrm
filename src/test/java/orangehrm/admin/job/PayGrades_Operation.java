@@ -1,6 +1,7 @@
 package orangehrm.admin.job;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.util.List;
 
@@ -62,7 +63,7 @@ public class PayGrades_Operation extends AbstractTest {
 		url = payGradesPage.getCurrentPageUrl(driver);
 	}
 
-	//@Test
+	@Test
 	public void TC_01_Verify_Add_Pay_Grade() {
 
 		payGradeName = payGradesPage.generatePayGradeName();
@@ -86,140 +87,79 @@ public class PayGrades_Operation extends AbstractTest {
 
 	@Test
 	public void TC_02_Verify_Add_Currency() {
-		
-		//Data Test
+
+		// Data Test
 		minimumSalary = String.valueOf(data.getMinimumValue());
 		maximumSalary = String.valueOf(data.getMaximumValue());
 
-
 		log.info("TC02 - Step 01: Click Edit button");
-		payGradesPage.clickToEditIconOfPayGrade("Grade 2");
-		
+		payGradesPage.clickToEditIconOfPayGrade(payGradeName);
+
 		log.info("TC02 - Step 02: Click Add Currencies button");
 		payGradesPage.clickToAddCurrencyButton();
-		
+
 		log.info("TC02 - Step 03: Select Currency");
 		payGradesPage.clickToArrowIcon();
-		currencyValue = payGradesPage.getRandomCurrencyValue();		
+		currencyValue = payGradesPage.getRandomCurrencyValue();
 		payGradesPage.selectCurrency(currencyValue);
-		
+
 		log.info("TC02 - Step 04: Input Minimum Salary and Maximum Salary");
 		payGradesPage.inputToMinimumSalaryTextbox(minimumSalary);
 		payGradesPage.inputToMaximumSalaryTextbox(maximumSalary);
-		
+
 		log.info("TC02 - Step 05: Click Save button");
-		payGradesPage.clickToSaveCurrencyButton();
-		
+		payGradesPage.clickToSaveCurrencyButton("Add Currency");
+
 		log.info("TC02 - Step 06: Verify Successful message displayed");
 		assertEquals(payGradesPage.getSuccessMessage(), "Successfully Saved");
-		
+
 		log.info("TC02 - Step 07: Verify whether currency is added into list");
-		assertEquals(payGradesPage.checkCurrencyInTheList(currencyValue.substring(6)), true);
-		assertEquals(payGradesPage.checkMiniumumSalaryIntheListminimumSalary(minimumSalary.concat(".00")), true);
-		assertEquals(payGradesPage.checkMaximumSalaryInTheList(maximumSalary.concat(".00")), true);
-		
+		assertTrue(payGradesPage.checkCurrencyInTheList(currencyValue.substring(6), "Add Currency"));
+		assertTrue(payGradesPage.checkMiniumumSalaryIntheList(currencyValue.substring(6), "Add Currency",
+				minimumSalary.concat(".00")));
+		assertTrue(payGradesPage.checkMaximumSalaryInTheList(currencyValue.substring(6), "Add Currency",
+				maximumSalary.concat(".00")));
 	}
 
-//	@Test
-//	public void TC_02_Verify_Edit_Job_Title() {
-//		log.info("TC02 - Step 01: Click to Edit icon");
-//		jobTitlesPage.clickToEditIconOfJobTitle(jobTitle);
-//
-//		log.info("TC02 - Step 02: Edit information");
-//		jobTitle = data.getJobTitle();
-//		jobTitlesPage.inputToJobTitleTexbox(jobTitle);
-//		jobTitlesPage.inputToJobDescriptionTextbox(data.getAddress());
-//		jobTitlesPage.inputToJobNoteTextbox(data.getAddress());
-//
-//		log.info("TC02 - Step 03: Click Save button");
-//		jobTitlesPage.clickToSaveButton();
-//
-//		log.info("TC02 - Step 04: Verify Successful popup is displayed");
-//		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Updated");
-//
-//		log.info("TC02 - Step 05: Verify the Job Title is added into list");
-//		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), true);
-//	}
-//
-//	@Test
-//	public void TC_03_Verify_Edit_Job_Specification_File() {
-//		fileName = "Doc3.docx";
-//		directory = GlobalConstants.ROOT_FOLDER + "\\upload-files\\" + fileName;
-//		log.info("TC03 - Step 01: Click to Edit icon");
-//		jobTitlesPage.clickToEditIconOfJobTitle(jobTitle);
-//
-//		log.info("TC03 - Step 02: Select Replace Current");
-//		jobTitlesPage.selectReplaceCurrentRadio();
-//
-//		log.info("TC03 - Step 03: Click to Browse icon");
-//		jobTitlesPage.clickToBrowseButton();
-//
-//		log.info("TC03 - Step 04: Select a valid file");
-//		jobTitlesPage.selectUploadFile(directory);
-//
-//		log.info("TC03 - Step 05: Click Save button");
-//		jobTitlesPage.clickToSaveButton();
-//
-//		log.info("TC03 - Step 06: Verify Successful popup is displayed");
-//		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Updated");
-//
-//		log.info("TC03 - Step 07: Assert that file is upload");
-//		jobTitlesPage.clickToEditIconOfJobTitle(jobTitle);
-//		assertEquals(jobTitlesPage.getUploadedFileName(), fileName);
-//	}
-//
-//	@Test
-//	public void TC_04_Verify_Delete_Job_Specification_File() {
-//		jobTitlesPage.clickToCancelButton();
-//		
-//		log.info("TC04 - Step 01: Click to Edit icon");
-//		jobTitlesPage.clickToEditIconOfJobTitle(jobTitle);
-//
-//		log.info("TC04 - Step 02: Select Delete Current radio button");
-//		jobTitlesPage.selectDeleteCurrentRadio();
-//
-//		log.info("TC04 - Step 03: Click Save button");
-//		jobTitlesPage.clickToSaveButton();
-//
-//		log.info("TC04 - Step 06: Verify Successful popup is displayed");
-//		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Updated");
-//
-//		log.info("TC04 - Step 07: Verify that file is deleted");
-//		jobTitlesPage.clickToEditIconOfJobTitle(jobTitle);
-//		assertEquals(jobTitlesPage.isDeleteRadioButtonUndisplayed(), true);
-//	}
-//
-//	@Test
-//	public void TC_05_Verify_Delete_Operation() {
-//		jobTitlesPage.clickToCancelButton();
-//		confirmMessage = "The selected record will be permanently deleted. Are you sure you want to continue?";
-//
-//		log.info("TC05 - Step 01: Click To Delete button");
-//		jobTitlesPage.clickToDeleteButtonOfJobTitle(jobTitle);
-//
-//		log.info("TC05 - Step 02: Verify confirmation popup is displayed");
-//		assertEquals(jobTitlesPage.getConfirmationPopupMessage(), confirmMessage);
-//
-//		log.info("TC05 - Step 03: Click to No, Cancel");
-//		jobTitlesPage.clickToNoButton();
-//
-//		log.info("TC05 - Step 04: Verify job title is not deleted");
-//		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), true);
-//
-//		log.info("TC05 - Step 05: Click to Delete button");
-//		jobTitlesPage.clickToDeleteButtonOfJobTitle(jobTitle);
-//
-//		log.info("TC05 - Step 06: Click to Yes, Delete button");
-//		jobTitlesPage.clickToYesButton();
-//
-//		log.info("TC05 - Step 07: Verify Successful popup is displayed");
-//		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Deleted");
-//
-//		log.info("TC05 - Step 08: Verify job title is deleted");
-//		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), false);
-//
-//	}
+	@Test
+	public void TC_03_Verify_Edit_Currency() {
 
+		// Data Test
+		minimumSalary = String.valueOf(data.getMinimumValue());
+		maximumSalary = String.valueOf(data.getMaximumValue());
+
+		log.info("TC03 - Step 01: Click Edit button on Currency");
+		payGradesPage.clickToEditIconOfCurrency(currencyValue.substring(6));
+
+		log.info("TC03 - Step 03: Input Minimum and Maximum Salary");
+		payGradesPage.inputToMinimumSalaryTextbox(minimumSalary);
+		payGradesPage.inputToMaximumSalaryTextbox(maximumSalary);
+
+		log.info("TC03 - Step 04: Click Save button");
+		payGradesPage.clickToSaveCurrencyButton("Edit Currency");
+
+		log.info("TC03 - Step 05: Verify Successful message displayed");
+		assertEquals(payGradesPage.getSuccessMessage(), "Successfully Updated");
+
+		log.info("TC03 - Step 06: Verify whether currency is edited");
+		assertTrue(payGradesPage.checkMiniumumSalaryIntheList(currencyValue.substring(6), "Edit Currency",
+				minimumSalary.concat(".00")));
+		assertTrue(payGradesPage.checkMaximumSalaryInTheList(currencyValue.substring(6), "Edit Currency",
+				maximumSalary.concat(".00")));
+	}
+
+	@Test
+	public void TC_04_Verify_Delete_Currency() {
+		log.info("TC04 - Step 01: Click To Delete button");
+		log.info("TC04 - Step 02: Verify confirmation popup is displayed");
+		log.info("TC04 - Step 03: Click to No, Cancel");
+		log.info("TC04 - Step 04: Verify currency is not deleted");
+		log.info("TC04 - Step 05: Click to Delete button");
+		log.info("TC04 - Step 06: Click to Yes, Delete button");
+		log.info("TC04 - Step 07: Verify Successful popup is displayed");
+		log.info("TC04 - Step 08: Verify currency is deleted");
+
+	}
 
 	public void afterClass() {
 		driver.quit();
