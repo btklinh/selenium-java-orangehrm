@@ -109,7 +109,7 @@ public class JobTitlesPageObject extends AbstractPage {
 	}
 
 	public void selectReplaceCurrentRadio() {
-		clickToElementByJS(driver, JobTitlesPageUI.REPLACE_CURRENT_RADIO);
+		clickToElementByJS(driver, JobTitlesPageUI.REPLACE_SPECIFICATION_JOB_RADIO);
 	}
 
 	public String getUploadedFileName() {
@@ -118,11 +118,11 @@ public class JobTitlesPageObject extends AbstractPage {
 	}
 
 	public boolean isDeleteRadioButtonUndisplayed() {
-		return isControlUndisplayed(driver, JobTitlesPageUI.DELETE_CURRENT_RADIO);
+		return isControlUndisplayed(driver, JobTitlesPageUI.DELETE_SPECIFICATION_JOB_RADIO);
 	}
 
 	public void selectDeleteCurrentRadio() {
-		clickToElementByJS(driver, JobTitlesPageUI.DELETE_CURRENT_RADIO);
+		clickToElementByJS(driver, JobTitlesPageUI.DELETE_SPECIFICATION_JOB_RADIO);
 	}
 
 	public void clickToDeleteButtonOfJobTitle(String jobTitle) {

@@ -223,4 +223,13 @@ public class PayGradesPageObject extends AbstractPage {
 		}
 		return result;
 	}
+
+	public void openPayGradePage(String url) {
+		openUrl(driver, url);
+		sleepInSecond(2);
+	}
+
+	public String getPayGradesUrl() {
+		return getCurrentPageUrl(driver);
+	}
 }

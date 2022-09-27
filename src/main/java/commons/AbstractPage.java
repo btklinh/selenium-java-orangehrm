@@ -26,6 +26,12 @@ public abstract class AbstractPage {
 	private List<WebElement> elements;
 	private Log log;
 	
+	public void openUrl(WebDriver driver, String url) {
+//		this.driver = driver;
+		driver.get(url);
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+	}
+	
 	public String getCurrentPageUrl(WebDriver driver) {
 		return driver.getCurrentUrl();
 	}

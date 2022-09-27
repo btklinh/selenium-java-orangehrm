@@ -19,7 +19,6 @@ import utilities.DataHelper;
 
 public class JobTitle_Operation extends AbstractTest {
 
-	String username, password;
 	PimPageObject pimPage;
 	LoginPageObject loginPage;
 	JobTitlesPageObject jobTitlesPage;
@@ -34,15 +33,13 @@ public class JobTitle_Operation extends AbstractTest {
 	public void Precondition_Login(String browserName) {
 		log.info("Pre-condition - Step 01: Open orangehrm site");
 		driver = getBrowserDriver(browserName);
-		username = "btklinh";
-		password = "Klinh1993@!";
 		loginPage = new LoginPageObject(driver);
 
 		log.info("Pre-condition - Step 02: Input correct Username");
-		loginPage.inputToUsernameTextbox(username);
+		loginPage.inputToUsernameTextbox(GlobalConstants.LOGIN_USERNAME);
 
 		log.info("Pre-condition - Step 03: Input correct Password");
-		loginPage.inputToPasswordTextbox(password);
+		loginPage.inputToPasswordTextbox(GlobalConstants.LOGIN_PASSWORD);
 
 		log.info("Pre-condition - Step 03: Click Login button");
 		pimPage = loginPage.clickToLoginButton();

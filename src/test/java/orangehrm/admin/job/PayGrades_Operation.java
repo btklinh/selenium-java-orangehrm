@@ -7,11 +7,13 @@ import static org.testng.Assert.assertTrue;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.AbstractTest;
+import commons.GlobalConstants;
 import commons.PageGeneratorManager;
 import pageObjects.JobTitlesPageObject;
 import pageObjects.LoginPageObject;
@@ -22,7 +24,7 @@ import utilities.DataHelper;
 
 public class PayGrades_Operation extends AbstractTest {
 
-	String username, password;
+
 	PimPageObject pimPage;
 	LoginPageObject loginPage;
 	PayGradesPageObject payGradesPage;
@@ -30,26 +32,23 @@ public class PayGrades_Operation extends AbstractTest {
 	UserPageObject userPage;
 	DataHelper data = DataHelper.getData();
 	String payGradeName, minimumSalary, maximumSalary, currencyValue;
-	String url, confirmMessage;
-	List<String> currencyList;
+	String url;
 
 	WebDriver driver;
 
 	@Parameters("browser")
 	@BeforeClass
-	public void Precondition_Access_Pay_Grades_List(String browserName) {
+	public void beforeClass(String browserName) {
 		log.info("Pre-condition - Step 01: Open orangehrm site");
 		driver = getBrowserDriver(browserName);
-		username = "btklinh";
-		password = "Klinh1993@!";
-		confirmMessage = "The selected record will be permanently deleted. Are you sure you want to continue?";
+
 		loginPage = new LoginPageObject(driver);
 
 		log.info("Pre-condition - Step 02: Input correct Username");
-		loginPage.inputToUsernameTextbox(username);
+		loginPage.inputToUsernameTextbox(GlobalConstants.LOGIN_USERNAME);
 
 		log.info("Pre-condition - Step 03: Input correct Password");
-		loginPage.inputToPasswordTextbox(password);
+		loginPage.inputToPasswordTextbox(GlobalConstants.LOGIN_PASSWORD);
 
 		log.info("Pre-condition - Step 03: Click Login button");
 		pimPage = loginPage.clickToLoginButton();
@@ -62,7 +61,7 @@ public class PayGrades_Operation extends AbstractTest {
 		userPage.clickToParentMenuByName(driver, "Job");
 		userPage.clickToDropdownMenuByName(driver, "Pay Grades");
 		payGradesPage = PageGeneratorManager.getPayGradesPage(driver);
-		url = payGradesPage.getCurrentPageUrl(driver);
+		url = payGradesPage.getPayGradesUrl();
 	}
 
 	@Test
@@ -152,11 +151,12 @@ public class PayGrades_Operation extends AbstractTest {
 
 	@Test
 	public void TC_04_Verify_Delete_Currency() {
+		
 		log.info("TC04 - Step 01: Click To Delete button");
 		payGradesPage.clickToDeleteCurrencyButton(currencyValue.substring(6));
 				
 		log.info("TC04 - Step 02: Verify confirmation popup is displayed");
-		assertEquals(payGradesPage.getConfirmationPopupMessage(), confirmMessage);
+		assertEquals(payGradesPage.getConfirmationPopupMessage(), GlobalConstants.DELETE_CONFIRM_MESSAGE);
 		
 		log.info("TC04 - Step 03: Click to No, Cancel");
 		payGradesPage.clickToNoButton();
@@ -175,11 +175,34 @@ public class PayGrades_Operation extends AbstractTest {
 		
 		log.info("TC04 - Step 08: Verify currency is deleted");
 		assertFalse(payGradesPage.checkCurrencyDeleted(currencyValue.substring(6)));
-
 	}
-
+	
+	@Test
+	public void TC_05_Verify_Edit_Pay_Grades() {
+		
+		log.info("TC05 - Step 01: Open Pay Grades page");
+		payGradesPage.openPayGradePage(url);
+		
+		log.info("TC05 - Step 02: Click to Edit icon");
+		payGradesPage.clickToEditIconOfPayGrade(payGradeName);
+		
+		log.info("TC05 - Step 03: Edit Pay Grade Name");
+		payGradeName = payGradesPage.generatePayGradeName();
+		payGradesPage.inputToPayGradeNameTextbox(payGradeName);
+		
+		log.info("TC05 - Step 04: Click Save button");
+		payGradesPage.clickToPayGradeSaveButton();
+		
+		log.info("TC05 - Step 05: Verify success message displayed");
+		payGradesPage.openPayGradePage(url);
+		
+		log.info("TC05 - Step 06: Verify pay grade is updated in list");
+		assertTrue(payGradesPage.checkPayGradesInTheList(payGradeName));
+		
+	}
+	@AfterClass
 	public void afterClass() {
-		driver.quit();
+		closeBrowser(driver);
 	}
 
 }
