@@ -24,7 +24,7 @@ public class JobTitle_Operation extends AbstractTest {
 	JobTitlesPageObject jobTitlesPage;
 	UserPageObject userPage;
 	DataHelper data = DataHelper.getData();
-	String jobTitle, jobDescription, jobNote, directory, fileName, confirmMessage;
+	String jobTitle, jobDescription, jobNote, directory, fileName, confirmMessage, url;
 
 	WebDriver driver;
 
@@ -52,6 +52,7 @@ public class JobTitle_Operation extends AbstractTest {
 		userPage.clickToParentMenuByName(driver, "Job");
 		userPage.clickToDropdownMenuByName(driver, "Job Titles");
 		jobTitlesPage = PageGeneratorManager.getJobTitlesPage(driver);
+		url = jobTitlesPage.getCurrentUrl();
 	}
 
 	@Test
@@ -160,15 +161,32 @@ public class JobTitle_Operation extends AbstractTest {
 	}
 
 	@Test
-	public void TC_05_Verify_Delete_Operation() {
-		jobTitlesPage.clickToCancelButton();
-		confirmMessage = "The selected record will be permanently deleted. Are you sure you want to continue?";
+	public void TC_05_Job_Title_Cannot_Be_Duplicated() {
+		log.info("TC05 - Step 01: Go to Job Titles Page");
+		jobTitlesPage.openJobTitlesPage(url);
+		
+		log.info("TC05 - Step 02: Click to Add button");
+		jobTitlesPage.clickToAddButton();
+		
+		log.info("TC05 - Step 03: Input duplicated Job Title");
+		jobTitlesPage.inputToJobTitleTexbox(jobTitle);
+		
+		log.info("TC05 - Step 04:  Click Save button");
+		jobTitlesPage.clickToSaveButton();
+		
+		log.info("TC05 - Step 05: Verify Error text message");
+		assertEquals(jobTitlesPage.getErrorMessageOfJobTitle(), "Already exists");
+	}
+
+	@Test
+	public void TC_06_Verify_Delete_Operation() {
+		jobTitlesPage.openJobTitlesPage(url);
 
 		log.info("TC05 - Step 01: Click To Delete button");
 		jobTitlesPage.clickToDeleteButtonOfJobTitle(jobTitle);
 
 		log.info("TC05 - Step 02: Verify confirmation popup is displayed");
-		assertEquals(jobTitlesPage.getConfirmationPopupMessage(), confirmMessage);
+		assertEquals(jobTitlesPage.getConfirmationPopupMessage(), GlobalConstants.DELETE_CONFIRM_MESSAGE);
 
 		log.info("TC05 - Step 03: Click to No, Cancel");
 		jobTitlesPage.clickToNoButton();
@@ -187,7 +205,6 @@ public class JobTitle_Operation extends AbstractTest {
 
 		log.info("TC05 - Step 08: Verify job title is deleted");
 		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), false);
-
 	}
 
 	@AfterClass

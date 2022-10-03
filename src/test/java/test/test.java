@@ -1,5 +1,6 @@
 package test;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -30,49 +31,40 @@ WebDriver driver;
 		return s.toLowerCase();
 		
 	}
-	
-	public static boolean checkSearchByNameResult(String keyword) {
-		boolean result = true;
-	
-		List<String> locationsNameList = new ArrayList<>();
-		locationsNameList.add("Hong Kong 1");
-		locationsNameList.add("Hong Kong 2");
-		//locationsNameList.add("asdc1");
-		
-		for (String location : locationsNameList) {
-			System.out.println(location);
-			String formatLocation = formatText(location);
-			System.out.println(formatLocation);
-			String formatKeyword = formatText(keyword);
-			System.out.println(formatKeyword);
-			if (formatLocation.contains(formatKeyword)) {
-				result = true;
-				continue;
-			} else {
-				result = false;
-				break;
-			}
-		}
-		return result;
+	public static double convertToHour(String time) {
+		return Integer.parseInt(time.substring(0, 2));
 	}
 	
-	public static int getRecordsNumber() {
-		
-		String label = "(212) Records Found";
-		String recordNumber = label.replace("Records Found", "").replace("(", "").replace(")", "").trim();
-		return Integer.parseInt(recordNumber);
+	public static double convertToMinute(String time) {
+		return Integer.parseInt(time.substring(3, 5));
 	}
 	
+	public static String convertToSuffix(String time) {
+		return time.substring(6,8);
+	}
 
-	
-	public static String generatePayGradeName() {
-		long ID = new Date().getTime();
-		String prefix = "Grade ";
-		String payGradeName = prefix + String.valueOf(ID);
-		return payGradeName;
+	public static String durationPerDayCal(String workingHourFrom, String workingHourTo) {
+		double fromHh, toHh, fromMm, toMm, duration;
+		fromHh = convertToHour(workingHourFrom);
+		toHh = convertToHour(workingHourTo);
+		fromMm = convertToMinute(workingHourFrom);
+		toMm = convertToMinute(workingHourTo);
+		if (convertToSuffix(workingHourFrom).equals("PM")) {
+			fromHh += 12;
+		}
+		if (convertToSuffix(workingHourTo).equals("PM")) {
+			toHh += 12;
+		}
+		DecimalFormat df = new DecimalFormat("0.00");
+		duration = (toHh + (toMm/60)) - (fromHh + (fromMm/60));
+		System.out.println(df.format(duration));
+		return String.valueOf(df.format(duration));
 	}
 
 	public static void main(String args[]) {
-		System.out.println(generatePayGradeName());
+		System.out.println(convertToHour("03:12 PM"));
+		System.out.println(convertToMinute("10:12 AM"));
+		System.out.println(convertToSuffix("10:12 AM"));
+		durationPerDayCal("03:12 PM", "11:42 PM");
 	}
 }

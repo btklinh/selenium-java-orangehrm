@@ -153,5 +153,23 @@ public class JobTitlesPageObject extends AbstractPage {
 		clickToElement(driver, JobTitlesPageUI.CANCEL_BUTTON);
 	}
 
+	public String getCurrentUrl() {
+		return getCurrentPageUrl(driver);
+	}
+	
+	public void openJobTitlesPage(String url) {
+		openUrl(driver, url);
+		sleepInSecond(2);
+	}
+
+	public String getErrorMessageOfJobTitle() {
+		waitToElementVisible(driver, JobTitlesPageUI.JOB_TITLE_ERROR_TEXT);
+		return getElementText(driver, JobTitlesPageUI.JOB_TITLE_ERROR_TEXT);
+	}
+
+	public String getErrorMessageOfJobSpecification() {
+		waitToElementVisible(driver, JobTitlesPageUI.JOB_SPECIFICATION_ERROR_TEXT);
+		return getElementText(driver, JobTitlesPageUI.JOB_SPECIFICATION_ERROR_TEXT);
+	}
 
 }

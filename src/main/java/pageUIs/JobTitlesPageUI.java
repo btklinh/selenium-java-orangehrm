@@ -4,6 +4,10 @@ public class JobTitlesPageUI {
 
 	public static final String ADD_BUTTON = "//button[contains(@class,'oxd-button')]";
 	public static final String JOB_TITLE_TEXTBOX = "//*[text()='Job Title']/parent::div/following-sibling::div/input";
+	public static final String JOB_TITLE_ERROR_TEXT = "//*[text()='Job Title']/parent::div/following-sibling::span";
+	public static final String JOB_SPECIFICATION_ERROR_TEXT = "//*[text()='Job Specification']/parent::div/following-sibling::span";
+	
+	
 	//public static final String BROWSE_BUTTON = "//input[@class='oxd-file-input']";
 	public static final String BROWSE_BUTTON = "//div[text()='Browse']";
 	public static final String JOB_DESCRIPTION_TEXTBOX = "//textarea[contains(@placeholder,'description')]";

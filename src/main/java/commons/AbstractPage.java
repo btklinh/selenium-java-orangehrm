@@ -259,4 +259,5 @@ public abstract class AbstractPage {
 			log.info("Waiting for element invisible with message: " + e.getMessage());
 		}
 	}
+	
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Chrome"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="2.049">
+  <properties />
+  
+  
+            <testcase name="TC_01_Verify_Add_Work_Shift" time="2.049" classname="orangehrm.admin.job.WorkShift_Operation" />
+      
+</testsuite>

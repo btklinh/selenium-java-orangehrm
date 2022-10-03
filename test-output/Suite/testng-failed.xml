@@ -9,14 +9,13 @@
   <test thread-count="5" name="Run on Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="orangehrm.admin.job.PayGrades_Operation">
+      <class name="orangehrm.admin.job.WorkShift_Operation">
         <methods>
-          <include name="TC_05_Verify_Edit_Pay_Grades"/>
+          <include name="Precondition_Login"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
+          <include name="TC_01_Verify_Add_Work_Shift"/>
         </methods>
-      </class> <!-- orangehrm.admin.job.PayGrades_Operation -->
+      </class> <!-- orangehrm.admin.job.WorkShift_Operation -->
     </classes>
   </test> <!-- Run on Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

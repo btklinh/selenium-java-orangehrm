@@ -232,4 +232,9 @@ public class PayGradesPageObject extends AbstractPage {
 	public String getPayGradesUrl() {
 		return getCurrentPageUrl(driver);
 	}
+
+	public void clickToDeleteIconOfPayGrade(String payGradeName) {
+		waitToElementClickable(driver, PayGradesPageUI.DYNAMIC_DELETE_BUTTON_BY_GRADE, payGradeName);
+		clickToElement(driver, PayGradesPageUI.DYNAMIC_DELETE_BUTTON_BY_GRADE, payGradeName);
+	}
 }

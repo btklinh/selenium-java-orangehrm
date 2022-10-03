@@ -200,6 +200,38 @@ public class PayGrades_Operation extends AbstractTest {
 		assertTrue(payGradesPage.checkPayGradesInTheList(payGradeName));
 		
 	}
+	
+	@Test
+	public void TC_06_Verify_Delete_Pay_Grade() {
+		log.info("TC06 - Step 01: Open Pay Grades page");
+		payGradesPage.openPayGradePage(url);
+		
+		log.info("TC06 - Step 02: Click to Delete icon");
+		payGradesPage.clickToDeleteIconOfPayGrade(payGradeName);
+		
+		log.info("TC06 - Step 03: Verify confirmation popup is displayed");
+		assertEquals(payGradesPage.getConfirmationPopupMessage(), GlobalConstants.DELETE_CONFIRM_MESSAGE);
+		
+		log.info("TC06 - Step 04: Click to No, Cancel");
+		payGradesPage.clickToNoButton();
+		
+		log.info("TC06 - Step 05: Verify job title is not deleted");
+		assertTrue(payGradesPage.checkPayGradesInTheList(payGradeName));
+		
+		log.info("TC06 - Step 06: Click to Delete button");
+		payGradesPage.clickToDeleteIconOfPayGrade(payGradeName);
+		
+		log.info("TC06 - Step 07: Click to Yes, Delete button");
+		payGradesPage.clickToYesButton();
+		
+		log.info("TC06 - Step 08: Verify Successful popup is displayed");
+		assertEquals(payGradesPage.getSuccessMessage(), "Successfully Deleted");
+		
+		log.info("TC06 - Step 09: Verify job title is deleted");
+		assertFalse(payGradesPage.checkPayGradesInTheList(payGradeName));
+		
+	}
+	
 	@AfterClass
 	public void afterClass() {
 		closeBrowser(driver);
