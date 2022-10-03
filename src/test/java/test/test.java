@@ -27,8 +27,8 @@ public class test extends AbstractTest {
 	WebDriver driver;
 
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
-		// String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-		// Class.forName(JDBC_DRIVER);
+//		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+//		Class.forName(JDBC_DRIVER);
 		Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/orangehrm_mysql", "root", "");
 		// Create statement/query
 		Statement stmt = con.createStatement();
@@ -37,17 +37,13 @@ public class test extends AbstractTest {
 
 		// Execute statement/query
 		ResultSet rs = stmt.executeQuery(s);
-		List<String> listJob = new ArrayList<String>();
 		while (rs.next()) {
 			String jobtitle = rs.getString("job_title");
-			listJob.add(jobtitle);
 			System.out.println(jobtitle);
 		}
 
 		con.close();
 		System.out.print("Query executed");
-		for (String a : listJob) {
-			System.out.println(a);
-		}
+
 	}
 }
