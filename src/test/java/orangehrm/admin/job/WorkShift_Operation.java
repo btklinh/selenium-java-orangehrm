@@ -1,6 +1,7 @@
 package orangehrm.admin.job;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
@@ -24,7 +25,7 @@ public class WorkShift_Operation extends AbstractTest {
 	DataHelper data = DataHelper.getData();
 	String url, shiftName, workingHourFrom, workingHourTo;
 	WebDriver driver;
-	
+
 	@Parameters("browser")
 	@BeforeClass
 	public void Precondition_Login(String browserName) {
@@ -51,34 +52,44 @@ public class WorkShift_Operation extends AbstractTest {
 		workShiftsPage = PageGeneratorManager.getWorkShiftsPage(driver);
 		url = workShiftsPage.getCurrentUrl();
 	}
-	
+
 	@Test
 	public void TC_01_Verify_Add_Work_Shift() {
 		shiftName = workShiftsPage.generateShiftName();
 		workingHourFrom = "10:12 AM";
 		workingHourTo = "01:20 PM";
-		
+
 		log.info("TC01 - Step 01: Click Add button");
 		workShiftsPage.clickToAddButton();
-		
+
 		log.info("TC01 - Step 02: Input valid Shift Name");
 		workShiftsPage.inputToShiftNameTextbox(shiftName);
-		
-		log.info("TC01 - Step 03: Select valid working hours");		
+
+		log.info("TC01 - Step 03: Select valid working hours");
 		workShiftsPage.selectWorkingHoursFrom(workingHourFrom);
 		workShiftsPage.selectWorkingHoursTo(workingHourTo);
-		
-		
+
 		log.info("TC01 - Step 04: Select Assigned Employees");
-		workShiftsPage.clickToAssignedEmployees();
-		
+		workShiftsPage.typeToAssignedEmployees("linh");
+		workShiftsPage.selectAssignedEmployees();
+
 		log.info("TC01 - Step 05: Verify whether Duration Per Day display correctly");
 		String actual = workShiftsPage.getDurationPerDayText();
 		String expected = workShiftsPage.calDurationPerDay(workingHourFrom, workingHourTo);
 		assertEquals(actual, expected);
 
 		log.info("TC01 - Step 06: Click to Save button");
-//		workShiftsPage.clickToSaveButton();
+		workShiftsPage.clickToSaveButton();
+		
+		log.info("TC01 - Step 07: Verify success message displayed");
+		assertEquals(workShiftsPage.getSuccessMessage(), "Successfully Saved");
+
+		log.info("TC01 - Step 08: Verify the Work Shift in the list");
+		assertTrue(workShiftsPage.checkWorkShiftsInTheList(shiftName));
+		assertEquals(workShiftsPage.getWorkingTimeFrom(shiftName), workShiftsPage.formatTime(workingHourFrom));
+		assertEquals(workShiftsPage.getWorkingTimeTo(shiftName), workShiftsPage.formatTime(workingHourTo));
+		assertEquals(workShiftsPage.getHoursPerDay(shiftName), expected);
 	}
+	
 
 }

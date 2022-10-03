@@ -2,31 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-03T10:48:19Z" name="Suite" finished-at="2022-10-03T10:48:32Z" duration-ms="13398">
+  <suite started-at="2022-10-03T18:19:54Z" name="Default suite" finished-at="2022-10-03T18:19:54Z" duration-ms="341">
     <groups>
     </groups>
-    <test started-at="2022-10-03T10:48:19Z" name="Run on Chrome" finished-at="2022-10-03T10:48:32Z" duration-ms="13398">
-      <class name="orangehrm.admin.job.WorkShift_Operation">
-        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:orangehrm.admin.job.WorkShift_Operation@7f08caf]" started-at="2022-10-03T10:48:19Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2022-10-03T10:48:19Z" duration-ms="46" status="PASS">
+    <test started-at="2022-10-03T18:19:54Z" name="Default test" finished-at="2022-10-03T18:19:54Z" duration-ms="341">
+      <class name="test.test">
+        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:test.test@772861aa]" started-at="2022-10-03T18:19:54Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2022-10-03T18:19:54Z" duration-ms="41" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAllFilesInReportNGScreenshot -->
-        <test-method is-config="true" signature="Precondition_Login(java.lang.String)[pri:0, instance:orangehrm.admin.job.WorkShift_Operation@7f08caf]" started-at="2022-10-03T10:48:19Z" name="Precondition_Login" finished-at="2022-10-03T10:48:30Z" duration-ms="11126" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="TestBasic()[pri:0, instance:test.test@772861aa]" started-at="2022-10-03T18:19:54Z" name="TestBasic" finished-at="2022-10-03T18:19:54Z" duration-ms="109" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Precondition_Login -->
-        <test-method signature="TC_01_Verify_Add_Work_Shift()[pri:0, instance:orangehrm.admin.job.WorkShift_Operation@7f08caf]" started-at="2022-10-03T10:48:30Z" name="TC_01_Verify_Add_Work_Shift" finished-at="2022-10-03T10:48:32Z" duration-ms="2049" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_01_Verify_Add_Work_Shift -->
-      </class> <!-- orangehrm.admin.job.WorkShift_Operation -->
-    </test> <!-- Run on Chrome -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- TestBasic -->
+      </class> <!-- test.test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
