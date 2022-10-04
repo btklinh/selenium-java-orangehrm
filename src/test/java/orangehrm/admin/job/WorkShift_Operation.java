@@ -91,5 +91,7 @@ public class WorkShift_Operation extends AbstractTest {
 		assertEquals(workShiftsPage.getHoursPerDay(shiftName), expected);
 	}
 	
+	
+	
 
 }
