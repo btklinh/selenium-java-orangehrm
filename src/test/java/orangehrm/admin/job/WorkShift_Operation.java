@@ -56,8 +56,8 @@ public class WorkShift_Operation extends AbstractTest {
 	@Test
 	public void TC_01_Verify_Add_Work_Shift() {
 		shiftName = workShiftsPage.generateShiftName();
-		workingHourFrom = "10:12 AM";
-		workingHourTo = "01:20 PM";
+		workingHourFrom = workShiftsPage.convert24HTo12H(data.fromTime());
+		workingHourTo = workShiftsPage.convert24HTo12H(data.toTime(workingHourFrom));
 
 		log.info("TC01 - Step 01: Click Add button");
 		workShiftsPage.clickToAddButton();
@@ -80,18 +80,16 @@ public class WorkShift_Operation extends AbstractTest {
 
 		log.info("TC01 - Step 06: Click to Save button");
 		workShiftsPage.clickToSaveButton();
-		
+
 		log.info("TC01 - Step 07: Verify success message displayed");
 		assertEquals(workShiftsPage.getSuccessMessage(), "Successfully Saved");
 
 		log.info("TC01 - Step 08: Verify the Work Shift in the list");
 		assertTrue(workShiftsPage.checkWorkShiftsInTheList(shiftName));
-		assertEquals(workShiftsPage.getWorkingTimeFrom(shiftName), workShiftsPage.formatTime(workingHourFrom));
-		assertEquals(workShiftsPage.getWorkingTimeTo(shiftName), workShiftsPage.formatTime(workingHourTo));
+		assertEquals(workShiftsPage.getWorkingTimeFrom(shiftName), workShiftsPage.convert12HTo24H(workingHourFrom));
+		assertEquals(workShiftsPage.getWorkingTimeTo(shiftName), workShiftsPage.convert12HTo24H(workingHourTo));
+
 		assertEquals(workShiftsPage.getHoursPerDay(shiftName), expected);
 	}
-	
-	
-	
 
 }

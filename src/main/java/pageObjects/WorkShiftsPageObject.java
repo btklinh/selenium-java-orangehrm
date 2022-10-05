@@ -1,16 +1,16 @@
 package pageObjects;
 
 import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import commons.AbstractPage;
-import pageUIs.JobTitlesPageUI;
 import pageUIs.WorkShiftsPageUI;
 
 public class WorkShiftsPageObject extends AbstractPage {
@@ -70,22 +70,12 @@ public class WorkShiftsPageObject extends AbstractPage {
 		return Integer.parseInt(time.substring(3, 5));
 	}
 
-	public String convertToSuffix(String time) {
-		return time.substring(6, 8);
-	}
-
 	public String calDurationPerDay(String workingHourFrom, String workingHourTo) {
 		double fromHh, toHh, fromMm, toMm, duration;
-		fromHh = convertToHour(workingHourFrom);
-		toHh = convertToHour(workingHourTo);
-		fromMm = convertToMinute(workingHourFrom);
-		toMm = convertToMinute(workingHourTo);
-		if (convertToSuffix(workingHourFrom).equals("PM")) {
-			fromHh += 12;
-		}
-		if (convertToSuffix(workingHourTo).equals("PM")) {
-			toHh += 12;
-		}
+		fromHh = convertToHour(convert12HTo24H(workingHourFrom));
+		toHh = convertToHour(convert12HTo24H(workingHourTo));
+		fromMm = convertToMinute(convert12HTo24H(workingHourFrom));
+		toMm = convertToMinute(convert12HTo24H(workingHourTo));
 		DecimalFormat df = new DecimalFormat("0.00");
 		duration = (toHh + (toMm / 60)) - (fromHh + (fromMm / 60));
 		return String.valueOf(df.format(duration));
@@ -144,16 +134,37 @@ public class WorkShiftsPageObject extends AbstractPage {
 		return getElementText(driver, WorkShiftsPageUI.HOURS_PER_DAY_ROW, shiftName);
 	}
 
-	public String formatTime(String time) {
-		String convertTime;
-		if (convertToSuffix(time).equals("AM")) {
-			convertTime = time.substring(0, 5);
-		} else {
-			int hour = convertToHour(time) + 12;
-			int minute = convertToMinute(time);
-			convertTime = String.valueOf(hour) + ":" + String.valueOf(minute);
+
+	public String convert12HTo24H(String time) {
+		// String convertTime;
+		SimpleDateFormat _24HourSDF = new SimpleDateFormat("HH:mm");
+		SimpleDateFormat _12HourSDF = new SimpleDateFormat("hh:mm a");
+		Date _12HourDt;
+		try {
+			_12HourDt = _12HourSDF.parse(time);
+			return String.valueOf(_24HourSDF.format(_12HourDt));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
 		}
-		return convertTime;
+
+	}
+	
+	public String convert24HTo12H(String time) {
+		// String convertTime;
+		SimpleDateFormat _24HourSDF = new SimpleDateFormat("HH:mm");
+		SimpleDateFormat _12HourSDF = new SimpleDateFormat("hh:mm a");
+		Date _24HourDt;
+		try {
+			_24HourDt = _24HourSDF.parse(time);
+			return String.valueOf(_12HourSDF.format(_24HourDt));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+
 	}
 
 	public String getSuccessMessage() {
