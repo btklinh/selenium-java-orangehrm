@@ -12,7 +12,6 @@ public class LoginPageObject extends AbstractPage{
 		this.driver = driver;
 	}
 
-
 	public void inputToUsernameTextbox(String username) {
 		waitToElementVisible(driver, LoginPageUI.USERNAME_TEXTBOX);
 		sendKeysToElement(driver, LoginPageUI.USERNAME_TEXTBOX, username);
