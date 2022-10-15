@@ -1,0 +1,1 @@
+{"uuid":"8bceee21-d30a-447f-82ea-df6384d7cf73","name":"orangehrm.pim.Employee_Add","children":["d6cd9403-299d-4abd-909a-73e6995f9bc8"],"befores":[{"name":"Precondition_Login","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1665848116659,"stop":1665848140782}],"afters":[],"start":1665848116473,"stop":1665848177511}

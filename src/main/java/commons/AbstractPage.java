@@ -25,15 +25,20 @@ public abstract class AbstractPage {
 	private JavascriptExecutor jsExecutor;
 	private List<WebElement> elements;
 	private Log log;
-	
+
 	public void openUrl(WebDriver driver, String url) {
 //		this.driver = driver;
 		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 	}
-	
+
 	public String getCurrentPageUrl(WebDriver driver) {
 		return driver.getCurrentUrl();
+	}
+
+	public void clickToElementByJS(WebDriver driver, String locator) {
+		jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("arguments[0].click();", findElement(driver, locator));
 	}
 
 	protected WebElement findElement(WebDriver driver, String locator) {
@@ -66,8 +71,8 @@ public abstract class AbstractPage {
 		}
 		return elementsText;
 	}
-	
-	protected List<String> getElementsText(WebDriver driver, String locator, String...values) {
+
+	protected List<String> getElementsText(WebDriver driver, String locator, String... values) {
 		List<WebElement> elements = findElements(driver, castToRestParameter(locator, values));
 		List<String> elementsText = new ArrayList<String>();
 		for (WebElement e : elements) {
@@ -83,6 +88,7 @@ public abstract class AbstractPage {
 	protected void waitToElementVisible(WebDriver driver, String locator) {
 		explicitWait = new WebDriverWait(driver, SHORT_TIMEOUT);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+		// explicitWait.until(ExpectedConditions.)
 	}
 
 	protected void waitToElementVisible(WebDriver driver, String locator, String... values) {
@@ -200,11 +206,6 @@ public abstract class AbstractPage {
 		jsExecutor.executeScript("arguments[0].setAttribute('value', '" + value + "')", findElement(driver, locator));
 	}
 
-	public void clickToElementByJS(WebDriver driver, String locator) {
-		jsExecutor = (JavascriptExecutor) driver;
-		jsExecutor.executeScript("arguments[0].click();", findElement(driver, locator));
-	}
-
 	public String getElementAttribute(WebDriver driver, String locator, String attributeName) {
 		return findElement(driver, locator).getAttribute(attributeName);
 	}
@@ -226,14 +227,15 @@ public abstract class AbstractPage {
 		}
 
 	}
+
 	public void overrideGlobalTimeout(WebDriver driver, long timeout) {
 		driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
 	}
-	
+
 	public By byXpath(String locator) {
 		return By.xpath(locator);
 	}
-	
+
 	public void waitToElementInvisible(WebDriver driver, String locator) {
 		try {
 			// co gia tri khi co trong dom
@@ -246,7 +248,7 @@ public abstract class AbstractPage {
 			log.info("Waiting for element invisible with message: " + e.getMessage());
 		}
 	}
-	
+
 	public void waitToElementInvisible(WebDriver driver, String locator, String... values) {
 		try {
 			// co gia tri khi co trong dom
@@ -259,5 +261,27 @@ public abstract class AbstractPage {
 			log.info("Waiting for element invisible with message: " + e.getMessage());
 		}
 	}
-	
+
+	public String getTextOnTextboxByJS(WebDriver driver, String locator) {
+		jsExecutor = (JavascriptExecutor) driver;
+		return jsExecutor.executeScript("return arguments[0].value;", findElement(driver, locator)).toString();
+	}
+
+	public void checkToCheckbox(WebDriver driver, String locator) {
+		if (!findElement(driver, locator).isSelected()) {
+			findElement(driver, locator).click();
+		}
+	}
+
+	public void checkToCheckbox(WebDriver driver, String locator, String... value) {
+		if (!findElement(driver, castToRestParameter(locator, value)).isSelected()) {
+			findElement(driver, castToRestParameter(locator, value)).click();
+		}
+	}
+
+	public void uncheckToCheckbox(WebDriver driver, String locator) {
+		if (findElement(driver, locator).isSelected()) {
+			findElement(driver, locator).click();
+		}
+	}
 }

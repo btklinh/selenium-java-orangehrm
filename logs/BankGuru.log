@@ -1,0 +1,304 @@
+[INFO ] [2022-10-15 16:57:32,851] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 16:57:37,060] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 16:57:37,614] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 16:57:37,806] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 16:57:38,666] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 16:57:46,363] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 16:57:46,841] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 17:10:08,667] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 17:10:13,190] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 17:10:13,965] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 17:10:14,168] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 17:10:15,169] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 17:10:23,571] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 17:10:24,196] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 17:11:03,576] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 17:11:08,027] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 17:11:08,715] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 17:11:08,920] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 17:11:09,871] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 17:11:18,968] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 17:11:19,584] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 17:11:19,651] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 17:12:12,835] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 17:12:16,605] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 17:12:17,418] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 17:12:17,598] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 17:12:18,356] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 17:12:28,043] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 17:12:28,742] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 17:59:16,449] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 17:59:24,092] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 17:59:24,962] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 17:59:25,157] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 17:59:26,120] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 17:59:33,915] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 17:59:34,476] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 17:59:37,671] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 17:59:38,695] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-15 18:00:25,835] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 18:00:29,619] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 18:00:30,294] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 18:00:30,495] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 18:00:31,297] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 18:00:40,173] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 18:00:42,827] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 18:00:43,079] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 18:00:44,370] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-15 18:09:28,853] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 18:09:32,987] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 18:09:33,848] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 18:09:34,030] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 18:09:34,853] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 18:09:42,936] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 18:09:45,496] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 18:09:45,577] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 18:09:46,149] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-15 18:17:17,965] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 18:17:22,834] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 18:17:23,763] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 18:17:23,953] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 18:17:25,007] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 18:17:33,764] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 18:17:36,451] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 18:17:36,545] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 18:17:41,022] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-15 20:53:05,813] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 20:53:21,139] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 20:53:23,111] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 20:53:23,644] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 20:53:25,327] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 20:53:43,808] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 20:53:48,197] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 20:54:28,961] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 20:54:41,451] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 20:54:46,391] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 20:54:47,127] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 20:54:49,514] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 20:55:10,388] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 20:55:15,441] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 20:55:15,746] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 20:55:24,158] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-15 22:29:46,086] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 22:29:58,358] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 22:30:00,489] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 22:30:01,288] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 22:30:03,289] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 22:30:22,926] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 22:30:29,953] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 22:30:31,375] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 22:30:42,626] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-15 22:32:16,801] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 22:32:33,874] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 22:32:36,610] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 22:32:37,376] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 22:32:39,406] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 22:33:12,010] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 22:33:18,024] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 22:35:16,663] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 22:35:35,700] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 22:35:38,371] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 22:35:39,064] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 22:35:41,276] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 22:36:07,904] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 22:36:13,880] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 22:46:41,577] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 22:46:53,387] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 22:46:55,569] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 22:46:56,181] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 22:46:58,206] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 22:47:16,041] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 22:47:21,406] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 22:47:21,849] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 22:48:39,149] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 22:48:50,351] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 22:48:52,409] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 22:48:52,992] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 22:48:54,794] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 22:49:13,780] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 22:49:18,822] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 22:49:18,918] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 22:49:27,255] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-15 22:57:42,749] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 22:57:59,084] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 22:58:01,436] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 22:58:02,127] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 22:58:04,067] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 22:58:28,449] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 22:58:34,061] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 22:58:34,131] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 23:02:59,094] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 23:03:10,019] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 23:03:11,994] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 23:03:12,598] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 23:03:14,436] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 23:03:31,600] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 23:03:33,728] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 23:03:39,163] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 23:03:47,301] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-15 23:08:50,762] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 23:09:03,433] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 23:09:05,698] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 23:09:06,267] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 23:09:08,476] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 23:09:27,751] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 23:09:30,879] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 23:09:36,292] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 23:09:44,777] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-15 23:11:46,867] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 23:11:57,217] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 23:11:59,020] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 23:11:59,581] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 23:12:01,472] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 23:12:17,518] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 23:12:19,826] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 23:12:25,151] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 23:12:33,432] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-15 23:15:28,707] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-15 23:15:38,518] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-15 23:15:40,350] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-15 23:15:40,871] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-15 23:15:42,479] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-15 23:16:00,467] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-15 23:16:02,873] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-15 23:16:08,241] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-15 23:16:16,365] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-16 01:01:09,118] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 01:01:31,375] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-16 01:01:33,206] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-16 01:01:33,794] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-16 01:01:35,669] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-16 01:01:39,608] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-16 01:01:41,144] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-16 01:01:46,422] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-16 01:01:51,220] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-16 02:46:34,419] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 02:46:53,506] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-16 02:46:55,027] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-16 02:46:55,525] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-16 02:46:57,142] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-16 02:47:01,570] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-16 02:47:03,227] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-16 02:47:08,535] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-16 02:47:13,643] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-16 02:53:32,033] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 02:53:52,174] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-16 02:53:53,597] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-16 02:53:54,211] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-16 02:53:55,737] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-16 02:54:01,528] TC01 - Step 02: Inout valid info of employee 
+[INFO ] [2022-10-16 02:54:03,166] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-16 02:54:08,454] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-16 02:54:13,152] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-16 03:14:25,324] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 03:14:45,311] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-16 03:14:46,743] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-16 03:14:47,262] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-16 03:14:57,404] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-16 03:14:57,899] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-16 03:14:58,396] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-16 03:14:58,895] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-16 03:14:59,293] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-16 03:14:59,789] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-16 03:23:57,145] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 03:24:17,285] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-16 03:24:18,726] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-16 03:24:19,273] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-16 03:24:29,040] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-16 03:24:29,491] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-16 03:24:29,929] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-16 03:24:30,475] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-16 03:24:30,913] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-16 03:24:31,451] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-16 03:24:31,911] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-16 03:28:20,809] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 03:28:39,176] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-16 03:28:40,667] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-16 03:28:41,168] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-16 03:28:51,500] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-16 03:28:52,062] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-16 03:28:52,639] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-16 03:28:53,157] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-16 03:28:53,566] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-16 03:28:54,067] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-16 03:28:54,490] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-16 03:28:56,057] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-16 03:43:54,856] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 03:45:07,914] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 03:45:19,706] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-16 03:45:20,871] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-16 03:45:21,339] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-16 03:45:31,052] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-16 03:45:31,534] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-16 03:45:32,070] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-16 03:45:32,589] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-16 03:45:32,983] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-16 03:45:33,493] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-16 03:45:33,916] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-16 03:45:35,477] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-16 03:45:36,922] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-16 03:45:37,301] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-16 03:45:37,552] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-16 03:46:37,659] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 03:46:50,854] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-16 03:46:52,043] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-16 03:46:52,492] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-16 03:47:02,700] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-16 03:47:03,208] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-16 03:47:03,717] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-16 03:47:04,233] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-16 03:47:04,631] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-16 03:47:05,142] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-16 03:47:05,575] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-16 03:47:07,159] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-16 03:47:08,615] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-16 03:47:09,001] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-16 03:47:09,262] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-16 03:48:00,506] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 03:48:18,822] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-16 03:48:20,274] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-16 03:48:20,734] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-16 03:48:30,345] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-16 03:48:30,798] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-16 03:48:31,296] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-16 03:48:31,800] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-16 03:48:32,185] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-16 03:48:32,705] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-16 03:48:33,123] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-16 03:48:34,701] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-16 03:48:36,173] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-16 03:48:36,595] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-16 03:48:36,868] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-16 03:55:02,126] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 03:55:16,315] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-16 03:55:17,935] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-16 03:55:18,464] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-16 03:55:29,208] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-16 03:55:29,896] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-16 03:55:30,581] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-16 03:55:31,305] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-16 03:55:31,887] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-16 03:55:32,637] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-16 03:55:33,229] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-16 03:55:35,043] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-16 03:55:36,678] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-16 03:55:37,233] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-16 03:55:37,718] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-16 03:55:38,180] TC02 - Step 12: Set Smoker
+[INFO ] [2022-10-16 04:02:31,720] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-16 04:02:45,699] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-16 04:02:47,482] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-16 04:02:48,023] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-16 04:02:57,632] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-16 04:02:58,143] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-16 04:02:58,660] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-16 04:02:59,165] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-16 04:02:59,557] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-16 04:03:00,066] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-16 04:03:00,491] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-16 04:03:02,096] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-16 04:03:03,548] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-16 04:03:03,919] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-16 04:03:04,233] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-16 04:03:04,602] TC02 - Step 12: Set Smoker
+[INFO ] [2022-10-16 04:03:04,736] TC02 - Step 13: Click Save

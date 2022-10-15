@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>E:\course-automation-testing-framework\02-source-code\selenium_java_orangehrm\src\test\resources\testng.xml</span>
+                    <span>G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\src\test\resources\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.WorkShift_Operation" class="method navigator-link" hash-for-method="TC_01_Verify_Add_Work_Shift">TC_01_Verify_Add_Work_Shift</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.pim.Employee_Add" class="method navigator-link" hash-for-method="TC_02_Verify_Edit_Personal_Details">TC_02_Verify_Edit_Personal_Details</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -120,14 +120,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">orangehrm.admin.job.WorkShift_Operation</span>
+              <span class="class-name">orangehrm.pim.Employee_Add</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_01_Verify_Add_Work_Shift">
-                  </a> <!-- TC_01_Verify_Add_Work_Shift -->
-                  <span class="method-name">TC_01_Verify_Add_Work_Shift</span>
+                  <a name="TC_02_Verify_Edit_Personal_Details">
+                  </a> <!-- TC_02_Verify_Edit_Personal_Details -->
+                  <span class="method-name">TC_02_Verify_Edit_Personal_Details</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +135,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\course-automation-testing-framework\02-source-code\selenium_java_orangehrm\src\test\resources\testng.xml</span>
+            <span class="header-content">G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\src\test\resources\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -150,7 +150,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Run on Chrome&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;orangehrm.admin.job.WorkShift_Operation&quot;/&gt;
+      &lt;class name=&quot;orangehrm.pim.Employee_Add&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Run on Chrome --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -192,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_01_Verify_Add_Work_Shift')
-data.setCell(0, 2, 'orangehrm.admin.job.WorkShift_Operation')
-data.setCell(0, 3, 8254);
+data.setCell(0, 1, 'TC_02_Verify_Edit_Personal_Details')
+data.setCell(0, 2, 'orangehrm.pim.Employee_Add')
+data.setCell(0, 3, 15773);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -210,6 +210,37 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_02_Verify_Edit_Personal_Details</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:02:57,632] TC02 - Step 01: Set NickName
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:02:58,143] TC02 - Step 02: Set Other ID
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:02:58,660] TC02 - Step 03: Set Driver's License Number
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:02:59,165] TC02 - Step 04: Set License Expiry Date
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:02:59,557] TC02 - Step 05: Set SSN Number
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:00,066] TC02 - Step 06: Set SIN Number
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:00,491] TC02 - Step 07: Set Nationality
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:02,096] TC02 - Step 08: Set Marital Status
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:03,548] TC02 - Step 09: Set Date of Birth
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:03,919] TC02 - Step 10: Set Gender
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:04,233] TC02 - Step 11: Set Military Service
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:04,602] TC02 - Step 12: Set Smoker
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:04,736] TC02 - Step 13: Click Save
+<br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
@@ -225,19 +256,23 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">orangehrm.admin.job.WorkShift_Operation</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">orangehrm.pim.Employee_Add</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">deleteAllFilesInReportNGScreenshot</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">Precondition_Login(chrome)</span>
-                <span class="method-start">116 ms</span>
+                <span class="method-start">212 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TC_01_Verify_Add_Work_Shift</span>
-                <span class="method-start">10163 ms</span>
+                <span class="method-name">TC_02_Verify_Edit_Personal_Details</span>
+                <span class="method-start">17789 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">33903 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="orangehrm.admin.job.JobTitle_Work_Flow">
+      <class name="orangehrm.pim.Employee_Add">
         <methods>
+          <include name="TC_01_Verify_Add_Employee"/>
           <include name="Precondition_Login"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
-          <include name="TC_02_Verify_Edit_Job_Specification_File"/>
         </methods>
-      </class> <!-- orangehrm.admin.job.JobTitle_Work_Flow -->
+      </class> <!-- orangehrm.pim.Employee_Add -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

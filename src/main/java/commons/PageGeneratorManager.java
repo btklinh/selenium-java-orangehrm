@@ -2,6 +2,8 @@ package commons;
 
 import org.openqa.selenium.WebDriver;
 
+import pageObjects.EmployeeAddPageObject;
+import pageObjects.EmployeeInfoPageObject;
 import pageObjects.EmploymentStatusPageObject;
 import pageObjects.JobCategoriesPageObject;
 import pageObjects.JobTitlesPageObject;
@@ -48,5 +50,13 @@ public class PageGeneratorManager {
 	}
 	public static LocationsPageObject getLocationsPage(WebDriver driver) {
 		return new LocationsPageObject(driver);
+	}
+	
+	public static EmployeeInfoPageObject getEmployeeInfoPage (WebDriver driver) {
+		return new EmployeeInfoPageObject(driver);
+	}
+	
+	public static EmployeeAddPageObject getEmployeeAddPage (WebDriver driver) {
+		return new EmployeeAddPageObject(driver);
 	}
 }

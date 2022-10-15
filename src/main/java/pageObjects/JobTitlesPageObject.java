@@ -43,7 +43,7 @@ public class JobTitlesPageObject extends AbstractPage {
 
 	public void clickToSaveButton() {
 		waitToElementClickable(driver, JobTitlesPageUI.SAVE_BUTTON);
-		clickToElement(driver, JobTitlesPageUI.SAVE_BUTTON);
+		clickToElementByJS(driver, JobTitlesPageUI.SAVE_BUTTON);
 	}
 
 	public void clickToBrowseButton() {
