@@ -96,8 +96,16 @@ public class EmployeeInfoPageObject extends AbstractPage {
 	}
 
 	public void selectGender(String gender) {
-		waitToElementClickable(driver, EmployeeInfoPageUI.GENDER_RADIO_BUTTON, gender);
-		checkToCheckbox(driver, EmployeeInfoPageUI.SMOKER_CHECKBOX,gender);
+		waitToElementVisible(driver, EmployeeInfoPageUI.GENDER_RADIO_BUTTON, gender);
+		checkToCheckbox(driver, EmployeeInfoPageUI.GENDER_RADIO_BUTTON, gender);
+//		//waitToElementClickable(driver, EmployeeInfoPageUI.SMOKER_CHECKBOX);	    
+//
+////		if (gender.contentEquals("Male")) 
+////			checkToCheckbox(driver, EmployeeInfoPageUI.GENDER_RADIO_BUTTON);
+////		else
+////			uncheckToCheckbox(driver, EmployeeInfoPageUI.GENDER_RADIO_BUTTON);
+//		waitToElementClickable(driver, EmployeeInfoPageUI.GENDER_RADIO_BUTTON, gender);
+//		checkToCheckbox(driver, EmployeeInfoPageUI.SMOKER_CHECKBOX,gender);
 	}
 	
 	public void setMilitary(String value) {
@@ -119,6 +127,21 @@ public class EmployeeInfoPageObject extends AbstractPage {
 		waitToElementClickable(driver, EmployeeInfoPageUI.SAVEPD_BUTTON);
 		clickToElement(driver, EmployeeInfoPageUI.SAVEPD_BUTTON);
 	}
+
+	public void clickToBloodTypeArror() {
+		waitToElementClickable(driver, EmployeeInfoPageUI.BLOODTYPE_ARROW_ICON);
+		clickToElement(driver, EmployeeInfoPageUI.BLOODTYPE_ARROW_ICON);
+	}
+
+	public void clickSaveCustomFields() {
+		sleepInSecond(3);
+		waitToElementClickable(driver, EmployeeInfoPageUI.SAVE_CF_BUTTON);
+		clickToElement(driver, EmployeeInfoPageUI.SAVE_CF_BUTTON);
+	}
+
+//	public void setBloodType(String string) {
+//		waitToElementVisible(driver, EmployeeInfoPageUI.
+//	}
 
 
 }

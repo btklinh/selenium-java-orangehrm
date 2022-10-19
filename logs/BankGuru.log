@@ -302,3 +302,207 @@
 [INFO ] [2022-10-16 04:03:04,233] TC02 - Step 11: Set Military Service
 [INFO ] [2022-10-16 04:03:04,602] TC02 - Step 12: Set Smoker
 [INFO ] [2022-10-16 04:03:04,736] TC02 - Step 13: Click Save
+[INFO ] [2022-10-18 00:44:59,922] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-18 00:45:20,533] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-18 00:45:21,965] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-18 00:45:22,659] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-18 00:45:33,848] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-18 00:45:34,490] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-18 00:45:35,071] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-18 00:45:35,709] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-18 00:45:36,215] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-18 00:45:36,864] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-18 00:45:37,369] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-18 00:45:39,042] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-18 00:45:40,650] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-18 00:45:41,180] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-18 00:45:41,700] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-18 00:45:42,222] TC02 - Step 12: Set Smoker
+[INFO ] [2022-10-18 00:45:42,420] TC02 - Step 13: Click Save
+[INFO ] [2022-10-18 00:45:42,740] TC02 - Step 14: Verify message success displayed
+[INFO ] [2022-10-18 00:48:34,395] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-18 00:48:49,671] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-18 00:48:51,968] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-18 00:48:52,619] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-18 00:49:03,596] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-18 00:49:04,223] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-18 00:49:04,901] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-18 00:49:05,563] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-18 00:49:06,084] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-18 00:49:06,755] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-18 00:49:07,287] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-18 00:49:08,976] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-18 00:49:10,549] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-18 00:49:11,007] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-18 00:49:11,410] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-18 00:49:11,966] TC02 - Step 12: Set Smoker
+[INFO ] [2022-10-18 00:49:12,111] TC02 - Step 13: Click Save
+[INFO ] [2022-10-18 00:49:12,455] TC02 - Step 14: Verify message success displayed
+[INFO ] [2022-10-18 00:49:14,100] TC02 - Step 15: Set Blood Type
+[INFO ] [2022-10-18 00:49:14,998] TC02 - Step 16: Click Save
+[INFO ] [2022-10-18 00:49:15,445] TC02 - Step 17: Verify message success displayed
+[INFO ] [2022-10-18 00:50:52,739] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-18 00:51:10,363] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-18 00:51:11,924] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-18 00:51:12,482] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-18 00:51:23,890] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-18 00:51:24,563] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-18 00:51:25,273] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-18 00:51:25,996] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-18 00:51:26,498] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-18 00:51:27,130] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-18 00:51:27,650] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-18 00:51:29,376] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-18 00:51:30,905] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-18 00:51:31,363] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-18 00:51:31,753] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-18 00:51:32,256] TC02 - Step 12: Set Smoker
+[INFO ] [2022-10-18 00:51:32,431] TC02 - Step 13: Click Save
+[INFO ] [2022-10-18 00:51:32,767] TC02 - Step 14: Verify message success displayed
+[INFO ] [2022-10-18 00:51:33,962] TC02 - Step 15: Set Blood Type
+[INFO ] [2022-10-18 00:51:34,673] TC02 - Step 16: Click Save
+[INFO ] [2022-10-18 00:51:36,060] TC02 - Step 17: Verify message success displayed
+[INFO ] [2022-10-18 01:21:28,726] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-18 01:21:46,646] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-18 01:21:48,395] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-18 01:21:49,010] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-18 01:21:58,942] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-18 01:21:59,549] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-18 01:22:00,215] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-18 01:22:00,744] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-18 01:22:01,171] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-18 01:22:01,723] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-18 01:22:02,202] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-18 01:22:03,795] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-18 01:22:05,275] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-18 01:22:05,683] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-18 01:22:06,010] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-18 01:22:06,404] TC02 - Step 12: Set Smoker
+[INFO ] [2022-10-18 01:22:06,541] TC02 - Step 13: Click Save
+[INFO ] [2022-10-18 01:22:06,843] TC02 - Step 14: Verify message success displayed
+[INFO ] [2022-10-18 01:22:07,833] TC02 - Step 15: Set Blood Type
+[INFO ] [2022-10-18 01:22:08,380] TC02 - Step 16: Click Save
+[INFO ] [2022-10-18 01:22:11,772] TC02 - Step 17: Verify message success displayed
+[INFO ] [2022-10-18 01:25:12,223] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-18 01:25:31,774] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-18 01:25:32,970] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-18 01:25:33,488] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-18 01:25:35,334] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-18 01:25:39,805] TC01 - Step 02: Input valid info of employee 
+[INFO ] [2022-10-18 01:25:41,520] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-18 01:25:46,838] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-18 01:25:51,912] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-18 01:25:55,731] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-18 01:25:56,336] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-18 01:25:56,842] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-18 01:25:57,425] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-18 01:25:57,896] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-18 01:25:58,557] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-18 01:25:59,163] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-18 01:26:00,904] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-18 01:26:02,518] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-18 01:26:02,983] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-18 01:26:03,351] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-18 01:26:03,826] TC02 - Step 12: Set Smoker
+[INFO ] [2022-10-18 01:26:03,977] TC02 - Step 13: Click Save
+[INFO ] [2022-10-18 01:26:04,341] TC02 - Step 14: Verify message success displayed
+[INFO ] [2022-10-18 01:26:05,300] TC02 - Step 15: Set Blood Type
+[INFO ] [2022-10-18 01:26:05,922] TC02 - Step 16: Click Save
+[INFO ] [2022-10-18 01:26:09,237] TC02 - Step 17: Verify message success displayed
+[INFO ] [2022-10-18 01:27:49,038] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-18 01:28:16,963] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-18 01:28:18,710] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-18 01:28:19,462] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-18 01:28:21,596] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-18 01:28:26,611] TC01 - Step 02: Input valid info of employee 
+[INFO ] [2022-10-18 01:28:28,669] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-18 01:28:34,039] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-18 01:28:39,358] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-18 01:28:43,446] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-18 01:28:44,421] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-18 01:28:45,249] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-18 01:28:46,889] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-18 01:28:47,778] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-18 01:28:48,689] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-18 01:28:49,453] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-18 01:28:51,526] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-18 01:28:53,266] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-18 01:28:53,847] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-18 01:28:54,374] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-18 01:28:55,018] TC02 - Step 12: Set Smoker
+[INFO ] [2022-10-18 01:28:55,232] TC02 - Step 13: Click Save
+[INFO ] [2022-10-18 01:28:55,695] TC02 - Step 14: Verify message success displayed
+[INFO ] [2022-10-18 01:28:56,854] TC02 - Step 15: Set Blood Type
+[INFO ] [2022-10-18 01:28:57,700] TC02 - Step 16: Click Save
+[INFO ] [2022-10-18 01:29:01,165] TC02 - Step 17: Verify message success displayed
+[INFO ] [2022-10-18 01:30:58,035] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-18 01:31:15,326] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-18 01:31:17,092] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-18 01:31:17,748] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-18 01:31:19,711] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-18 01:31:24,033] TC01 - Step 02: Input valid info of employee 
+[INFO ] [2022-10-18 01:31:26,033] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-18 01:31:31,371] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-18 01:31:36,445] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-18 01:31:40,666] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-18 01:31:41,806] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-18 01:31:42,442] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-18 01:31:43,105] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-18 01:31:43,801] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-18 01:31:44,715] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-18 01:31:45,385] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-18 01:31:47,207] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-18 01:31:48,788] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-18 01:31:49,282] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-18 01:35:34,301] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-18 01:35:56,338] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-18 01:35:58,233] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-18 01:35:59,025] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-18 01:36:01,224] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-18 01:36:06,277] TC01 - Step 02: Input valid info of employee 
+[INFO ] [2022-10-18 01:36:08,368] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-18 01:36:13,804] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-18 01:36:19,697] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-18 01:36:23,985] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-18 01:36:25,176] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-18 01:36:26,044] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-18 01:36:26,979] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-18 01:36:27,600] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-18 01:36:28,428] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-18 01:36:29,189] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-18 01:36:31,162] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-18 01:36:32,884] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-18 01:36:33,451] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-18 01:36:33,947] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-18 01:36:34,580] TC02 - Step 12: Set Smoker
+[INFO ] [2022-10-18 01:36:34,822] TC02 - Step 13: Click Save
+[INFO ] [2022-10-18 01:36:35,221] TC02 - Step 14: Verify message success displayed
+[INFO ] [2022-10-18 01:36:36,466] TC02 - Step 15: Set Blood Type
+[INFO ] [2022-10-18 01:36:37,166] TC02 - Step 16: Click Save
+[INFO ] [2022-10-18 01:36:40,544] TC02 - Step 17: Verify message success displayed
+[INFO ] [2022-10-18 01:56:50,830] Pre-condition - Step 01: Open orangehrm site
+[INFO ] [2022-10-18 01:56:59,553] Pre-condition - Step 02: Input correct Username
+[INFO ] [2022-10-18 01:57:01,191] Pre-condition - Step 03: Input correct Password
+[INFO ] [2022-10-18 01:57:01,705] Pre-condition - Step 03: Click Login button
+[INFO ] [2022-10-18 01:57:02,280] TC01 - Step 01: Click Add Employee
+[INFO ] [2022-10-18 01:57:07,814] TC01 - Step 02: Input valid info of employee 
+[INFO ] [2022-10-18 01:57:09,311] TC01 - Step 03: Click Save button
+[INFO ] [2022-10-18 01:57:14,615] TC01 - Step 04: Verify success message is displayed
+[INFO ] [2022-10-18 01:57:19,555] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+[INFO ] [2022-10-18 01:57:22,822] TC02 - Step 01: Set NickName
+[INFO ] [2022-10-18 01:57:23,402] TC02 - Step 02: Set Other ID
+[INFO ] [2022-10-18 01:57:23,939] TC02 - Step 03: Set Driver's License Number
+[INFO ] [2022-10-18 01:57:24,545] TC02 - Step 04: Set License Expiry Date
+[INFO ] [2022-10-18 01:57:24,987] TC02 - Step 05: Set SSN Number
+[INFO ] [2022-10-18 01:57:25,646] TC02 - Step 06: Set SIN Number
+[INFO ] [2022-10-18 01:57:26,148] TC02 - Step 07: Set Nationality
+[INFO ] [2022-10-18 01:57:27,758] TC02 - Step 08: Set Marital Status
+[INFO ] [2022-10-18 01:57:29,243] TC02 - Step 09: Set Date of Birth
+[INFO ] [2022-10-18 01:57:29,650] TC02 - Step 10: Set Gender
+[INFO ] [2022-10-18 01:57:29,957] TC02 - Step 11: Set Military Service
+[INFO ] [2022-10-18 01:57:30,395] TC02 - Step 12: Set Smoker
+[INFO ] [2022-10-18 01:57:30,576] TC02 - Step 13: Click Save
+[INFO ] [2022-10-18 01:57:30,849] TC02 - Step 14: Verify message success displayed
+[INFO ] [2022-10-18 01:57:31,799] TC02 - Step 15: Set Blood Type
+[INFO ] [2022-10-18 01:57:32,398] TC02 - Step 16: Click Save
+[INFO ] [2022-10-18 01:57:35,671] TC02 - Step 17: Verify message success displayed

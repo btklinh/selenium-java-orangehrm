@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 9 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,75 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">26 methods, 9 failed,  1 skipped,  16 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.page.Admin_Page_Access_01" class="method navigator-link" hash-for-method="TC_01_Verify_Access_User_Page">TC_01_Verify_Access_User_Page</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.PayGrades_Operation" class="method navigator-link" hash-for-method="TC_02_Verify_Add_Currency">TC_02_Verify_Add_Currency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.page.Admin_Page_Access_01" class="method navigator-link" hash-for-method="TC_02_Verify_Job_Titles_Page">TC_02_Verify_Job_Titles_Page</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.PayGrades_Operation" class="method navigator-link" hash-for-method="TC_03_Verify_Edit_Currency">TC_03_Verify_Edit_Currency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.page.Admin_Page_Access_01" class="method navigator-link" hash-for-method="TC_03_Verify_Job_Pay_Grades_Page">TC_03_Verify_Job_Pay_Grades_Page</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.PayGrades_Operation" class="method navigator-link" hash-for-method="TC_04_Verify_Delete_Currency">TC_04_Verify_Delete_Currency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.page.Admin_Page_Access_01" class="method navigator-link" hash-for-method="TC_04_Verify_Job_Employee_Status_Page">TC_04_Verify_Job_Employee_Status_Page</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.page.Admin_Page_Access_01" class="method navigator-link" hash-for-method="TC_05_Verify_Job_Job_Categories_Page">TC_05_Verify_Job_Job_Categories_Page</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.page.Admin_Page_Access_01" class="method navigator-link" hash-for-method="TC_06_Verify_Job_Work_Shifts_Page">TC_06_Verify_Job_Work_Shifts_Page</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.organization.Location_Operation" class="method navigator-link" hash-for-method="TC_04_Verify_Search_Existed_Location_By_Name">TC_04_Verify_Search_Existed_Location_By_Name</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +170,82 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.JobTitle_Validation" class="method navigator-link" hash-for-method="TC_01_Job_Title_Cannot_Be_Blank">TC_01_Job_Title_Cannot_Be_Blank</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.pim.Employee_Add" class="method navigator-link" hash-for-method="TC_01_Verify_Add_Employee">TC_01_Verify_Add_Employee</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.JobTitle_Operation" class="method navigator-link" hash-for-method="TC_01_Verify_Add_Job_Title">TC_01_Verify_Add_Job_Title</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.PayGrades_Operation" class="method navigator-link" hash-for-method="TC_01_Verify_Add_Pay_Grade">TC_01_Verify_Add_Pay_Grade</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.WorkShift_Operation" class="method navigator-link" hash-for-method="TC_01_Verify_Add_Work_Shift">TC_01_Verify_Add_Work_Shift</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.JobTitle_Validation" class="method navigator-link" hash-for-method="TC_02_Job_Title_Cannot_More_Than_100_Characters">TC_02_Job_Title_Cannot_More_Than_100_Characters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.JobTitle_Operation" class="method navigator-link" hash-for-method="TC_02_Verify_Edit_Job_Title">TC_02_Verify_Edit_Job_Title</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="orangehrm.pim.Employee_Add" class="method navigator-link" hash-for-method="TC_02_Verify_Edit_Personal_Details">TC_02_Verify_Edit_Personal_Details</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.JobTitle_Validation" class="method navigator-link" hash-for-method="TC_03_File_Size_Cannot_More_Than_1MB">TC_03_File_Size_Cannot_More_Than_1MB</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.JobTitle_Operation" class="method navigator-link" hash-for-method="TC_03_Verify_Edit_Job_Specification_File">TC_03_Verify_Edit_Job_Specification_File</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.JobTitle_Validation" class="method navigator-link" hash-for-method="TC_04_File_Extension_Wrong_Format">TC_04_File_Extension_Wrong_Format</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.JobTitle_Operation" class="method navigator-link" hash-for-method="TC_04_Verify_Delete_Job_Specification_File">TC_04_Verify_Delete_Job_Specification_File</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.JobTitle_Operation" class="method navigator-link" hash-for-method="TC_05_Job_Title_Cannot_Be_Duplicated">TC_05_Job_Title_Cannot_Be_Duplicated</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.PayGrades_Operation" class="method navigator-link" hash-for-method="TC_05_Verify_Edit_Pay_Grades">TC_05_Verify_Edit_Pay_Grades</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.JobTitle_Operation" class="method navigator-link" hash-for-method="TC_06_Verify_Delete_Operation">TC_06_Verify_Delete_Operation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="orangehrm.admin.job.PayGrades_Operation" class="method navigator-link" hash-for-method="TC_06_Verify_Delete_Pay_Grade">TC_06_Verify_Delete_Pay_Grade</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -117,6 +260,266 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">orangehrm.page.Admin_Page_Access_01</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_Verify_Access_User_Page">
+                  </a> <!-- TC_01_Verify_Access_User_Page -->
+                  <span class="method-name">TC_01_Verify_Access_User_Page</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[text()=&apos;Admin&apos;]/parent::a (tried for 5 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at commons.AbstractPage.waitToElementClickable(AbstractPage.java:107)
+	at commons.AbstractPage.clickToLeftMenuByName(AbstractPage.java:180)
+	at orangehrm.page.Admin_Page_Access_01.TC_01_Verify_Access_User_Page(Admin_Page_Access_01.java:57)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Admin&apos;]/parent::a&quot;}
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-OVC9B5E&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53316}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ff215575744e01bcc1b0bd39770fa845
+*** Element info: {Using=xpath, value=//span[text()=&apos;Admin&apos;]/parent::a}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_02_Verify_Job_Titles_Page">
+                  </a> <!-- TC_02_Verify_Job_Titles_Page -->
+                  <span class="method-name">TC_02_Verify_Job_Titles_Page</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pageObjects.UserPageObject.clickToParentMenuByName(org.openqa.selenium.WebDriver, String)&quot; because &quot;this.userPage&quot; is null
+	at orangehrm.page.Admin_Page_Access_01.TC_02_Verify_Job_Titles_Page(Admin_Page_Access_01.java:67)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_03_Verify_Job_Pay_Grades_Page">
+                  </a> <!-- TC_03_Verify_Job_Pay_Grades_Page -->
+                  <span class="method-name">TC_03_Verify_Job_Pay_Grades_Page</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pageObjects.JobTitlesPageObject.clickToParentMenuByName(org.openqa.selenium.WebDriver, String)&quot; because &quot;this.jobTitlesPage&quot; is null
+	at orangehrm.page.Admin_Page_Access_01.TC_03_Verify_Job_Pay_Grades_Page(Admin_Page_Access_01.java:78)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_04_Verify_Job_Employee_Status_Page">
+                  </a> <!-- TC_04_Verify_Job_Employee_Status_Page -->
+                  <span class="method-name">TC_04_Verify_Job_Employee_Status_Page</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pageObjects.PayGradesPageObject.clickToParentMenuByName(org.openqa.selenium.WebDriver, String)&quot; because &quot;this.payGradesPage&quot; is null
+	at orangehrm.page.Admin_Page_Access_01.TC_04_Verify_Job_Employee_Status_Page(Admin_Page_Access_01.java:89)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_05_Verify_Job_Job_Categories_Page">
+                  </a> <!-- TC_05_Verify_Job_Job_Categories_Page -->
+                  <span class="method-name">TC_05_Verify_Job_Job_Categories_Page</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pageObjects.EmploymentStatusPageObject.clickToParentMenuByName(org.openqa.selenium.WebDriver, String)&quot; because &quot;this.employmentStatusPage&quot; is null
+	at orangehrm.page.Admin_Page_Access_01.TC_05_Verify_Job_Job_Categories_Page(Admin_Page_Access_01.java:100)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_06_Verify_Job_Work_Shifts_Page">
+                  </a> <!-- TC_06_Verify_Job_Work_Shifts_Page -->
+                  <span class="method-name">TC_06_Verify_Job_Work_Shifts_Page</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pageObjects.JobCategoriesPageObject.clickToParentMenuByName(org.openqa.selenium.WebDriver, String)&quot; because &quot;this.jobCategoriesPage&quot; is null
+	at orangehrm.page.Admin_Page_Access_01.TC_06_Verify_Job_Work_Shifts_Page(Admin_Page_Access_01.java:111)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">orangehrm.admin.job.PayGrades_Operation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_02_Verify_Add_Currency">
+                  </a> <!-- TC_02_Verify_Add_Currency -->
+                  <span class="method-name">TC_02_Verify_Add_Currency</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-OVC9B5E&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53219}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b054c35d9ab1042ed7c60c79b5dfedcd
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
+	at pageObjects.PayGradesPageObject.getAllDropdownValue(PayGradesPageObject.java:104)
+	at pageObjects.PayGradesPageObject.getRandomCurrencyValue(PayGradesPageObject.java:168)
+	at orangehrm.admin.job.PayGrades_Operation.TC_02_Verify_Add_Currency(PayGrades_Operation.java:104)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_03_Verify_Edit_Currency">
+                  </a> <!-- TC_03_Verify_Edit_Currency -->
+                  <span class="method-name">TC_03_Verify_Edit_Currency</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;String.substring(int)&quot; because &quot;this.currencyValue&quot; is null
+	at orangehrm.admin.job.PayGrades_Operation.TC_03_Verify_Edit_Currency(PayGrades_Operation.java:133)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_04_Verify_Delete_Currency">
+                  </a> <!-- TC_04_Verify_Delete_Currency -->
+                  <span class="method-name">TC_04_Verify_Delete_Currency</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;String.substring(int)&quot; because &quot;this.currencyValue&quot; is null
+	at orangehrm.admin.job.PayGrades_Operation.TC_04_Verify_Delete_Currency(PayGrades_Operation.java:156)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">orangehrm.admin.organization.Location_Operation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_04_Verify_Search_Existed_Location_By_Name">
+                  </a> <!-- TC_04_Verify_Search_Existed_Location_By_Name -->
+                  <span class="method-name">TC_04_Verify_Search_Existed_Location_By_Name</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[text()=&apos;Admin&apos;]/parent::a (tried for 5 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at commons.AbstractPage.waitToElementClickable(AbstractPage.java:107)
+	at commons.AbstractPage.clickToLeftMenuByName(AbstractPage.java:180)
+	at orangehrm.admin.organization.Location_Operation.Precondition_Login(Location_Operation.java:48)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Admin&apos;]/parent::a&quot;}
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-OVC9B5E&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53296}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: db1eba3a5067c327115e60a46db535e3
+*** Element info: {Using=xpath, value=//span[text()=&apos;Admin&apos;]/parent::a}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">orangehrm.admin.job.JobTitle_Validation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_Job_Title_Cannot_Be_Blank">
+                  </a> <!-- TC_01_Job_Title_Cannot_Be_Blank -->
+                  <span class="method-name">TC_01_Job_Title_Cannot_Be_Blank</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_02_Job_Title_Cannot_More_Than_100_Characters">
+                  </a> <!-- TC_02_Job_Title_Cannot_More_Than_100_Characters -->
+                  <span class="method-name">TC_02_Job_Title_Cannot_More_Than_100_Characters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_03_File_Size_Cannot_More_Than_1MB">
+                  </a> <!-- TC_03_File_Size_Cannot_More_Than_1MB -->
+                  <span class="method-name">TC_03_File_Size_Cannot_More_Than_1MB</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_04_File_Extension_Wrong_Format">
+                  </a> <!-- TC_04_File_Extension_Wrong_Format -->
+                  <span class="method-name">TC_04_File_Extension_Wrong_Format</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">orangehrm.admin.job.WorkShift_Operation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_Verify_Add_Work_Shift">
+                  </a> <!-- TC_01_Verify_Add_Work_Shift -->
+                  <span class="method-name">TC_01_Verify_Add_Work_Shift</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -125,9 +528,95 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="TC_01_Verify_Add_Employee">
+                  </a> <!-- TC_01_Verify_Add_Employee -->
+                  <span class="method-name">TC_01_Verify_Add_Employee</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="TC_02_Verify_Edit_Personal_Details">
                   </a> <!-- TC_02_Verify_Edit_Personal_Details -->
                   <span class="method-name">TC_02_Verify_Edit_Personal_Details</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">orangehrm.admin.job.PayGrades_Operation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_Verify_Add_Pay_Grade">
+                  </a> <!-- TC_01_Verify_Add_Pay_Grade -->
+                  <span class="method-name">TC_01_Verify_Add_Pay_Grade</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_05_Verify_Edit_Pay_Grades">
+                  </a> <!-- TC_05_Verify_Edit_Pay_Grades -->
+                  <span class="method-name">TC_05_Verify_Edit_Pay_Grades</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_06_Verify_Delete_Pay_Grade">
+                  </a> <!-- TC_06_Verify_Delete_Pay_Grade -->
+                  <span class="method-name">TC_06_Verify_Delete_Pay_Grade</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">orangehrm.admin.job.JobTitle_Operation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_01_Verify_Add_Job_Title">
+                  </a> <!-- TC_01_Verify_Add_Job_Title -->
+                  <span class="method-name">TC_01_Verify_Add_Job_Title</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_02_Verify_Edit_Job_Title">
+                  </a> <!-- TC_02_Verify_Edit_Job_Title -->
+                  <span class="method-name">TC_02_Verify_Edit_Job_Title</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_03_Verify_Edit_Job_Specification_File">
+                  </a> <!-- TC_03_Verify_Edit_Job_Specification_File -->
+                  <span class="method-name">TC_03_Verify_Edit_Job_Specification_File</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_04_Verify_Delete_Job_Specification_File">
+                  </a> <!-- TC_04_Verify_Delete_Job_Specification_File -->
+                  <span class="method-name">TC_04_Verify_Delete_Job_Specification_File</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_05_Job_Title_Cannot_Be_Duplicated">
+                  </a> <!-- TC_05_Job_Title_Cannot_Be_Duplicated -->
+                  <span class="method-name">TC_05_Job_Title_Cannot_Be_Duplicated</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_06_Verify_Delete_Operation">
+                  </a> <!-- TC_06_Verify_Delete_Operation -->
+                  <span class="method-name">TC_06_Verify_Delete_Operation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -150,6 +639,12 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Run on Chrome&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;orangehrm.admin.job.JobTitle_Operation&quot;/&gt;
+      &lt;class name=&quot;orangehrm.admin.job.JobTitle_Validation&quot;/&gt;
+      &lt;class name=&quot;orangehrm.admin.job.PayGrades_Operation&quot;/&gt;
+      &lt;class name=&quot;orangehrm.admin.job.WorkShift_Operation&quot;/&gt;
+      &lt;class name=&quot;orangehrm.admin.organization.Location_Operation&quot;/&gt;
+      &lt;class name=&quot;orangehrm.page.Admin_Page_Access_01&quot;/&gt;
       &lt;class name=&quot;orangehrm.pim.Employee_Add&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Run on Chrome --&gt;
@@ -164,7 +659,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Run on Chrome (1 class)</span>
+                <span class="test-name">Run on Chrome (7 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -190,16 +685,116 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(26);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_02_Verify_Edit_Personal_Details')
+data.setCell(0, 1, 'TC_01_Verify_Add_Employee')
 data.setCell(0, 2, 'orangehrm.pim.Employee_Add')
-data.setCell(0, 3, 15773);
+data.setCell(0, 3, 20643);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TC_02_Verify_Add_Currency')
+data.setCell(1, 2, 'orangehrm.admin.job.PayGrades_Operation')
+data.setCell(1, 3, 18089);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TC_04_Verify_Delete_Job_Specification_File')
+data.setCell(2, 2, 'orangehrm.admin.job.JobTitle_Operation')
+data.setCell(2, 3, 16324);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TC_01_Verify_Add_Job_Title')
+data.setCell(3, 2, 'orangehrm.admin.job.JobTitle_Operation')
+data.setCell(3, 3, 15789);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'TC_03_Verify_Edit_Job_Specification_File')
+data.setCell(4, 2, 'orangehrm.admin.job.JobTitle_Operation')
+data.setCell(4, 3, 14712);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'TC_02_Verify_Edit_Personal_Details')
+data.setCell(5, 2, 'orangehrm.pim.Employee_Add')
+data.setCell(5, 3, 13481);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'TC_01_Verify_Access_User_Page')
+data.setCell(6, 2, 'orangehrm.page.Admin_Page_Access_01')
+data.setCell(6, 3, 11772);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'TC_05_Verify_Edit_Pay_Grades')
+data.setCell(7, 2, 'orangehrm.admin.job.PayGrades_Operation')
+data.setCell(7, 3, 11613);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'TC_02_Verify_Edit_Job_Title')
+data.setCell(8, 2, 'orangehrm.admin.job.JobTitle_Operation')
+data.setCell(8, 3, 11358);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'TC_01_Verify_Add_Work_Shift')
+data.setCell(9, 2, 'orangehrm.admin.job.WorkShift_Operation')
+data.setCell(9, 3, 11147);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'TC_06_Verify_Delete_Operation')
+data.setCell(10, 2, 'orangehrm.admin.job.JobTitle_Operation')
+data.setCell(10, 3, 10674);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'TC_06_Verify_Delete_Pay_Grade')
+data.setCell(11, 2, 'orangehrm.admin.job.PayGrades_Operation')
+data.setCell(11, 3, 9849);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'TC_03_File_Size_Cannot_More_Than_1MB')
+data.setCell(12, 2, 'orangehrm.admin.job.JobTitle_Validation')
+data.setCell(12, 3, 9514);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'TC_04_File_Extension_Wrong_Format')
+data.setCell(13, 2, 'orangehrm.admin.job.JobTitle_Validation')
+data.setCell(13, 3, 9473);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'TC_01_Verify_Add_Pay_Grade')
+data.setCell(14, 2, 'orangehrm.admin.job.PayGrades_Operation')
+data.setCell(14, 3, 6867);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'TC_02_Job_Title_Cannot_More_Than_100_Characters')
+data.setCell(15, 2, 'orangehrm.admin.job.JobTitle_Validation')
+data.setCell(15, 3, 6549);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'TC_05_Job_Title_Cannot_Be_Duplicated')
+data.setCell(16, 2, 'orangehrm.admin.job.JobTitle_Operation')
+data.setCell(16, 3, 6533);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'TC_01_Job_Title_Cannot_Be_Blank')
+data.setCell(17, 2, 'orangehrm.admin.job.JobTitle_Validation')
+data.setCell(17, 3, 2876);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'TC_02_Verify_Job_Titles_Page')
+data.setCell(18, 2, 'orangehrm.page.Admin_Page_Access_01')
+data.setCell(18, 3, 7);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'TC_03_Verify_Edit_Currency')
+data.setCell(19, 2, 'orangehrm.admin.job.PayGrades_Operation')
+data.setCell(19, 3, 6);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'TC_06_Verify_Job_Work_Shifts_Page')
+data.setCell(20, 2, 'orangehrm.page.Admin_Page_Access_01')
+data.setCell(20, 3, 5);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'TC_04_Verify_Job_Employee_Status_Page')
+data.setCell(21, 2, 'orangehrm.page.Admin_Page_Access_01')
+data.setCell(21, 3, 5);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'TC_04_Verify_Delete_Currency')
+data.setCell(22, 2, 'orangehrm.admin.job.PayGrades_Operation')
+data.setCell(22, 3, 5);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'TC_05_Verify_Job_Job_Categories_Page')
+data.setCell(23, 2, 'orangehrm.page.Admin_Page_Access_01')
+data.setCell(23, 3, 5);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'TC_03_Verify_Job_Pay_Grades_Page')
+data.setCell(24, 2, 'orangehrm.page.Admin_Page_Access_01')
+data.setCell(24, 3, 4);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'TC_04_Verify_Search_Existed_Location_By_Name')
+data.setCell(25, 2, 'orangehrm.admin.organization.Location_Operation')
+data.setCell(25, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -213,41 +808,160 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">TC_02_Verify_Edit_Personal_Details</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:02:57,632] TC02 - Step 01: Set NickName
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:22,822] TC02 - Step 01: Set NickName
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:02:58,143] TC02 - Step 02: Set Other ID
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:23,402] TC02 - Step 02: Set Other ID
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:02:58,660] TC02 - Step 03: Set Driver's License Number
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:23,939] TC02 - Step 03: Set Driver's License Number
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:02:59,165] TC02 - Step 04: Set License Expiry Date
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:24,545] TC02 - Step 04: Set License Expiry Date
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:02:59,557] TC02 - Step 05: Set SSN Number
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:24,987] TC02 - Step 05: Set SSN Number
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:00,066] TC02 - Step 06: Set SIN Number
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:25,646] TC02 - Step 06: Set SIN Number
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:00,491] TC02 - Step 07: Set Nationality
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:26,148] TC02 - Step 07: Set Nationality
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:02,096] TC02 - Step 08: Set Marital Status
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:27,758] TC02 - Step 08: Set Marital Status
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:03,548] TC02 - Step 09: Set Date of Birth
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:29,243] TC02 - Step 09: Set Date of Birth
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:03,919] TC02 - Step 10: Set Gender
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:29,650] TC02 - Step 10: Set Gender
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:04,233] TC02 - Step 11: Set Military Service
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:29,957] TC02 - Step 11: Set Military Service
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:04,602] TC02 - Step 12: Set Smoker
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:30,395] TC02 - Step 12: Set Smoker
 <br></span>
-                <span class="reporter-method-output">[INFO ] [2022-10-16 04:03:04,736] TC02 - Step 13: Click Save
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:30,576] TC02 - Step 13: Click Save
 <br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:30,849] TC02 - Step 14: Verify message success displayed
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:31,799] TC02 - Step 15: Set Blood Type
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:32,398] TC02 - Step 16: Click Save
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:35,671] TC02 - Step 17: Verify message success displayed
+<br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_01_Verify_Add_Employee</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:02,280] TC01 - Step 01: Click Add Employee
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:07,814] TC01 - Step 02: Input valid info of employee 
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:09,311] TC01 - Step 03: Click Save button
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:14,615] TC01 - Step 04: Verify success message is displayed
+<br></span>
+                <span class="reporter-method-output">[INFO ] [2022-10-18 01:57:19,555] TC01 - Step 05: Verify that employee information screen is displayed with correct info
+<br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_02_Verify_Job_Titles_Page</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><br><a target="_blank" href="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_02_Verify_Job_Titles_Page_18_10_2022_01_56_46.png"><img src="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_02_Verify_Job_Titles_Page_18_10_2022_01_56_46.png" height='100' width='150'/> </a></br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_06_Verify_Job_Work_Shifts_Page</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><br><a target="_blank" href="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_06_Verify_Job_Work_Shifts_Page_18_10_2022_01_56_49.png"><img src="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_06_Verify_Job_Work_Shifts_Page_18_10_2022_01_56_49.png" height='100' width='150'/> </a></br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_01_Verify_Access_User_Page</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><br><a target="_blank" href="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_01_Verify_Access_User_Page_18_10_2022_01_56_45.png"><img src="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_01_Verify_Access_User_Page_18_10_2022_01_56_45.png" height='100' width='150'/> </a></br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_04_Verify_Job_Employee_Status_Page</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><br><a target="_blank" href="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_04_Verify_Job_Employee_Status_Page_18_10_2022_01_56_47.png"><img src="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_04_Verify_Job_Employee_Status_Page_18_10_2022_01_56_47.png" height='100' width='150'/> </a></br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_03_Verify_Edit_Currency</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><br><a target="_blank" href="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_03_Verify_Edit_Currency_18_10_2022_01_54_50.png"><img src="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_03_Verify_Edit_Currency_18_10_2022_01_54_50.png" height='100' width='150'/> </a></br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_03_Verify_Job_Pay_Grades_Page</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><br><a target="_blank" href="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_03_Verify_Job_Pay_Grades_Page_18_10_2022_01_56_47.png"><img src="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_03_Verify_Job_Pay_Grades_Page_18_10_2022_01_56_47.png" height='100' width='150'/> </a></br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_04_Verify_Delete_Currency</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><br><a target="_blank" href="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_04_Verify_Delete_Currency_18_10_2022_01_54_51.png"><img src="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_04_Verify_Delete_Currency_18_10_2022_01_54_51.png" height='100' width='150'/> </a></br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_02_Verify_Add_Currency</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><br><a target="_blank" href="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_02_Verify_Add_Currency_18_10_2022_01_54_49.png"><img src="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_02_Verify_Add_Currency_18_10_2022_01_54_49.png" height='100' width='150'/> </a></br></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_05_Verify_Job_Job_Categories_Page</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><br><a target="_blank" href="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_05_Verify_Job_Job_Categories_Page_18_10_2022_01_56_48.png"><img src="file:///G:\course-automation-test-framework\02-source_code\selenium-java-orangehrm\ReportNGScreenShots\TC_05_Verify_Job_Job_Categories_Page_18_10_2022_01_56_48.png" height='100' width='150'/> </a></br></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">orangehrm.admin.job.JobTitle_Validation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">deleteAllFilesInReportNGScreenshot</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">orangehrm.admin.job.WorkShift_Operation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">deleteAllFilesInReportNGScreenshot</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">orangehrm.page.Admin_Page_Access_01</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">deleteAllFilesInReportNGScreenshot</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">orangehrm.pim.Employee_Add</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">deleteAllFilesInReportNGScreenshot</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">orangehrm.admin.job.PayGrades_Operation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">deleteAllFilesInReportNGScreenshot</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">orangehrm.admin.organization.Location_Operation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">deleteAllFilesInReportNGScreenshot</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -256,23 +970,208 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">orangehrm.pim.Employee_Add</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">orangehrm.admin.job.JobTitle_Operation</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">deleteAllFilesInReportNGScreenshot</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">Precondition_Login(chrome)</span>
-                <span class="method-start">212 ms</span>
+                <span class="method-start">233 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TC_02_Verify_Edit_Personal_Details</span>
-                <span class="method-start">17789 ms</span>
+                <span class="method-name">TC_01_Verify_Add_Job_Title</span>
+                <span class="method-start">24619 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_02_Verify_Edit_Job_Title</span>
+                <span class="method-start">40852 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_03_Verify_Edit_Job_Specification_File</span>
+                <span class="method-start">52222 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_04_Verify_Delete_Job_Specification_File</span>
+                <span class="method-start">66940 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_05_Job_Title_Cannot_Be_Duplicated</span>
+                <span class="method-start">83271 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_06_Verify_Delete_Operation</span>
+                <span class="method-start">89899 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">33903 ms</span>
+                <span class="method-start">100578 ms</span>
               </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">orangehrm.admin.job.JobTitle_Validation</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">Precondition_Login(chrome)</span>
+                <span class="method-start">101122 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_Job_Title_Cannot_Be_Blank</span>
+                <span class="method-start">126394 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_02_Job_Title_Cannot_More_Than_100_Characters</span>
+                <span class="method-start">129277 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_03_File_Size_Cannot_More_Than_1MB</span>
+                <span class="method-start">135831 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_04_File_Extension_Wrong_Format</span>
+                <span class="method-start">145449 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">154926 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">orangehrm.admin.job.PayGrades_Operation</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(chrome)</span>
+                <span class="method-start">155892 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_Verify_Add_Pay_Grade</span>
+                <span class="method-start">181124 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_02_Verify_Add_Currency</span>
+                <span class="method-start">187995 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_03_Verify_Edit_Currency</span>
+                <span class="method-start">206964 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_04_Verify_Delete_Currency</span>
+                <span class="method-start">207557 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_05_Verify_Edit_Pay_Grades</span>
+                <span class="method-start">208157 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_06_Verify_Delete_Pay_Grade</span>
+                <span class="method-start">219775 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">229656 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">orangehrm.admin.job.WorkShift_Operation</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">Precondition_Login(chrome)</span>
+                <span class="method-start">230337 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_Verify_Add_Work_Shift</span>
+                <span class="method-start">248430 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">259582 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">orangehrm.admin.organization.Location_Operation</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Precondition_Login(chrome)</span>
+                <span class="method-start">260042 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">orangehrm.page.Admin_Page_Access_01</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">Precondition_Login(chrome)</span>
+                <span class="method-start">284222 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_01_Verify_Access_User_Page</span>
+                <span class="method-start">310027 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_02_Verify_Job_Titles_Page</span>
+                <span class="method-start">322759 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_03_Verify_Job_Pay_Grades_Page</span>
+                <span class="method-start">323472 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_04_Verify_Job_Employee_Status_Page</span>
+                <span class="method-start">324184 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_05_Verify_Job_Job_Categories_Page</span>
+                <span class="method-start">324921 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_06_Verify_Job_Work_Shifts_Page</span>
+                <span class="method-start">325706 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">326539 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">orangehrm.pim.Employee_Add</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">Precondition_Login(chrome)</span>
+                <span class="method-start">327057 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC_01_Verify_Add_Employee</span>
+                <span class="method-start">338396 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_02_Verify_Edit_Personal_Details</span>
+                <span class="method-start">359044 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">372530 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">orangehrm.admin.organization.Location_Operation</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TC_04_Verify_Search_Existed_Location_By_Name</span>
+                <span class="method-start">-1666032683770 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

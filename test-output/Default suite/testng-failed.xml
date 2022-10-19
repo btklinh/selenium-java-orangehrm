@@ -5,9 +5,10 @@
     <classes>
       <class name="orangehrm.pim.Employee_Add">
         <methods>
-          <include name="TC_01_Verify_Add_Employee"/>
+          <include name="afterClass"/>
           <include name="Precondition_Login"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="TC_02_Verify_Edit_Personal_Details"/>
         </methods>
       </class> <!-- orangehrm.pim.Employee_Add -->
     </classes>

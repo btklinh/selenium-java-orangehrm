@@ -26,8 +26,10 @@ public class EmployeeInfoPageUI {
 	public static final String SMOKER_CHECKBOX = "//label[text()='Smoker']/parent::div/following-sibling::div//span";
 	public static final String BOOD_TYPE_DROPDOWN = null;
 	public static final String NATIONALITY_ARROW_ICON = "//label[text()='Nationality']/parent::div/following-sibling::div//i[contains(@class,'oxd-select-text--arrow')]";
+	public static final String BLOODTYPE_ARROW_ICON = "//label[text()='Blood Type']/parent::div/following-sibling::div//i[contains(@class,'oxd-select-text--arrow')]";
 	public static final String DYNAMIC_SELECT_DROPDOWN_VALUE = "//div[@role='option']/span[contains(text(),'%s')]";
 	public static final String MARITAL_ARROW_ICON = "//label[text()='Marital Status']/parent::div/following-sibling::div//i[contains(@class,'oxd-select-text--arrow')]";
 	public static final String SAVEPD_BUTTON = "//p/following-sibling::button";
+	public static final String SAVE_CF_BUTTON = "//h6[text()='Custom Fields']/following-sibling::form//button";
 
 }

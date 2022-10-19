@@ -209,7 +209,7 @@ public class JobTitle_Operation extends AbstractTest {
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+		closeBrowser(driver);
 	}
 
 }

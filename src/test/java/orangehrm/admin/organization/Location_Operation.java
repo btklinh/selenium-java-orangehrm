@@ -3,11 +3,13 @@ package orangehrm.admin.organization;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.AbstractTest;
+import commons.GlobalConstants;
 import commons.PageGeneratorManager;
 import pageObjects.JobTitlesPageObject;
 import pageObjects.LocationsPageObject;
@@ -30,15 +32,14 @@ public class Location_Operation extends AbstractTest {
 	public void Precondition_Login(String browserName) {
 		log.info("Pre-condition - Step 01: Open orangehrm site");
 		driver = getBrowserDriver(browserName);
-		username = "btklinh";
-		password = "Klinh1993@!";
+	
 		loginPage = new LoginPageObject(driver);
 
 		log.info("Pre-condition - Step 02: Input correct Username");
-		loginPage.inputToUsernameTextbox(username);
+		loginPage.inputToUsernameTextbox(GlobalConstants.LOGIN_USERNAME);
 
 		log.info("Pre-condition - Step 03: Input correct Password");
-		loginPage.inputToPasswordTextbox(password);
+		loginPage.inputToPasswordTextbox(GlobalConstants.LOGIN_USERNAME);
 
 		log.info("Pre-condition - Step 03: Click Login button");
 		pimPage = loginPage.clickToLoginButton();
@@ -66,5 +67,10 @@ public class Location_Operation extends AbstractTest {
 
 		log.info("TC04 - Step 4: Verify the number of Records");
 		assertEquals(locationPage.getRecordsNumber(), locationPage.getLocationsListSize());
+	}
+	
+	@AfterClass
+	public void afterClass() {
+		closeBrowser(driver);
 	}
 }

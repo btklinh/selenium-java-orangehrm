@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -90,6 +91,11 @@ public class WorkShift_Operation extends AbstractTest {
 		assertEquals(workShiftsPage.getWorkingTimeTo(shiftName), workShiftsPage.convert12HTo24H(workingHourTo));
 
 		assertEquals(workShiftsPage.getHoursPerDay(shiftName), expected);
+	}
+	
+	@AfterClass
+	public void afterClass() {
+		closeBrowser(driver);
 	}
 
 }

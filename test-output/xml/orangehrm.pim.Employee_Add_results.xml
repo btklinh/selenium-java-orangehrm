@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Run on Chrome"
-           tests="1"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="15.773">
+           time="34.124">
   <properties />
   
   
-            <testcase name="TC_02_Verify_Edit_Personal_Details" time="15.773" classname="orangehrm.pim.Employee_Add" />
+            <testcase name="TC_02_Verify_Edit_Personal_Details" time="13.481" classname="orangehrm.pim.Employee_Add" />
+                <testcase name="TC_01_Verify_Add_Employee" time="20.643" classname="orangehrm.pim.Employee_Add" />
       
 </testsuite>

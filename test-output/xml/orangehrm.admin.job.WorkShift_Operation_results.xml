@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="8.254">
+           time="11.147">
   <properties />
   
   
-            <testcase name="TC_01_Verify_Add_Work_Shift" time="8.254" classname="orangehrm.admin.job.WorkShift_Operation" />
+            <testcase name="TC_01_Verify_Add_Work_Shift" time="11.147" classname="orangehrm.admin.job.WorkShift_Operation" />
       
 </testsuite>

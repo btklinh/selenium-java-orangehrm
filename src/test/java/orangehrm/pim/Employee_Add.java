@@ -25,6 +25,7 @@ public class Employee_Add extends AbstractTest {
 	UserPageObject userPage;
 	DataHelper data = DataHelper.getData();
 	String fName, mName, lName, employeeId, confirmMessage, url;
+	String nickName, otherID, driverLicense, licenseExpireDate, ssnNum, marialStatus, dob, sinNum, gender, militarySer, smoker, bloodType, nationality;
 	EmployeeInfoPageObject employeeInfoPage;
 	EmployeeAddPageObject employeeAddPage;
 
@@ -50,16 +51,29 @@ public class Employee_Add extends AbstractTest {
 		fName = data.getFirstName();
 		mName = data.getMiddleName();
 		lName = data.getLastName();
+		nickName = "Lynn";
+		otherID = "NV001";
+		driverLicense = "009AS91739";
+		licenseExpireDate = "2025-10-12";
+		nationality = "American";
+		ssnNum = "01234546789";
+		sinNum = "215232423";
+		marialStatus = "Married";
+		dob = "1979-08-23";
+		gender = "Male";
+		militarySer = "Yes";
+		smoker = "No";
+		bloodType = "B+";
 
 	}
 
-	// @Test
+	@Test
 	public void TC_01_Verify_Add_Employee() {
 		log.info("TC01 - Step 01: Click Add Employee");
 		pimPage.clickAddButton();
 		employeeAddPage = PageGeneratorManager.getEmployeeAddPage(driver);
 
-		log.info("TC01 - Step 02: Inout valid info of employee ");
+		log.info("TC01 - Step 02: Input valid info of employee ");
 		employeeId = employeeAddPage.getEmployeeID();
 		employeeAddPage.setFName(fName);
 		employeeAddPage.setMName(mName);
@@ -82,65 +96,70 @@ public class Employee_Add extends AbstractTest {
 
 	@Test
 	public void TC_02_Verify_Edit_Personal_Details() {
-		// employeeInfoPage = PageGeneratorManager.getEmployeeInfoPage(driver);
-		pimPage.openUrl(driver, "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/10");
-		employeeInfoPage = PageGeneratorManager.getEmployeeInfoPage(driver);
-
-		employeeInfoPage.sleepInSecond(4);
+//		// employeeInfoPage = PageGeneratorManager.getEmployeeInfoPage(driver);
+//		pimPage.openUrl(driver, "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/10");
+//		employeeInfoPage = PageGeneratorManager.getEmployeeInfoPage(driver);
+//
+//		employeeInfoPage.sleepInSecond(4);
 
 		log.info("TC02 - Step 01: Set NickName");
-		employeeInfoPage.setNickName("Lynn");
+		employeeInfoPage.setNickName(nickName);
 
 		log.info("TC02 - Step 02: Set Other ID");
-		employeeInfoPage.setOtherID("NV001");
+		employeeInfoPage.setOtherID(otherID);
 
 		log.info("TC02 - Step 03: Set Driver's License Number");
-		employeeInfoPage.setDriverLicense("009AS91739");
+		employeeInfoPage.setDriverLicense(driverLicense);
 
 		log.info("TC02 - Step 04: Set License Expiry Date");
-		employeeInfoPage.setLicenseExpireDate("2025-10-12");
+		employeeInfoPage.setLicenseExpireDate(licenseExpireDate);
 
 		log.info("TC02 - Step 05: Set SSN Number");
-		employeeInfoPage.setSsnNumber("01234546789");
+		employeeInfoPage.setSsnNumber(ssnNum);
 
 		log.info("TC02 - Step 06: Set SIN Number");
-		employeeInfoPage.setSinNumber("948283");
+		employeeInfoPage.setSinNumber(sinNum);
 
 		log.info("TC02 - Step 07: Set Nationality");
 		employeeInfoPage.clickToNationalityArrow();
-		employeeInfoPage.setDropdownValue("Canadian");
-		
+		employeeInfoPage.setDropdownValue(nationality);
+
 		log.info("TC02 - Step 08: Set Marital Status");
 		employeeInfoPage.clickToMaritalArrow();
-		employeeInfoPage.setDropdownValue("Married");
-		
+		employeeInfoPage.setDropdownValue(marialStatus);
+
 		log.info("TC02 - Step 09: Set Date of Birth");
-		employeeInfoPage.setDateOfBirth("1979-08-23");
-		
+		employeeInfoPage.setDateOfBirth(dob);
+
 		log.info("TC02 - Step 10: Set Gender");
-		employeeInfoPage.selectGender("Male");
-		
+		employeeInfoPage.selectGender(gender);
+
 		log.info("TC02 - Step 11: Set Military Service");
-		employeeInfoPage.setMilitary("yes");
-		
+		employeeInfoPage.setMilitary(militarySer);
+
 		log.info("TC02 - Step 12: Set Smoker");
-		employeeInfoPage.setSmoker("No");
-		
+		employeeInfoPage.setSmoker(smoker);
+
 		log.info("TC02 - Step 13: Click Save");
 		employeeInfoPage.clickSavePD();
-//		
-//		log.info("TC02 - Step 14: Set Blood Type");
-//		employeeInfoPage.setBloodType("");
-//		
-//		
-//		log.info("TC02 - Step 15: Click Save");
-//		employeeInfoPage.clickSaveButton("");
 
+		log.info("TC02 - Step 14: Verify message success displayed");
+		assertEquals(employeeInfoPage.getMessage(), "Successfully Updated");
+
+		log.info("TC02 - Step 15: Set Blood Type");
+		employeeInfoPage.clickToBloodTypeArror();
+		employeeInfoPage.setDropdownValue(bloodType);
+
+		log.info("TC02 - Step 16: Click Save");
+		employeeInfoPage.clickSaveCustomFields();
+
+		log.info("TC02 - Step 17: Verify message success displayed");
+		assertEquals(employeeInfoPage.getMessage(), "Successfully Saved");
 	}
 
 	@AfterClass
 	public void afterClass() {
-		//closeBrowser(driver);
+		 closeBrowser(driver);
 	}
 
 }
