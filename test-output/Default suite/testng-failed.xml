@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="orangehrm.pim.Employee_Add">
+      <class name="orangehrm.admin.job.WorkShift_Operation">
         <methods>
-          <include name="afterClass"/>
           <include name="Precondition_Login"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
-          <include name="TC_02_Verify_Edit_Personal_Details"/>
+          <include name="TC_01_Verify_Add_Work_Shift"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- orangehrm.pim.Employee_Add -->
+      </class> <!-- orangehrm.admin.job.WorkShift_Operation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

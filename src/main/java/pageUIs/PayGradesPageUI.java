@@ -9,7 +9,8 @@ public class PayGradesPageUI {
 	public static final String CURRENCY_EDIT_BUTTON = "//div[text()='%s']/parent::div/following-sibling::div[3]//i[contains(@class,'bi-pencil')]";
 	public static final String CURRENCY_DELETE_BUTTON = "//div[text()='%s']/parent::div/following-sibling::div[3]//i[contains(@class,'bi-trash')]";
 	public static final String SUCCESS_MESSAGE_POPUP = "//p[contains(@class,'oxd-text--toast-message')]";
-	public static final String PAY_GRADES_LIST = "//div[@role='row']/child::div[2]/div";
+	//public static final String PAY_GRADES_LIST = "//div[@role='row']/child::div[2]/div";
+	public static final String PAY_GRADES_LIST = "//div[text()='%s']";
 	public static final String DYNAMIC_DELETE_BUTTON_BY_GRADE = "//div[text()='%s']/parent::div/following-sibling::div[2]//i[contains(@class,'bi-trash')]";
 	public static final String DYNAMIC_EDIT_BUTTON_BY_GRADE = "//div[text()='%s']/parent::div/following-sibling::div[2]//i[contains(@class,'bi-pencil')]";
 	public static final String CURRENCIES_TITLE = "//*[text()='Currencies']";

@@ -10,8 +10,9 @@ import commons.AbstractTest;
 import pageObjects.LoginPageObject;
 import pageObjects.PimPageObject;
 
+
 public class LoginPage_Login extends AbstractTest {
-	
+
 	String username, password;
 	LoginPageObject loginPage;
 	PimPageObject pimPage;
@@ -20,23 +21,26 @@ public class LoginPage_Login extends AbstractTest {
 	@Parameters("browser")
 	@Test
 	public void TC_01_Login_Success(String browserName) {
-		log.info("TC 01 - Step 01: Open orangehrm site");		
+		log.info("TC 01 - Step 01: Open orangehrm site");
 		driver = getBrowserDriver(browserName);
 		username = "btklinh";
 		password = "Klinh1993@!";
-		loginPage = new LoginPageObject(driver);
-		
+//		loginPage = new LoginPageObject(driver);
+
 		log.info("TC 01- Step 02: Input correct Username");
 		loginPage.inputToUsernameTextbox(username);
-		
+
 		log.info("TC 01 - Step 03: Input correct Password");
 		loginPage.inputToPasswordTextbox(password);
-		
+
 		log.info("TC 01 - Step 03: Click Login button");
 		pimPage = loginPage.clickToLoginButton();
-		
+
 		log.info("TC 01 - Step 04: Verify PIM page displayed");
 		assertEquals(pimPage.getPageTitle(), "PIM");
 		driver.quit();
+
+		log.info("TC 01 - Step 04: Verify PIM page displayed");
+	
 	}
 }

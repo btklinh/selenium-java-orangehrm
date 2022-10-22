@@ -83,7 +83,7 @@ public class PayGrades_Operation extends AbstractTest {
 		log.info("TC01 - Step 05: Verify the Pay Grade is added into list");
 		payGradesPage.clickToParentMenuByName(driver, "Job");
 		payGradesPage.clickToDropdownMenuByName(driver, "Pay Grades");
-		assertEquals(payGradesPage.checkPayGradesInTheList(payGradeName), true);
+		assertFalse(payGradesPage.checkPayGradesUndisplayedInTheList(payGradeName));
 	}
 
 	@Test
@@ -197,7 +197,7 @@ public class PayGrades_Operation extends AbstractTest {
 		payGradesPage.openPayGradePage(url);
 		
 		log.info("TC05 - Step 06: Verify pay grade is updated in list");
-		assertTrue(payGradesPage.checkPayGradesInTheList(payGradeName));
+		assertFalse(payGradesPage.checkPayGradesUndisplayedInTheList(payGradeName));
 		
 	}
 	
@@ -216,7 +216,7 @@ public class PayGrades_Operation extends AbstractTest {
 		payGradesPage.clickToNoButton();
 		
 		log.info("TC06 - Step 05: Verify job title is not deleted");
-		assertTrue(payGradesPage.checkPayGradesInTheList(payGradeName));
+		assertFalse(payGradesPage.checkPayGradesUndisplayedInTheList(payGradeName));
 		
 		log.info("TC06 - Step 06: Click to Delete button");
 		payGradesPage.clickToDeleteIconOfPayGrade(payGradeName);
@@ -228,7 +228,7 @@ public class PayGrades_Operation extends AbstractTest {
 		assertEquals(payGradesPage.getSuccessMessage(), "Successfully Deleted");
 		
 		log.info("TC06 - Step 09: Verify job title is deleted");
-		assertFalse(payGradesPage.checkPayGradesInTheList(payGradeName));
+		assertTrue(payGradesPage.checkPayGradesUndisplayedInTheList(payGradeName));
 		
 	}
 	

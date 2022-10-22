@@ -9,37 +9,14 @@
   <test thread-count="5" name="Run on Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="orangehrm.page.Admin_Page_Access_01">
+      <class name="orangehrm.admin.job.JobTitle_Operation">
         <methods>
-          <include name="TC_02_Verify_Job_Titles_Page"/>
+          <include name="TC_06_Verify_Delete_Operation"/>
           <include name="afterClass"/>
-          <include name="TC_05_Verify_Job_Job_Categories_Page"/>
           <include name="deleteAllFilesInReportNGScreenshot"/>
-          <include name="TC_04_Verify_Job_Employee_Status_Page"/>
-          <include name="TC_06_Verify_Job_Work_Shifts_Page"/>
-          <include name="TC_01_Verify_Access_User_Page"/>
-          <include name="TC_03_Verify_Job_Pay_Grades_Page"/>
           <include name="Precondition_Login"/>
         </methods>
-      </class> <!-- orangehrm.page.Admin_Page_Access_01 -->
-      <class name="orangehrm.admin.job.PayGrades_Operation">
-        <methods>
-          <include name="TC_03_Verify_Edit_Currency"/>
-          <include name="deleteAllFilesInReportNGScreenshot"/>
-          <include name="TC_02_Verify_Add_Currency"/>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-          <include name="TC_04_Verify_Delete_Currency"/>
-        </methods>
-      </class> <!-- orangehrm.admin.job.PayGrades_Operation -->
-      <class name="orangehrm.admin.organization.Location_Operation">
-        <methods>
-          <include name="TC_04_Verify_Search_Existed_Location_By_Name"/>
-          <include name="deleteAllFilesInReportNGScreenshot"/>
-          <include name="afterClass"/>
-          <include name="Precondition_Login"/>
-        </methods>
-      </class> <!-- orangehrm.admin.organization.Location_Operation -->
+      </class> <!-- orangehrm.admin.job.JobTitle_Operation -->
     </classes>
   </test> <!-- Run on Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

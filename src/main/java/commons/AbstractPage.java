@@ -227,6 +227,21 @@ public abstract class AbstractPage {
 		}
 
 	}
+	
+
+	public boolean isControlUndisplayed(WebDriver driver, String locator, String... value) {
+		overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
+		elements = findElements(driver, castToRestParameter(locator, value));
+		overrideGlobalTimeout(driver, GlobalConstants.LONG_TIMEOUT);
+		if (elements.size() == 0) {
+			return true;
+		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
 
 	public void overrideGlobalTimeout(WebDriver driver, long timeout) {
 		driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
@@ -284,4 +299,22 @@ public abstract class AbstractPage {
 			findElement(driver, locator).click();
 		}
 	}
+	
+//	public boolean isControlUndisplayed(WebDriver driver, String locator) {
+//		overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
+//		elements = finds(driver, locator);
+//		overrideGlobalTimeout(driver, GlobalConstants.LONG_TIMEOUT);
+//		if (elements.size() == 0) {
+//			// System.out.println("Element not in DOM");
+//			log.info("Element not in DOM");
+//			return true;
+//		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+//			// System.out.println("Element in DOM but not visible / displayed");
+//			log.info("Element in DOM but not visible / displayed");
+//			return true;
+//		} else {
+//			// System.out.println("Element in DOM and visible");
+//			log.info("Element in DOM and visible");
+//			return false;
+//		}
 }

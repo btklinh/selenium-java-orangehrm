@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="28.412">
+           time="21.152">
   <properties />
   
   
-            <testcase name="TC_03_File_Size_Cannot_More_Than_1MB" time="9.514" classname="orangehrm.admin.job.JobTitle_Validation" />
-                <testcase name="TC_01_Job_Title_Cannot_Be_Blank" time="2.876" classname="orangehrm.admin.job.JobTitle_Validation" />
-                <testcase name="TC_04_File_Extension_Wrong_Format" time="9.473" classname="orangehrm.admin.job.JobTitle_Validation" />
-                <testcase name="TC_02_Job_Title_Cannot_More_Than_100_Characters" time="6.549" classname="orangehrm.admin.job.JobTitle_Validation" />
+            <testcase name="TC_04_File_Extension_Wrong_Format" time="7.154" classname="orangehrm.admin.job.JobTitle_Validation" />
+                <testcase name="TC_03_File_Size_Cannot_More_Than_1MB" time="7.942" classname="orangehrm.admin.job.JobTitle_Validation" />
+                <testcase name="TC_02_Job_Title_Cannot_More_Than_100_Characters" time="4.238" classname="orangehrm.admin.job.JobTitle_Validation" />
+                <testcase name="TC_01_Job_Title_Cannot_Be_Blank" time="1.818" classname="orangehrm.admin.job.JobTitle_Validation" />
       
 </testsuite>

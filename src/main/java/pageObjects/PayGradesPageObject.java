@@ -50,20 +50,25 @@ public class PayGradesPageObject extends AbstractPage {
 		return getElementText(driver, AbstractPageUI.PAGE_TITLE_CONTAIN_CONFIGURE);
 	}
 
-	public boolean checkPayGradesInTheList(String payGrade) {
-		waitToElementVisible(driver, PayGradesPageUI.PAY_GRADES_LIST);
-		List<String> payGradesList = new ArrayList<>();
-		payGradesList = getElementsText(driver, PayGradesPageUI.PAY_GRADES_LIST);
-		for (String grade : payGradesList) {
-			if (grade.equals(payGrade)) {
-				result = true;
-				break;
-			} else {
-				result = false;
-				continue;
-			}
-		}
-		return result;
+	public boolean checkPayGradesUndisplayedInTheList(String payGrade) {
+		return isControlUndisplayed(driver, PayGradesPageUI.PAY_GRADES_LIST, payGrade);
+//		if (!findElement(driver, PayGradesPageUI.PAY_GRADES_LIST)) {
+//			result = false;
+//		} else {
+//			waitToElementVisible(driver, PayGradesPageUI.PAY_GRADES_LIST);
+//			List<String> payGradesList = new ArrayList<>();
+//			payGradesList = getElementsText(driver, PayGradesPageUI.PAY_GRADES_LIST);
+//			for (String grade : payGradesList) {
+//				if (grade.equals(payGrade)) {
+//					result = true;
+//					break;
+//				} else {
+//					result = false;
+//					continue;
+//				}
+//			}
+//		}
+//		return result;
 	}
 
 	public String generatePayGradeName() {
@@ -168,7 +173,6 @@ public class PayGradesPageObject extends AbstractPage {
 		currencyList = getAllDropdownValue();
 		return currencyList.get(data.getRandomIndex(currencyList.size() - 1));
 	}
-	
 
 	public void clickToEditIconOfCurrency(String currencyValue) {
 		// TODO Auto-generated method stub
@@ -185,7 +189,7 @@ public class PayGradesPageObject extends AbstractPage {
 	public void clickToDeleteCurrencyButton(String substring) {
 		waitToElementVisible(driver, PayGradesPageUI.CURRENCY_DELETE_BUTTON, substring);
 		clickToElement(driver, PayGradesPageUI.CURRENCY_DELETE_BUTTON, substring);
-		
+
 	}
 
 	public String getConfirmationPopupMessage() {
@@ -196,7 +200,7 @@ public class PayGradesPageObject extends AbstractPage {
 	public void clickToNoButton() {
 		waitToElementClickable(driver, PayGradesPageUI.NO_BUTTON);
 		clickToElement(driver, PayGradesPageUI.NO_BUTTON);
-		
+
 	}
 
 	public void clickToYesButton() {
@@ -208,7 +212,7 @@ public class PayGradesPageObject extends AbstractPage {
 		waitToElementVisible(driver, PayGradesPageUI.CURRENCY_TABLE_HEADER);
 		List<String> currencyList = new ArrayList<>();
 		currencyList = getElementsText(driver, PayGradesPageUI.CURRENCY_ROW_LABEL);
-		if (currencyList.size()==0)
+		if (currencyList.size() == 0)
 			result = false;
 		else {
 			for (String currency : currencyList) {

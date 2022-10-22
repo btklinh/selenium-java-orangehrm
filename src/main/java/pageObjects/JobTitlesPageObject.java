@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
 import pageUIs.JobTitlesPageUI;
+import pageUIs.PayGradesPageUI;
 
 public class JobTitlesPageObject extends AbstractPage {
 	WebDriver driver;
@@ -81,20 +82,21 @@ public class JobTitlesPageObject extends AbstractPage {
 		return getElementsText(driver, JobTitlesPageUI.JOB_TITLES_LIST);
 	}
 
-	public boolean checkJobTitleInTheList(String jobTitle) {
-		waitToElementVisible(driver, JobTitlesPageUI.JOB_TITLES_LIST);
-		List<String> jobTitlesList = new ArrayList<>();
-		jobTitlesList = getElementsText(driver, JobTitlesPageUI.JOB_TITLES_LIST);
-		for (String job : jobTitlesList) {
-			if (job.equals(jobTitle)) {
-				result = true;
-				break;
-			} else {
-				result = false;
-				continue;
-			}
-		}
-		return result;
+	public boolean checkJobTitleUndisplayedInTheList(String jobTitle) {
+		return isControlUndisplayed(driver, JobTitlesPageUI.JOB_TITLES_LIST, jobTitle);
+//		waitToElementVisible(driver, JobTitlesPageUI.JOB_TITLES_LIST);
+//		List<String> jobTitlesList = new ArrayList<>();
+//		jobTitlesList = getElementsText(driver, JobTitlesPageUI.JOB_TITLES_LIST);
+//		for (String job : jobTitlesList) {
+//			if (job.equals(jobTitle)) {
+//				result = true;
+//				break;
+//			} else {
+//				result = false;
+//				continue;
+//			}
+//		}
+//		return result;
 	}
 
 	public String getSuccessMessage() {

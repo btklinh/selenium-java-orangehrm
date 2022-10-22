@@ -1,6 +1,8 @@
 package orangehrm.admin.job;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -88,7 +90,7 @@ public class JobTitle_Operation extends AbstractTest {
 		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Saved");
 
 		log.info("TC01 - Step 09: Verify the Job Title is added into list");
-		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), true);
+		assertFalse(jobTitlesPage.checkJobTitleUndisplayedInTheList(jobTitle));
 	}
 
 	@Test
@@ -109,7 +111,7 @@ public class JobTitle_Operation extends AbstractTest {
 		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Updated");
 
 		log.info("TC02 - Step 05: Verify the Job Title is added into list");
-		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), true);
+		assertFalse(jobTitlesPage.checkJobTitleUndisplayedInTheList(jobTitle));
 	}
 
 	@Test
@@ -192,7 +194,7 @@ public class JobTitle_Operation extends AbstractTest {
 		jobTitlesPage.clickToNoButton();
 
 		log.info("TC05 - Step 04: Verify job title is not deleted");
-		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), true);
+		assertFalse(jobTitlesPage.checkJobTitleUndisplayedInTheList(jobTitle));
 
 		log.info("TC05 - Step 05: Click to Delete button");
 		jobTitlesPage.clickToDeleteButtonOfJobTitle(jobTitle);
@@ -204,7 +206,7 @@ public class JobTitle_Operation extends AbstractTest {
 		assertEquals(jobTitlesPage.getSuccessMessage(), "Successfully Deleted");
 
 		log.info("TC05 - Step 08: Verify job title is deleted");
-		assertEquals(jobTitlesPage.checkJobTitleInTheList(jobTitle), false);
+		assertTrue(jobTitlesPage.checkJobTitleUndisplayedInTheList(jobTitle));
 	}
 
 	@AfterClass
