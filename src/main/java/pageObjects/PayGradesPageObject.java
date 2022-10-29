@@ -217,10 +217,10 @@ public class PayGradesPageObject extends AbstractPage {
 		else {
 			for (String currency : currencyList) {
 				if (currency.equals(currencyValue)) {
-					result = false;
+					result = true;
 					continue;
 				} else {
-					result = true;
+					result = false;
 					break;
 				}
 			}

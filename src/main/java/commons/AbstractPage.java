@@ -210,9 +210,6 @@ public abstract class AbstractPage {
 		return findElement(driver, locator).getAttribute(attributeName);
 	}
 
-	public boolean isControlDisplayed(WebDriver driver, String locator) {
-		return findElement(driver, locator).isDisplayed();
-	}
 
 	public boolean isControlUndisplayed(WebDriver driver, String locator) {
 		overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);

@@ -44,7 +44,7 @@ public class Admin_Page_Access_01 extends AbstractTest {
 		loginPage.inputToUsernameTextbox(GlobalConstants.LOGIN_USERNAME);
 
 		log.info("Pre-condition - Step 03: Input correct Password");
-		loginPage.inputToPasswordTextbox(GlobalConstants.LOGIN_USERNAME);
+		loginPage.inputToPasswordTextbox(GlobalConstants.LOGIN_PASSWORD);
 
 		log.info("Pre-condition - Step 03: Click Login button");
 		pimPage = loginPage.clickToLoginButton();

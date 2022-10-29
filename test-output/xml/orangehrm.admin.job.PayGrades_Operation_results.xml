@@ -4,15 +4,15 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="80.720">
+           time="81.474">
   <properties />
   
   
-            <testcase name="TC_02_Verify_Add_Currency" time="25.734" classname="orangehrm.admin.job.PayGrades_Operation" />
-                <testcase name="TC_01_Verify_Add_Pay_Grade" time="4.010" classname="orangehrm.admin.job.PayGrades_Operation" />
-                <testcase name="TC_04_Verify_Delete_Currency" time="19.556" classname="orangehrm.admin.job.PayGrades_Operation" />
-                <testcase name="TC_03_Verify_Edit_Currency" time="14.460" classname="orangehrm.admin.job.PayGrades_Operation" />
-                <testcase name="TC_06_Verify_Delete_Pay_Grade" time="9.105" classname="orangehrm.admin.job.PayGrades_Operation" />
-                <testcase name="TC_05_Verify_Edit_Pay_Grades" time="7.855" classname="orangehrm.admin.job.PayGrades_Operation" />
+            <testcase name="TC_02_Verify_Add_Currency" time="25.762" classname="orangehrm.admin.job.PayGrades_Operation" />
+                <testcase name="TC_04_Verify_Delete_Currency" time="19.599" classname="orangehrm.admin.job.PayGrades_Operation" />
+                <testcase name="TC_06_Verify_Delete_Pay_Grade" time="9.657" classname="orangehrm.admin.job.PayGrades_Operation" />
+                <testcase name="TC_01_Verify_Add_Pay_Grade" time="4.191" classname="orangehrm.admin.job.PayGrades_Operation" />
+                <testcase name="TC_05_Verify_Edit_Pay_Grades" time="7.912" classname="orangehrm.admin.job.PayGrades_Operation" />
+                <testcase name="TC_03_Verify_Edit_Currency" time="14.353" classname="orangehrm.admin.job.PayGrades_Operation" />
       
 </testsuite>

@@ -10,13 +10,13 @@
 	<test name="Run on Chrome">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-		<!--	<class name="orangehrm.admin.job.JobTitle_Operation" />-->
+			<!--<class name="orangehrm.page.Admin_Page_Access_01" />
 			<class name="orangehrm.admin.job.JobTitle_Operation" />
-		<!--	<class name="orangehrm.admin.job.PayGrades_Operation" />
+			<class name="orangehrm.admin.job.PayGrades_Operation" />
 			<class name="orangehrm.admin.job.WorkShift_Operation" />
 			<class name="orangehrm.admin.organization.Location_Operation" />
-			<class name="orangehrm.page.Admin_Page_Access_01" />
 			<class name="orangehrm.pim.Employee_Add" />-->
+			<class name="orangehrm.admin.job.EmploymentStatus_Operation" />
 		</classes>
 	</test>
 

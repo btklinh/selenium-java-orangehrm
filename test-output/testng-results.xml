@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-22T18:56:34Z" name="Suite" finished-at="2022-10-22T18:57:31Z" duration-ms="57019">
+  <suite started-at="2022-10-29T19:44:09Z" name="Suite" finished-at="2022-10-29T19:44:21Z" duration-ms="11837">
     <groups>
     </groups>
-    <test started-at="2022-10-22T18:56:34Z" name="Run on Chrome" finished-at="2022-10-22T18:57:31Z" duration-ms="57019">
-      <class name="orangehrm.admin.job.JobTitle_Operation">
-        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:orangehrm.admin.job.JobTitle_Operation@6c6333cd]" started-at="2022-10-22T18:56:34Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2022-10-22T18:56:34Z" duration-ms="29" status="PASS">
+    <test started-at="2022-10-29T19:44:09Z" name="Run on Chrome" finished-at="2022-10-29T19:44:21Z" duration-ms="11837">
+      <class name="orangehrm.admin.job.EmploymentStatus_Operation">
+        <test-method is-config="true" signature="deleteAllFilesInReportNGScreenshot()[pri:0, instance:orangehrm.admin.job.EmploymentStatus_Operation@158f4cfe]" started-at="2022-10-29T19:44:09Z" name="deleteAllFilesInReportNGScreenshot" finished-at="2022-10-29T19:44:09Z" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAllFilesInReportNGScreenshot -->
-        <test-method is-config="true" signature="Precondition_Login(java.lang.String)[pri:0, instance:orangehrm.admin.job.JobTitle_Operation@6c6333cd]" started-at="2022-10-22T18:56:34Z" name="Precondition_Login" finished-at="2022-10-22T18:56:41Z" duration-ms="6747" status="PASS">
+        <test-method is-config="true" signature="Precondition_Login(java.lang.String)[pri:0, instance:orangehrm.admin.job.EmploymentStatus_Operation@158f4cfe]" started-at="2022-10-29T19:44:09Z" name="Precondition_Login" finished-at="2022-10-29T19:44:15Z" duration-ms="6688" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,35 +22,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Precondition_Login -->
-        <test-method signature="TC_01_Verify_Add_Job_Title()[pri:0, instance:orangehrm.admin.job.JobTitle_Operation@6c6333cd]" started-at="2022-10-22T18:56:41Z" name="TC_01_Verify_Add_Job_Title" finished-at="2022-10-22T18:56:50Z" duration-ms="8877" status="PASS">
+        <test-method signature="TC_01_Verify_Add_Employment_Status()[pri:0, instance:orangehrm.admin.job.EmploymentStatus_Operation@158f4cfe]" started-at="2022-10-29T19:44:15Z" name="TC_01_Verify_Add_Employment_Status" finished-at="2022-10-29T19:44:20Z" duration-ms="4764" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01_Verify_Add_Job_Title -->
-        <test-method signature="TC_02_Verify_Edit_Job_Title()[pri:0, instance:orangehrm.admin.job.JobTitle_Operation@6c6333cd]" started-at="2022-10-22T18:56:50Z" name="TC_02_Verify_Edit_Job_Title" finished-at="2022-10-22T18:56:56Z" duration-ms="5551" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_02_Verify_Edit_Job_Title -->
-        <test-method signature="TC_03_Verify_Edit_Job_Specification_File()[pri:0, instance:orangehrm.admin.job.JobTitle_Operation@6c6333cd]" started-at="2022-10-22T18:56:56Z" name="TC_03_Verify_Edit_Job_Specification_File" finished-at="2022-10-22T18:57:05Z" duration-ms="9745" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_03_Verify_Edit_Job_Specification_File -->
-        <test-method signature="TC_04_Verify_Delete_Job_Specification_File()[pri:0, instance:orangehrm.admin.job.JobTitle_Operation@6c6333cd]" started-at="2022-10-22T18:57:05Z" name="TC_04_Verify_Delete_Job_Specification_File" finished-at="2022-10-22T18:57:18Z" duration-ms="12500" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_04_Verify_Delete_Job_Specification_File -->
-        <test-method signature="TC_05_Job_Title_Cannot_Be_Duplicated()[pri:0, instance:orangehrm.admin.job.JobTitle_Operation@6c6333cd]" started-at="2022-10-22T18:57:18Z" name="TC_05_Job_Title_Cannot_Be_Duplicated" finished-at="2022-10-22T18:57:22Z" duration-ms="4095" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_05_Job_Title_Cannot_Be_Duplicated -->
-        <test-method signature="TC_06_Verify_Delete_Operation()[pri:0, instance:orangehrm.admin.job.JobTitle_Operation@6c6333cd]" started-at="2022-10-22T18:57:22Z" name="TC_06_Verify_Delete_Operation" finished-at="2022-10-22T18:57:31Z" duration-ms="9125" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_06_Verify_Delete_Operation -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:orangehrm.admin.job.JobTitle_Operation@6c6333cd]" started-at="2022-10-22T18:57:31Z" name="afterClass" finished-at="2022-10-22T18:57:31Z" duration-ms="254" status="PASS">
+        </test-method> <!-- TC_01_Verify_Add_Employment_Status -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:orangehrm.admin.job.EmploymentStatus_Operation@158f4cfe]" started-at="2022-10-29T19:44:20Z" name="afterClass" finished-at="2022-10-29T19:44:21Z" duration-ms="267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- orangehrm.admin.job.JobTitle_Operation -->
+      </class> <!-- orangehrm.admin.job.EmploymentStatus_Operation -->
     </test> <!-- Run on Chrome -->
   </suite> <!-- Suite -->
 </testng-results>

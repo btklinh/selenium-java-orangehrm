@@ -4,15 +4,15 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="49.893">
+           time="51.109">
   <properties />
   
   
-            <testcase name="TC_02_Verify_Edit_Job_Title" time="5.551" classname="orangehrm.admin.job.JobTitle_Operation" />
-                <testcase name="TC_01_Verify_Add_Job_Title" time="8.877" classname="orangehrm.admin.job.JobTitle_Operation" />
-                <testcase name="TC_06_Verify_Delete_Operation" time="9.125" classname="orangehrm.admin.job.JobTitle_Operation" />
-                <testcase name="TC_03_Verify_Edit_Job_Specification_File" time="9.745" classname="orangehrm.admin.job.JobTitle_Operation" />
-                <testcase name="TC_04_Verify_Delete_Job_Specification_File" time="12.500" classname="orangehrm.admin.job.JobTitle_Operation" />
-                <testcase name="TC_05_Job_Title_Cannot_Be_Duplicated" time="4.095" classname="orangehrm.admin.job.JobTitle_Operation" />
+            <testcase name="TC_02_Verify_Edit_Job_Title" time="5.533" classname="orangehrm.admin.job.JobTitle_Operation" />
+                <testcase name="TC_06_Verify_Delete_Operation" time="9.183" classname="orangehrm.admin.job.JobTitle_Operation" />
+                <testcase name="TC_01_Verify_Add_Job_Title" time="9.804" classname="orangehrm.admin.job.JobTitle_Operation" />
+                <testcase name="TC_03_Verify_Edit_Job_Specification_File" time="9.751" classname="orangehrm.admin.job.JobTitle_Operation" />
+                <testcase name="TC_04_Verify_Delete_Job_Specification_File" time="12.747" classname="orangehrm.admin.job.JobTitle_Operation" />
+                <testcase name="TC_05_Job_Title_Cannot_Be_Duplicated" time="4.091" classname="orangehrm.admin.job.JobTitle_Operation" />
       
 </testsuite>

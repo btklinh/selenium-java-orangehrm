@@ -9,14 +9,14 @@
   <test thread-count="5" name="Run on Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="orangehrm.admin.job.JobTitle_Operation">
+      <class name="orangehrm.admin.job.EmploymentStatus_Operation">
         <methods>
-          <include name="TC_06_Verify_Delete_Operation"/>
-          <include name="afterClass"/>
-          <include name="deleteAllFilesInReportNGScreenshot"/>
           <include name="Precondition_Login"/>
+          <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="afterClass"/>
+          <include name="TC_01_Verify_Add_Employment_Status"/>
         </methods>
-      </class> <!-- orangehrm.admin.job.JobTitle_Operation -->
+      </class> <!-- orangehrm.admin.job.EmploymentStatus_Operation -->
     </classes>
   </test> <!-- Run on Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -84,16 +84,6 @@ public class DataHelper {
 		String dateAfterFormat = dateFormat.format(date);
 		return dateAfterFormat;
 	}
-//	public int fromTime() {
-//		return faker.number().numberBetween(0, 24);
-//	}
-//	public int minutes() {
-//		return faker.number().numberBetween(0, 59);
-//	}
-//	public String getTime() {
-//		String time = String.valueOf(hours()) + ":" +String.valueOf(minutes());
-//		return time;
-//	}
 	
 	public String getDeposit() {
 		return faker.number().digits(7);
@@ -154,5 +144,12 @@ public class DataHelper {
 		}
 		toTime = formatTime(toHour, toMinute);
 		return toTime;
+	}
+	
+	public String getEmploymentStatus() {
+			long ID = new Date().getTime();
+			String prefix = "Employee Status ";
+			String name = prefix + String.valueOf(ID);
+			return name;
 	}
 }

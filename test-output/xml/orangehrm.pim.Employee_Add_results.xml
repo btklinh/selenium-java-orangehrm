@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="21.901">
+           time="22.528">
   <properties />
   
   
-            <testcase name="TC_01_Verify_Add_Employee" time="14.687" classname="orangehrm.pim.Employee_Add" />
-                <testcase name="TC_02_Verify_Edit_Personal_Details" time="7.214" classname="orangehrm.pim.Employee_Add" />
+            <testcase name="TC_02_Verify_Edit_Personal_Details" time="7.631" classname="orangehrm.pim.Employee_Add" />
+                <testcase name="TC_01_Verify_Add_Employee" time="14.897" classname="orangehrm.pim.Employee_Add" />
       
 </testsuite>
